@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aljibs Pro - Instalación profesional de decoración en yeso en Tánger: techos, molduras, cornisas, rosetones y luz LED.">
+<title>Aljibs Pro | Decoración en Yeso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d2137; --navy2:#13304f; --gold:#c9a24b; --gold2:#e6c87a;
+  --cream:#faf7f0; --ink:#253441; --white:#ffffff; --shadow:0 10px 30px rgba(13,33,55,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
+html[lang="ar"] body{font-family:'Cairo',sans-serif}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+section{padding:80px 20px;scroll-margin-top:90px}
+.wrap{max-width:1150px;margin:auto}
+h1,h2,h3{color:var(--navy);line-height:1.25}
+h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:10px}
+.sec-sub{color:#68788a;margin-bottom:45px}
+.gold-line{width:70px;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;margin:14px 0 18px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:700;border:none;cursor:pointer;transition:.3s;font-size:.95rem}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 6px 18px rgba(201,162,75,.4)}
+.btn-gold:hover{transform:translateY(-3px)}
+.btn-out{border:2px solid var(--navy);color:var(--navy);background:transparent}
+.btn-out:hover{background:var(--navy);color:var(--gold2)}
+.btn-wa{background:#25D366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.35)}
+.btn-wa:hover{transform:translateY(-3px)}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-filter:blur(8px);box-shadow:0 2px 20px rgba(0,0,0,.25)}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;gap:20px;padding:10px 20px}
+.brand{display:flex;align-items:center;gap:12px;margin-inline-end:auto}
+.brand img{width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.brand-name{color:var(--gold2);font-weight:800;font-size:1.15rem;line-height:1.2}
+.brand-tag{color:#9fb2c8;font-size:.7rem;letter-spacing:1px;text-transform:uppercase}
+.nav-links{display:flex;gap:26px}
+.nav-links a{color:#dfe8f2;font-weight:600;font-size:.92rem;position:relative;padding:6px 0}
+.nav-links a::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:0;height:2px;background:var(--gold);transition:.3s}
+.nav-links a:hover::after{width:100%}
+.nav-links a:hover{color:var(--gold2)}
+.langs{display:flex;gap:6px;background:rgba(255,255,255,.08);padding:5px;border-radius:50px}
+.langs button{border:none;background:transparent;color:#cfd9e6;font-weight:700;font-size:.75rem;padding:6px 10px;border-radius:50px;cursor:pointer;transition:.3s}
+.langs button.active{background:var(--gold);color:var(--navy)}
+#burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
+#burger span{width:26px;height:3px;background:var(--gold2);border-radius:3px}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:90px 20px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(201,162,75,.15),transparent 45%),radial-gradient(circle at 10% 90%,rgba(201,162,75,.1),transparent 40%)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+.hero-badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid var(--gold);color:var(--gold2);padding:7px 18px;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:20px}
+.hero h1{color:#fff;font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:18px}
+.hero h1 em{color:var(--gold2);font-style:normal}
+.hero p{color:#c4d2e2;font-size:1.05rem;margin-bottom:32px;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-img{position:relative}
+.hero-img img{border-radius:18px;border:3px solid var(--gold);box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1;object-fit:cover;width:100%}
+.hero-img::after{content:"";position:absolute;inset:-16px;border:2px dashed rgba(201,162,75,.5);border-radius:24px;z-index:-1}
+.stats{display:flex;gap:40px;margin-top:45px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.7rem;color:var(--gold2)}
+.stat span{color:#9fb2c8;font-size:.82rem}
+
+/* SERVICIOS */
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
+.srv{background:#fff;border-radius:16px;padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:.35s;position:relative;overflow:hidden}
+.srv:hover{transform:translateY(-8px);border-top-color:var(--gold)}
+.srv .ico{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:18px}
+.srv h3{margin-bottom:8px;font-size:1.1rem}
+.srv p{color:#68788a;font-size:.92rem}
+
+/* GALERÍA */
+#gallery{background:#fff}
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:60px}
+.gal{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow)}
+.gal img{width:100%;aspect-ratio:1;object-fit:cover;transition:.5s}
+.gal:hover img{transform:scale(1.07)}
+.gal figcaption{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(transparent,rgba(13,33,55,.92));color:#fff;padding:40px 18px 16px;font-weight:600;font-size:.92rem}
+.gal .zoom{position:absolute;top:12px;inset-inline-end:12px;background:rgba(201,162,75,.9);color:var(--navy);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
+.ba-box h3{font-size:1.3rem;margin-bottom:6px}
+.ba{--pos:50%;position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9;max-height:520px;user-select:none}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .after{clip-path:inset(0 0 0 var(--pos))}
+.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:var(--gold);z-index:3}
+.ba-handle{position:absolute;top:50%;left:var(--pos);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;z-index:4;box-shadow:0 4px 14px rgba(0,0,0,.35);pointer-events:none}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5}
+.ba-tag{position:absolute;top:14px;padding:5px 14px;border-radius:50px;font-size:.78rem;font-weight:700;z-index:2}
+.ba-tag.b{inset-inline-start:14px;background:rgba(13,33,55,.8);color:#fff}
+.ba-tag.a{inset-inline-end:14px;background:rgba(201,162,75,.9);color:var(--navy)}
+
+/* BANNER PROMO */
+#promo{padding:40px 20px}
+.promo-link{display:block;transition:.3s}
+.promo-link:hover{transform:translateY(-5px)}
+.promo-link img{width:100%;border-radius:20px;border:3px solid var(--gold);box-shadow:0 20px 50px rgba(13,33,55,.25);object-fit:cover}
+
+/* POR QUÉ NOSOTROS */
+#about{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#c4d2e2}
+#about h2{color:#fff}
+#about .sec-sub{color:#9fb2c8}
+#about p{margin-bottom:16px;max-width:800px}
+#about strong{color:var(--gold2)}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:40px}
+.why-item{background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.35);border-radius:14px;padding:26px 20px;text-align:center;transition:.3s}
+.why-item:hover{background:rgba(201,162,75,.12);transform:translateY(-5px)}
+.why-item .e{font-size:1.9rem;margin-bottom:10px}
+.why-item h3{color:var(--gold2);font-size:1rem;margin-bottom:6px}
+.why-item p{font-size:.85rem;color:#9fb2c8;margin:0}
+
+/* CONTACTO */
+.contact-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:50px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;text-align:center;border-top:5px solid var(--gold)}
+.c-item .e{font-size:2.2rem;margin-bottom:10px}
+.c-item h3{font-size:1rem;margin-bottom:6px}
+.c-item p{color:#68788a;font-size:.92rem;margin-bottom:14px}
+.c-item .big{font-size:1.25rem;font-weight:800;color:var(--navy);direction:ltr}
+.contact-btns{display:flex;gap:14px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:var(--navy);color:#9fb2c8;text-align:center;padding:30px 20px;font-size:.85rem}
+footer b{color:var(--gold2)}
+
+/* WHATSAPP FLOTANTE */
+#waFloat{position:fixed;bottom:22px;inset-inline-start:22px;z-index:90;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(37,211,102,.5);transition:.3s;animation:pulse 2.5s infinite}
+#waFloat:hover{transform:scale(1.1)}
+#waFloat svg{width:32px;height:32px;fill:#fff}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* CHAT */
+#chatBtn{position:fixed;bottom:22px;inset-inline-end:22px;z-index:90;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 8px 25px rgba(201,162,75,.5);transition:.3s}
+#chatBtn:hover{transform:scale(1.08)}
+#chatBox{position:fixed;bottom:96px;inset-inline-end:22px;z-index:95;width:min(370px,calc(100vw - 44px));height:520px;max-height:70vh;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px);opacity:0;pointer-events:none;transition:.35s}
+#chatBox.open{transform:translateY(0);opacity:1;pointer-events:auto}
+.chat-head{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:14px 16px;display:flex;align-items:center;gap:12px}
+.chat-head img{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
+.chat-head b{color:var(--gold2);display:block;font-size:.95rem}
+.chat-head small{color:#8fdc9a;font-size:.72rem}
+.chat-head small::before{content:"●";margin-inline-end:5px}
+#chatClose{margin-inline-start:auto;background:none;border:none;color:#c4d2e2;font-size:1.3rem;cursor:pointer}
+#chatMsgs{flex:1;overflow-y:auto;padding:16px;background:#f4f1ea;display:flex;flex-direction:column;gap:10px}
+.msg{max-width:82%;padding:10px 14px;border-radius:14px;font-size:.88rem;line-height:1.5;animation:pop .3s}
+@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+.msg.bot{background:#fff;border-start-start-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.08);align-self:flex-start}
+.msg.user{background:var(--navy);color:#fff;border-start-end-radius:4px;align-self:flex-end}
+.msg.typing span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9aa8b8;margin-inline-end:3px;animation:blink 1s infinite}
+.msg.typing span:nth-child(2){animation-delay:.2s}.msg.typing span:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
+#chips{display:flex;flex-wrap:wrap;gap:7px;padding:10px 12px;background:#f4f1ea;border-top:1px solid #e5e0d5}
+#chips button{border:1.5px solid var(--gold);background:#fff;color:var(--navy);border-radius:50px;padding:6px 14px;font-size:.78rem;font-weight:700;cursor:pointer;transition:.25s}
+#chips button:hover{background:var(--gold);color:#fff}
+.chat-foot{display:flex;gap:8px;padding:10px;background:#fff;border-top:1px solid #eee}
+.chat-foot input{flex:1;border:1.5px solid #e2ddd2;border-radius:50px;padding:11px 16px;font-size:.9rem;outline:none;font-family:inherit}
+.chat-foot input:focus{border-color:var(--gold)}
+.chat-foot button{width:46px;height:46px;border-radius:50%;border:none;background:var(--navy);color:var(--gold2);font-size:1.1rem;cursor:pointer;flex-shrink:0}
+html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
+
+/* LIGHTBOX */
+#lightbox{position:fixed;inset:0;background:rgba(13,33,55,.92);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:min(90vw,700px);max-height:75vh;border-radius:14px;border:3px solid var(--gold)}
+#lightbox p{color:var(--gold2);margin-top:14px;font-weight:700}
+#lbClose{position:absolute;top:18px;inset-inline-end:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
+
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-img{max-width:440px;margin:auto}
+  #burger{display:flex}
+  .nav-links{position:absolute;top:100%;inset-inline:0;background:var(--navy);flex-direction:column;gap:0;padding:10px 20px 20px;display:none}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+}
+.reveal{opacity:0;transform:translateY(30px);transition:.7s}
+.reveal.vis{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="logo.png" alt="Aljibs Pro" data-fallback="logo">
+      <div>
+        <div class="brand-name">الجبس برو · Aljibs Pro</div>
+        <div class="brand-tag" data-i18n="brand_tag"></div>
+      </div>
+    </div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero"     data-i18n="nav_home"></a>
+      <a href="#services" data-i18n="nav_services"></a>
+      <a href="#gallery"  data-i18n="nav_gallery"></a>
+      <a href="#about"    data-i18n="nav_about"></a>
+      <a href="#contact"  data-i18n="nav_contact"></a>
+    </nav>
+    <div class="langs" id="langs">
+      <button data-lang="es">ES</button>
+      <button data-lang="fr">FR</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="ar">ع</button>
+    </div>
+    <button id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-badge" data-i18n="hero_badge"></span>
+      <h1 data-i18n="hero_title"></h1>
+      <p data-i18n="hero_sub"></p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#contact" data-i18n="cta_quote"></a>
+        <a class="btn btn-out" style="border-color:var(--gold2);color:var(--gold2)" href="#gallery" data-i18n="cta_gallery"></a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>+500</b><span data-i18n="stat1"></span></div>
+        <div class="stat"><b>15</b><span data-i18n="stat2"></span></div>
+        <div class="stat"><b>100%</b><span data-i18n="stat3"></span></div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="trabajo-1.jpg" alt="Techo decorado en yeso" data-fallback="ph">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 data-i18n="services_title"></h2>
+    <div class="gold-line"></div>
+    <p class="sec-sub" data-i18n="services_sub"></p>
+    <div class="srv-grid">
+      <div class="srv reveal"><div class="ico">🏛️</div><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p></div>
+      <div class="srv reveal"><div class="ico">✨</div><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p></div>
+      <div class="srv reveal"><div class="ico">💡</div><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p></div>
+      <div class="srv reveal"><div class="ico">🧱</div><h3 data-i18n="s4t"></h3><p data-i18n="s4d"></p></div>
+      <div class="srv reveal"><div class="ico">🌸</div><h3 data-i18n="s5t"></h3><p data-i18n="s5d"></p></div>
+      <div class="srv reveal"><div class="ico">🎨</div><h3 data-i18n="s6t"></h3><p data-i18n="s6d"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <h2 data-i18n="gallery_title"></h2>
+    <div class="gold-line"></div>
+    <p class="sec-sub" data-i18n="gallery_sub"></p>
+    <div class="gal-grid">
+      <figure class="gal reveal" data-cap="g1c"><span class="zoom">+</span><img src="trabajo-1.jpg" alt="" data-fallback="ph"><figcaption data-i18n="g1c"></figcaption></figure>
+      <figure class="gal reveal" data-cap="g2c"><span class="zoom">+</span><img src="trabajo-2.jpg" alt="" data-fallback="ph"><figcaption data-i18n="g2c"></figcaption></figure>
+      <figure class="gal reveal" data-cap="g3c"><span class="zoom">+</span><img src="trabajo-3.jpg" alt="" data-fallback="ph"><figcaption data-i18n="g3c"></figcaption></figure>
+    </div>
+    <div class="ba-box reveal">
+      <h3 data-i18n="ba_title"></h3>
+      <p class="sec-sub" style="margin-bottom:20px" data-i18n="ba_sub"></p>
+      <div class="ba" id="ba">
+        <img src="antes.jpg" alt="Antes" data-fallback="ph">
+        <img src="trabajo-1.jpg" alt="Después" class="after" data-fallback="ph">
+        <span class="ba-tag b" data-i18n="before"></span>
+        <span class="ba-tag a" data-i18n="after"></span>
+        <div class="ba-line"></div>
+        <div class="ba-handle">⇔</div>
+        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="before after">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🆕 BANNER PROMOCIONAL (clic → WhatsApp) -->
+<section id="promo">
+  <div class="wrap">
+    <a href="#" target="_blank" id="promoLink" class="promo-link reveal" aria-label="WhatsApp Aljibs Pro">
+      <img src="banner.jpg" alt="الجبس برو - طنجة" data-fallback="ph">
+    </a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 data-i18n="about_title"></h2>
+    <div class="gold-line"></div>
+    <p data-i18n="about_p1"></p>
+    <p data-i18n="about_p2"></p>
+    <div class="why">
+      <div class="why-item reveal"><div class="e">🏆</div><h3 data-i18n="w1t"></h3><p data-i18n="w1d"></p></div>
+      <div class="why-item reveal"><div class="e">⏰</div><h3 data-i18n="w2t"></h3><p data-i18n="w2d"></p></div>
+      <div class="why-item reveal"><div class="e">💶</div><h3 data-i18n="w3t"></h3><p data-i18n="w3d"></p></div>
+      <div class="why-item reveal"><div class="e">🧹</div><h3 data-i18n="w4t"></h3><p data-i18n="w4d"></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 style="text-align:center" data-i18n="contact_title"></h2>
+    <div class="gold-line" style="margin:14px auto 18px"></div>
+    <p class="sec-sub" style="text-align:center" data-i18n="contact_sub"></p>
+    <div class="contact-card reveal">
+      <div class="c-item"><div class="e">📞</div><h3 data-i18n="phone_label"></h3><p class="big" id="phoneShow"></p><a class="btn btn-out" id="callBtn" href="#"></a></div>
+      <div class="c-item"><div class="e">🕗</div><h3 data-i18n="hours_label"></h3><p data-i18n="hours_value"></p></div>
+      <div class="c-item"><div class="e">📍</div><h3 data-i18n="area_label"></h3><p data-i18n="area_value"></p></div>
+    </div>
+    <div class="contact-btns">
+      <a class="btn btn-wa" id="waBtn" target="_blank" href="#">💬 <span data-i18n="btn_wa"></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>الجبس برو · Aljibs Pro</b> — <span data-i18n="footer_rights"></span> © 2026</p>
+</footer>
+
+<a id="waFloat" target="_blank" href="#" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 4.1 1.6 6.4 1.6 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm6 16.2c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.3.2-3.7-.8-3.1-1.3-5.1-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.2s.8-2.3 1.1-2.6c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.7 1-.5 1.3.7 1.2 1.6 2 2.8 2.7.3.2.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.2.5.3.6.4.1.2.1.8-.2 1.6z"/></svg>
+</a>
+
+<button id="chatBtn" aria-label="Chat">💬</button>
+<div id="chatBox">
+  <div class="chat-head">
+    <img src="logo.png" alt="" data-fallback="logo">
+    <div><b data-i18n="chat_title"></b><small data-i18n="chat_status"></small></div>
+    <button id="chatClose" aria-label="close">✕</button>
+  </div>
+  <div id="chatMsgs"></div>
+  <div id="chips"></div>
+  <div class="chat-foot">
+    <input id="chatIn" data-i18n-ph="chat_ph" autocomplete="off">
+    <button id="chatSend" aria-label="send">➤</button>
+  </div>
+</div>
+
+<div id="lightbox">
+  <button id="lbClose" aria-label="close">✕</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+</div>
+
+<script>
+/* ⚙️ CONFIGURACIÓN — país WhatsApp: 212 = Marruecos (Tánger) */
+const CONFIG = {
+  waCountry : "212",
+  waNumber  : "632599085",
+  phoneShow : "06 32 59 90 85"
+};
+
+const T = {
+es:{
+ _title:"Aljibs Pro | Decoración en Yeso en Tánger",
+ brand_tag:"Decoración en yeso · Tánger", nav_home:"Inicio", nav_services:"Servicios", nav_gallery:"Galería", nav_about:"Nosotros", nav_contact:"Contacto",
+ hero_badge:"✦ Expertos en yeso y escayola en Tánger",
+ hero_title:"Decoración en yeso que <em>transforma</em> tu hogar",
+ hero_sub:"Instalación profesional de techos, molduras, cornisas y diseños en yeso con iluminación LED. Acabados de lujo, limpios y al mejor precio.",
+ cta_quote:"Presupuesto gratis", cta_gallery:"Ver trabajos",
+ stat1:"Proyectos realizados", stat2:"Años de experiencia", stat3:"Clientes satisfechos",
+ services_title:"Nuestros servicios", services_sub:"Todo tipo de decoración en yeso, con diseño e instalación incluidos",
+ s1t:"Techos y falsos techos", s1d:"Techos de yeso y pladur con diseños modernos de varios niveles.",
+ s2t:"Molduras y cornisas", s2d:"Molduras decorativas y cornisas elegantes para techos y paredes.",
+ s3t:"Iluminación LED", s3d:"Luz LED indirecta integrada que crea ambientes únicos.",
+ s4t:"Tabiques de pladur", s4d:"Separaciones y tabiques interiores con acabado perfecto.",
+ s5t:"Rosetones y ornamentos", s5d:"Rosetones, arcos y detalles ornamentales clásicos o modernos.",
+ s6t:"Diseños a medida", s6d:"Realizamos el diseño que sueñas, adaptado a tu espacio y gusto.",
+ gallery_title:"Galería de trabajos", gallery_sub:"Una muestra de nuestras realizaciones",
+ g1c:"Techo con doble nivel y luz cálida", g2c:"Diseño moderno con LED azul", g3c:"Líneas LED y focos cuadrados",
+ ba_title:"Antes / Después", ba_sub:"Desliza y mira la transformación", before:"Antes", after:"Después",
+ about_title:"¿Por qué elegirnos?",
+ about_p1:"En <strong>Aljibs Pro</strong> somos especialistas en todo tipo de decoración en yeso: techos, molduras, cornisas, rosetones e iluminación LED integrada.",
+ about_p2:"Trabajamos con materiales de primera calidad, respetamos los plazos y dejamos tu casa limpia al terminar. Presupuesto gratuito y sin compromiso.",
+ w1t:"Acabados de lujo", w1d:"Detalle y calidad en cada trabajo.", w2t:"Puntualidad", w2d:"Respetamos los plazos acordados.", w3t:"Precio justo", w3d:"Presupuesto claro y sin sorpresas.", w4t:"Limpieza", w4d:"Dejamos tu hogar impecable.",
+ contact_title:"Contacto", contact_sub:"Llámanos o escríbenos por WhatsApp, ¡respuesta rápida!",
+ phone_label:"Teléfono / WhatsApp", hours_label:"Horario", hours_value:"Lun – Sáb: 8:00 – 19:00",
+ area_label:"Zona de trabajo", area_value:"Tánger y alrededores — nos desplazamos a domicilio",
+ btn_call:"Llamar ahora", btn_wa:"Escribir por WhatsApp",
+ footer_rights:"Todos los derechos reservados.",
+ chat_title:"Asistente Aljibs Pro", chat_status:"En línea · responde al instante", chat_ph:"Escribe tu pregunta…",
+ chat_welcome:"¡Hola! 👋 Soy el asistente virtual de <strong>Aljibs Pro</strong> (Tánger). Puedo informarte sobre servicios, precios, horarios o contacto. ¿En qué te ayudo?",
+ chips:["Servicios","Precio","Horario","Contacto"],
+},
+fr:{
+ _title:"Aljibs Pro | Décoration en plâtre à Tanger",
+ brand_tag:"Décoration en plâtre · Tanger", nav_home:"Accueil", nav_services:"Services", nav_gallery:"Galerie", nav_about:"À propos", nav_contact:"Contact",
+ hero_badge:"✦ Experts en plâtre et staff à Tanger",
+ hero_title:"Une décoration en plâtre qui <em>transforme</em> votre maison",
+ hero_sub:"Installation professionnelle de plafonds, moulures, corniches et designs en plâtre avec éclairage LED. Finitions de luxe, chantier propre, au meilleur prix.",
+ cta_quote:"Devis gratuit", cta_gallery:"Voir nos réalisations",
+ stat1:"Projets réalisés", stat2:"Années d'expérience", stat3:"Clients satisfaits",
+ services_title:"Nos services", services_sub:"Tous types de décoration en plâtre, conception et pose incluses",
+ s1t:"Plafonds & faux plafonds", s1d:"Plafonds en plâtre et placo aux designs modernes multi-niveaux.",
+ s2t:"Moulures & corniches", s2d:"Moulures décoratives et corniches élégantes pour plafonds et murs.",
+ s3t:"Éclairage LED", s3d:"Lumière LED indirecte intégrée pour des ambiances uniques.",
+ s4t:"Cloisons en placo", s4d:"Cloisons intérieures aux finitions parfaites.",
+ s5t:"Rosaces & ornements", s5d:"Rosaces, arcs et détails ornementaux classiques ou modernes.",
+ s6t:"Designs sur mesure", s6d:"Nous réalisons le design de vos rêves, adapté à votre espace.",
+ gallery_title:"Galerie", gallery_sub:"Un aperçu de nos réalisations",
+ g1c:"Plafond deux niveaux, lumière chaude", g2c:"Design moderne à LED bleue", g3c:"Lignes LED et spots carrés",
+ ba_title:"Avant / Après", ba_sub:"Faites glisser pour voir la transformation", before:"Avant", after:"Après",
+ about_title:"Pourquoi nous choisir ?",
+ about_p1:"Chez <strong>Aljibs Pro</strong>, nous sommes spécialistes de toute décoration en plâtre : plafonds, moulures, corniches, rosaces et éclairage LED intégré.",
+ about_p2:"Matériaux de première qualité, respect des délais et chantier laissé propre. Devis gratuit et sans engagement.",
+ w1t:"Finitions de luxe", w1d:"Soin et qualité à chaque chantier.", w2t:"Ponctualité", w2d:"Délais respectés.", w3t:"Prix juste", w3d:"Devis clair, sans surprises.", w4t:"Propreté", w4d:"Votre maison reste impeccable.",
+ contact_title:"Contact", contact_sub:"Appelez-nous ou écrivez-nous sur WhatsApp, réponse rapide !",
+ phone_label:"Téléphone / WhatsApp", hours_label:"Horaires", hours_value:"Lun – Sam : 8h – 19h",
+ area_label:"Zone d'intervention", area_value:"Tanger et environs — déplacement à domicile",
+ btn_call:"Appeler", btn_wa:"Écrire sur WhatsApp",
+ footer_rights:"Tous droits réservés.",
+ chat_title:"Assistant Aljibs Pro", chat_status:"En ligne · réponse immédiate", chat_ph:"Écrivez votre question…",
+ chat_welcome:"Bonjour ! 👋 Je suis l'assistant virtuel d'<strong>Aljibs Pro</strong> (Tanger). Je peux vous renseigner sur les services, prix, horaires ou le contact. Comment puis-je aider ?",
+ chips:["Services","Prix","Horaires","Contact"],
+},
+en:{
+ _title:"Aljibs Pro | Gypsum Decoration in Tangier",
+ brand_tag:"Gypsum decoration · Tangier", nav_home:"Home", nav_services:"Services", nav_gallery:"Gallery", nav_about:"About", nav_contact:"Contact",
+ hero_badge:"✦ Gypsum & plaster experts in Tangier",
+ hero_title:"Gypsum decoration that <em>transforms</em> your home",
+ hero_sub:"Professional installation of ceilings, moldings, cornices and gypsum designs with LED lighting. Luxury finishes, clean work, best price.",
+ cta_quote:"Free quote", cta_gallery:"View our work",
+ stat1:"Completed projects", stat2:"Years of experience", stat3:"Happy clients",
+ services_title:"Our services", services_sub:"All types of gypsum decoration, design and installation included",
+ s1t:"Ceilings & false ceilings", s1d:"Gypsum and plasterboard ceilings with modern multi-level designs.",
+ s2t:"Moldings & cornices", s2d:"Decorative moldings and elegant cornices for ceilings and walls.",
+ s3t:"LED lighting", s3d:"Integrated indirect LED light that creates unique atmospheres.",
+ s4t:"Plasterboard partitions", s4d:"Interior partitions with a perfect finish.",
+ s5t:"Medallions & ornaments", s5d:"Ceiling medallions, arches and ornamental details, classic or modern.",
+ s6t:"Custom designs", s6d:"We build the design you dream of, adapted to your space and taste.",
+ gallery_title:"Work gallery", gallery_sub:"A sample of our achievements",
+ g1c:"Two-level ceiling, warm light", g2c:"Modern design with blue LED", g3c:"LED lines and square spots",
+ ba_title:"Before / After", ba_sub:"Slide to see the transformation", before:"Before", after:"After",
+ about_title:"Why choose us?",
+ about_p1:"At <strong>Aljibs Pro</strong> we specialise in all types of gypsum decoration: ceilings, moldings, cornices, medallions and integrated LED lighting.",
+ about_p2:"We use top-quality materials, respect deadlines and leave your home clean when we finish. Free quote with no obligation.",
+ w1t:"Luxury finishes", w1d:"Detail and quality in every job.", w2t:"Punctuality", w2d:"We respect agreed deadlines.", w3t:"Fair price", w3d:"Clear quote, no surprises.", w4t:"Cleanliness", w4d:"We leave your home spotless.",
+ contact_title:"Contact", contact_sub:"Call us or message us on WhatsApp, fast reply!",
+ phone_label:"Phone / WhatsApp", hours_label:"Hours", hours_value:"Mon – Sat: 8:00 – 19:00",
+ area_label:"Work area", area_value:"Tangier and surrounding areas — we travel to your home",
+ btn_call:"Call now", btn_wa:"Message on WhatsApp",
+ footer_rights:"All rights reserved.",
+ chat_title:"Aljibs Pro Assistant", chat_status:"Online · instant reply", chat_ph:"Type your question…",
+ chat_welcome:"Hello! 👋 I'm the <strong>Aljibs Pro</strong> (Tangier) virtual assistant. I can help with services, prices, hours or contact. How can I help?",
+ chips:["Services","Price","Hours","Contact"],
+},
+ar:{
+ _title:"الجبس برو | ديكورات الجبس في طنجة",
+ brand_tag:"ديكور الجبس · طنجة", nav_home:"الرئيسية", nav_services:"خدماتنا", nav_gallery:"معرض الأعمال", nav_about:"لماذا نحن", nav_contact:"اتصل بنا",
+ hero_badge:"✦ خبراء في الجبس والديكور في طنجة",
+ hero_title:"ديكورات جبس <em>تُحوِّل</em> منزلك إلى تحفة فنية",
+ hero_sub:"تركيب احترافي للأسقف المعلقة، القوالب، الكرانيش والزخارف الجبسية مع إضاءة LED. تشطيبات فاخرة، عمل نظيف وأسعار منافسة.",
+ cta_quote:"عرض سعر مجاني", cta_gallery:"شاهد أعمالنا",
+ stat1:"مشروع منجز", stat2:"سنة خبرة", stat3:"عميل راضٍ",
+ services_title:"خدماتنا", services_sub:"جميع أنواع ديكورات الجبس، تصميماً وتركيباً",
+ s1t:"أسقف معلقة", s1d:"أسقف جبس وبلاكو بتصاميم عصرية متعددة المستويات.",
+ s2t:"قوالب وكرانيش", s2d:"قوالب ديكورية وكرانيش أنيقة للأسقف والجدران.",
+ s3t:"إضاءة LED", s3d:"إضاءة مخفية تضفي أجواءً ساحرة على منزلك.",
+ s4t:"فواصل بلاكو", s4d:"فواصل وتقسيمات داخلية بتشطيب مثالي.",
+ s5t:"وردات وزخارف", s5d:"وردات سقف وأقواس ونقوش كلاسيكية وعصرية.",
+ s6t:"تصاميم حسب الطلب", s6d:"ننفذ التصميم الذي تحلم به بما يناسب ذوقك ومساحتك.",
+ gallery_title:"معرض الأعمال", gallery_sub:"نماذج من إنجازاتنا",
+ g1c:"سقف بمستويين وإضاءة دافئة", g2c:"تصميم عصري بإضاءة زرقاء", g3c:"خطوط LED وسبوتات مربعة",
+ ba_title:"قبل / بعد", ba_sub:"حرّك المؤشر وشاهد الفرق", before:"قبل", after:"بعد",
+ about_title:"لماذا تختارنا؟",
+ about_p1:"في <strong>الجبس برو</strong> نحن متخصصون في جميع ديكورات الجبس: أسقف، قوالب، كرانيش، وردات وإضاءة LED مدمجة.",
+ about_p2:"نشتغل بمواد عالية الجودة، نحترم المواعيد ونترك منزلك نظيفاً. عرض السعر مجاني وبدون التزام.",
+ w1t:"تشطيبات فاخرة", w1d:"إتقان وجودة في كل عمل.", w2t:"احترام المواعيد", w2d:"نلتزم بالآجال المتفق عليها.", w3t:"أثمنة مناسبة", w3d:"عرض سعر واضح بدون مفاجآت.", w4t:"نظافة", w4d:"نترك منزلك نظيفاً.",
+ contact_title:"اتصل بنا", contact_sub:"اتصل أو راسلنا على واتساب، جواب سريع!",
+ phone_label:"الهاتف / واتساب", hours_label:"أوقات العمل", hours_value:"الاثنين – السبت: 8:00 – 19:00",
+ area_label:"منطقة التدخل", area_value:"طنجة والنواحي — ننتقل إلى منزلك",
+ btn_call:"اتصل الآن", btn_wa:"راسلنا على واتساب",
+ footer_rights:"جميع الحقوق محفوظة.",
+ chat_title:"مساعد الجبس برو", chat_status:"متصل · يجيب فوراً", chat_ph:"اكتب سؤالك…",
+ chat_welcome:"سلام! 👋 أنا المساعد الافتراضي لـ<strong>الجبس برو</strong> (طنجة). يمكنني إخبارك عن الخدمات، الأثمنة، أوقات العمل أو التواصل. كيف أساعدك؟",
+ chips:["الخدمات","الثمن","أوقات العمل","اتصال"],
+}};
+
+const INTENTS = [
+ {k:["gracias","merci","thank","شكرا","بارك"], r:{
+  es:"😊 ¡A ti! Si necesitas algo más, aquí estoy. No olvides pedir tu presupuesto gratuito. ✨",
+  fr:"😊 À vous ! Si besoin, je reste là. N'oubliez pas votre devis gratuit. ✨",
+  en:"😊 You're welcome! I'm here if you need anything else. Don't forget your free quote. ✨",
+  ar:"😊 العفو! أنا هنا إذا احتجت أي شيء. ولا تنسَ عرض السعر المجاني. ✨"}},
+ {k:["presupuesto","precio","cost","cuanto","devis","prix","combien","quote","price","tarif","سعر","ثمن","شحال","فلوس"], r:{
+  es:"💰 El presupuesto es GRATIS y sin compromiso. El precio depende de los m² y del diseño. Envíanos las medidas o una foto por WhatsApp al "+CONFIG.phoneShow+" y te damos una estimación al momento. 👇 Pulsa el botón verde de WhatsApp.",
+  fr:"💰 Le devis est GRATUIT et sans engagement. Le prix dépend des m² et du design. Envoyez-nous les mesures ou une photo sur WhatsApp au "+CONFIG.phoneShow+" et recevez une estimation immédiate. 👇 Utilisez le bouton WhatsApp vert.",
+  en:"💰 The quote is FREE with no obligation. Price depends on m² and design. Send us measurements or a photo on WhatsApp at "+CONFIG.phoneShow+" and get an instant estimate. 👇 Use the green WhatsApp button.",
+  ar:"💰 عرض السعر مجاني وبدون التزام. الثمن يتعلق بالمساحة والتصميم. أرسل لنا القياسات أو صورة على واتساب "+CONFIG.phoneShow+" وستتوصل بتقدير فوري. 👇 استعمل زر واتساب الأخضر."}},
+ {k:["whatsapp","telefono","contact","llamar","phone","call","اتصال","هاتف","واتساب","رقم","تواصل"], r:{
+  es:"📞 Puedes contactarnos por teléfono o WhatsApp: <b>"+CONFIG.phoneShow+"</b>. ¡Estaremos encantados de atenderte!",
+  fr:"📞 Contactez-nous par téléphone ou WhatsApp : <b>"+CONFIG.phoneShow+"</b>. Avec plaisir !",
+  en:"📞 Reach us by phone or WhatsApp: <b>"+CONFIG.phoneShow+"</b>. We'll be happy to help!",
+  ar:"📞 يمكنكم الاتصال بنا هاتفياً أو عبر واتساب: <b>"+CONFIG.phoneShow+"</b>. يسعدنا خدمتكم!"}},
+ {k:["horario","horaire","hours","schedule","domingo","sunday","dimanche","open","abierto","ouvert","دوام","متى","الأحد","السبت","وقت"], r:{
+  es:"🕗 Trabajamos de lunes a sábado, de 8:00 a 19:00. Por WhatsApp respondemos a cualquier hora.",
+  fr:"🕗 Nous travaillons du lundi au samedi, de 8h à 19h. Sur WhatsApp, nous répondons à toute heure.",
+  en:"🕗 We work Monday to Saturday, 8:00–19:00. On WhatsApp we reply any time.",
+  ar:"🕗 نعمل من الاثنين إلى السبت، من 8:00 إلى 19:00. وعلى واتساب نجيب في أي وقت."}},
+ {k:["tarda","duracion","delai","how long","cuanto tiempo","combien de temps","مدة","كم يوم","days","jours","dias"], r:{
+  es:"⏱️ Un techo estándar se instala en 2–4 días según el diseño. Los diseños con LED y varios niveles pueden llevar un poco más. ¡Siempre dejamos el trabajo limpio!",
+  fr:"⏱️ Un plafond standard est installé en 2 à 4 jours selon le design. Les designs LED multi-niveaux demandent un peu plus. Chantier toujours laissé propre !",
+  en:"⏱️ A standard ceiling takes 2–4 days depending on design. Multi-level LED designs may take a bit longer. We always leave everything clean!",
+  ar:"⏱️ السقف العادي يُركَّب في 2–4 أيام حسب التصميم. التصاميم متعددة المستويات مع LED قد تأخذ وقتاً أطول قليلاً. ونترك المكان نظيفاً دائماً!"}},
+ {k:["zona","donde","where","area","region","ville","مدينة","أين","منطقة","مكان","desplaz","déplace","travel","طنجة"], r:{
+  es:"📍 Estamos en Tánger y nos desplazamos a domicilio por toda la ciudad y alrededores, sin coste. Escríbenos por WhatsApp y coordinamos la visita.",
+  fr:"📍 Nous sommes à Tanger et nous nous déplaçons à domicile dans toute la ville et ses environs, sans frais. Écrivez-nous sur WhatsApp pour organiser la visite.",
+  en:"📍 We are based in Tangier and travel to your home anywhere in the city and surrounding areas, for free. Message us on WhatsApp to arrange a visit.",
+  ar:"📍 نتواجد في طنجة وننتقل إلى منزلك في كل أحياء المدينة والنواحي مجاناً. راسلنا على واتساب لتنسيق الزيارة."}},
+ {k:["material","calidad","quality","qualite","جودة","مواد","خام","grieta","fissure","crack"], r:{
+  es:"🧱 Usamos yeso y pladur de primera calidad, perfilería certificada y LED de bajo consumo. Acabado garantizado sin grietas.",
+  fr:"🧱 Nous utilisons du plâtre et du placo de première qualité, des structures certifiées et des LED basse consommation. Finition garantie sans fissures.",
+  en:"🧱 We use top-quality gypsum and plasterboard, certified framing and low-consumption LEDs. Crack-free finish guaranteed.",
+  ar:"🧱 نستعمل جبس وبلاكو من الدرجة الأولى، هياكل مصادق عليها وإضاءة LED موفرة. تشطيب مضمون بدون تشققات."}},
+ {k:["humano","human","persona","agent","equipo","team","معلم","فني","تقني","مسؤول"], r:{
+  es:"👷 ¡Claro! Un especialista de nuestro equipo te atenderá por WhatsApp: "+CONFIG.phoneShow+".",
+  fr:"👷 Bien sûr ! Un spécialiste de notre équipe vous répondra sur WhatsApp : "+CONFIG.phoneShow+".",
+  en:"👷 Of course! A specialist from our team will assist you on WhatsApp: "+CONFIG.phoneShow+".",
+  ar:"👷 بالطبع! سيواصل معك مختص من فريقنا عبر واتساب: "+CONFIG.phoneShow+"."}},
+ {k:["servicio","service","offres","خدمات","شنو","propose","techos","plafond","ceiling","moldura","moulure","molding","cornisa","corniche","rosace","roseton","pladur","placo","سقف","قالب","كرنيش","وردة","بلاكو","جبس"], r:{
+  es:"🛠️ Realizamos todo tipo de decoración en yeso:<br>• Techos y falsos techos<br>• Molduras y cornisas<br>• Rosetones y ornamentos<br>• Tabiques de pladur<br>• Iluminación LED integrada<br>• Diseños a medida<br>¿Quieres un presupuesto gratuito?",
+  fr:"🛠️ Nous réalisons tous types de décoration en plâtre :<br>• Plafonds et faux plafonds<br>• Moulures et corniches<br>• Rosaces et ornements<br>• Cloisons en placo<br>• Éclairage LED intégré<br>• Designs sur mesure<br>Souhaitez-vous un devis gratuit ?",
+  en:"🛠️ We do all types of gypsum decoration:<br>• False ceilings<br>• Moldings & cornices<br>• Medallions & ornaments<br>• Plasterboard partitions<br>• Integrated LED lighting<br>• Custom designs<br>Would you like a free quote?",
+  ar:"🛠️ ننجز جميع أنواع ديكورات الجبس:<br>• أسقف معلقة<br>• قوالب وكرانيش<br>• وردات وزخارف<br>• فواصل بلاكو<br>• إضاءة LED مدمجة<br>• تصاميم حسب الطلب<br>هل تريد عرض سعر مجاني؟"}},
+ {k:["galer","foto","photo","trabajos","realisation","معرض","صور","أعمال","portfolio","picture"], r:{
+  es:"🖼️ Tenemos diseños para todos los gustos: modernos con LED, clásicos con molduras… Desliza hasta la galería y mira el Antes/Después. 😍",
+  fr:"🖼️ Des designs pour tous les goûts : modernes avec LED, classiques avec moulures… Faites défiler jusqu'à la galerie et voyez l'Avant/Après. 😍",
+  en:"🖼️ Designs for every taste: modern LED, classic moldings… Scroll to the gallery and see the Before/After. 😍",
+  ar:"🖼️ لدينا تصاميم لكل الأذواق: عصرية بإضاءة LED وكلاسيكية بالقوالب… مرِّر إلى معرض الأعمال وشاهد قبل/بعد. 😍"}},
+ {k:["hola","buenas","bonjour","salut","hello","hey","سلام","مرحبا","صباح","مساء"], r:{
+  es:"¡Hola! 😊 ¿En qué puedo ayudarte? Puedes preguntarme por servicios, precios, horario o contacto.",
+  fr:"Bonjour ! 😊 Comment puis-je vous aider ? Services, prix, horaires ou contact ?",
+  en:"Hello! 😊 How can I help? Ask me about services, prices, hours or contact.",
+  ar:"مرحباً! 😊 كيف أساعدك؟ اسألني عن الخدمات، الأثمنة، أوقات العمل أو التواصل."}},
+];
+const FALLBACK = {
+ es:"🤔 No estoy seguro de haberte entendido. Puedo ayudarte con: servicios, precios, horario, zona o contacto. Prueba con un botón de abajo. 👇",
+ fr:"🤔 Je ne suis pas sûr d'avoir compris. Je peux vous aider sur : services, prix, horaires, zone ou contact. Essayez un bouton ci-dessous. 👇",
+ en:"🤔 I'm not sure I understood. I can help with: services, prices, hours, area or contact. Try a button below. 👇",
+ ar:"🤔 لم أفهم جيداً. يمكنني مساعدتك في: الخدمات، الأثمنة، أوقات العمل، المنطقة أو التواصل. جرّب أحد الأزرار أسفله. 👇"
+};
+
+let lang = localStorage.getItem("lang") || "es";
+function applyLang(l){
+  lang = l; localStorage.setItem("lang", l);
+  document.documentElement.lang = l;
+  document.documentElement.dir = (l === "ar") ? "rtl" : "ltr";
+  document.title = T[l]._title;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k = el.dataset.i18n; if(T[l][k] !== undefined) el.innerHTML = T[l][k];
+  });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
+    el.placeholder = T[l][el.dataset.i18nPh];
+  });
+  document.querySelectorAll("#langs button").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
+  renderChips();
+  if(chatMsgs.children.length === 1) chatMsgs.firstChild.innerHTML = T[l].chat_welcome;
+}
+document.getElementById("langs").addEventListener("click", e=>{
+  if(e.target.dataset.lang) applyLang(e.target.dataset.lang);
+});
+
+const waLink = "https://wa.me/" + CONFIG.waCountry + CONFIG.waNumber;
+document.getElementById("waFloat").href = waLink;
+document.getElementById("waBtn").href   = waLink;
+document.getElementById("promoLink").href = waLink;
+document.getElementById("callBtn").href = "tel:+" + CONFIG.waCountry + CONFIG.waNumber;
+document.getElementById("phoneShow").textContent = CONFIG.phoneShow;
+
+burger.onclick = ()=> navLinks.classList.toggle("open");
+navLinks.addEventListener("click", ()=> navLinks.classList.remove("open"));
+
+baRange.addEventListener("input", ()=> ba.style.setProperty("--pos", baRange.value + "%"));
+
+document.querySelectorAll(".gal").forEach(g=>{
+  g.addEventListener("click", ()=>{
+    lbImg.src = g.querySelector("img").src;
+    lbCap.textContent = T[lang][g.dataset.cap];
+    lightbox.classList.add("open");
+  });
+});
+lbClose.onclick = ()=> lightbox.classList.remove("open");
+lightbox.addEventListener("click", e=>{ if(e.target===lightbox) lightbox.classList.remove("open"); });
+
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("vis"); io.unobserve(e.target);} }),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+const chatBox = document.getElementById("chatBox"), chatMsgs = document.getElementById("chatMsgs");
+let opened = false;
+chatBtn.onclick = ()=>{ chatBox.classList.toggle("open"); if(!opened){ opened=true; addMsg(T[lang].chat_welcome,"bot"); } };
+chatClose.onclick = ()=> chatBox.classList.remove("open");
+
+function renderChips(){
+  chips.innerHTML = "";
+  T[lang].chips.forEach(c=>{
+    const b = document.createElement("button"); b.textContent = c;
+    b.onclick = ()=> sendMsg(c); chips.appendChild(b);
+  });
+}
+function addMsg(html, who){
+  const d = document.createElement("div");
+  d.className = "msg " + who; d.innerHTML = html;
+  chatMsgs.appendChild(d); chatMsgs.scrollTop = chatMsgs.scrollHeight;
+  return d;
+}
+function norm(s){
+  s = s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+  s = s.replace(/[\u064B-\u0652\u0640]/g,"").replace(/[أإآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه");
+  return s;
+}
+function botReply(text){
+  const n = norm(text);
+  for(const it of INTENTS){
+    for(const k of it.k){
+      const kk = norm(k);
+      if(kk.length <= 4){ if(new RegExp("(^|\\s)"+kk+"(\\s|$)").test(n)) return it.r[lang]; }
+      else if(n.includes(kk)) return it.r[lang];
+    }
+  }
+  return FALLBACK[lang];
+}
+function sendMsg(text){
+  addMsg(text.replace(/</g,"&lt;"),"user");
+  const t = addMsg("<span></span><span></span><span></span>","bot typing");
+  setTimeout(()=>{ t.remove(); addMsg(botReply(text),"bot"); }, 700 + Math.random()*600);
+}
+chatSend.onclick = ()=>{ const v = chatIn.value.trim(); if(v){ chatIn.value=""; sendMsg(v);} };
+chatIn.addEventListener("keydown", e=>{ if(e.key==="Enter") chatSend.click(); });
+
+const PH = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800"><rect width="800" height="800" fill="#0d2137"/><rect x="25" y="25" width="750" height="750" fill="none" stroke="#c9a24b" stroke-width="5"/><text x="400" y="410" font-size="52" fill="#c9a24b" text-anchor="middle" font-family="sans-serif">ALJIBS PRO</text></svg>');
+const LOGOPH = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#0d2137"/><path d="M32 14 12 30h6v16h28V30h6z" fill="#c9a24b"/></svg>');
+document.querySelectorAll("img[data-fallback]").forEach(img=>{
+  img.addEventListener("error", ()=>{ img.src = (img.dataset.fallback==="logo") ? LOGOPH : PH; });
+});
+
+applyLang(lang);
+</script>
+</body>
+</html>
