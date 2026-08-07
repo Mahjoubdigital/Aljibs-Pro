@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aljibs Pro - Instalación profesional de decoración en yeso en Tánger: techos, molduras, cornisas, rosetones y luz LED.">
 <title>Aljibs Pro | Decoración en Yeso</title>
-<!--  PWA: se instala como app sin tiendas -->
+<!-- 📲 PWA: se instala como app sin tiendas -->
 <meta name="theme-color" content="#0d2137">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -88,9 +88,6 @@ header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-
 .hero-img{position:relative}
 .hero-img img{border-radius:18px;border:3px solid var(--gold);box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1;object-fit:cover;width:100%}
 .hero-img::after{content:"";position:absolute;inset:-16px;border:2px dashed rgba(201,162,75,.5);border-radius:24px;z-index:-1}
-.stats{display:flex;gap:40px;margin-top:45px;flex-wrap:wrap}
-.stat b{display:block;font-size:1.7rem;color:var(--gold2)}
-.stat span{color:#9fb2c8;font-size:.82rem}
 
 /* SERVICIOS */
 .srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
@@ -263,7 +260,7 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
     <div class="brand">
       <img src="https://i.postimg.cc/wBdRbFgf/logo.jpg" alt="Aljibs Pro" data-fallback="logo">
       <div>
-        <div class="brand-name">Aljibs Pro</div>
+        <div class="brand-name">الجبس برو · Aljibs Pro</div>
         <div class="brand-tag" data-i18n="brand_tag"></div>
       </div>
     </div>
@@ -306,11 +303,7 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
         <a class="btn btn-gold" href="#contact" data-i18n="cta_quote"></a>
         <a class="btn btn-out" style="border-color:var(--gold2);color:var(--gold2)" href="#gallery" data-i18n="cta_gallery"></a>
       </div>
-      <div class="stats">
-        <div class="stat"><b>+500</b><span data-i18n="stat1"></span></div>
-        <div class="stat"><b>15</b><span data-i18n="stat2"></span></div>
-        <div class="stat"><b>100%</b><span data-i18n="stat3"></span></div>
-      </div>
+      <!-- ❌ Estadísticas eliminadas -->
     </div>
     <div class="hero-img">
       <img src="https://i.postimg.cc/PqkvFKTb/Despues.webp" alt="Techo decorado en yeso" data-fallback="ph">
@@ -454,7 +447,7 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
 </section>
 
 <footer>
-  <p><b>Aljibs Pro</b> — <span data-i18n="footer_rights"></span> © 2026</p>
+  <p><b>الجبس برو · Aljibs Pro</b> — <span data-i18n="footer_rights"></span> © 2026</p>
   <div><button id="pwaFoot" class="pwa-foot">📲 <span data-i18n="pwa_foot"></span></button></div>
 </footer>
 
@@ -515,7 +508,7 @@ const AI = {
 const AI_PROMPT = "Transform this room photo: add an elegant modern gypsum false ceiling with decorative moldings, cornices and indirect LED lighting. Photorealistic interior design render, keep the walls, windows and furniture of the room.";
 const FLAG = { es:"es", fr:"fr", en:"gb", ar:"ma" };
 
-/* 📲 MANIFIESTO PWA (generado en el propio archivo, sin archivos extra) */
+/* 📲 MANIFIESTO PWA */
 (function(){
   const manifest = {
     name: "Aljibs Pro — Decoración en Yeso",
@@ -547,8 +540,7 @@ es:{
  hero_badge:"✦ Expertos en yeso y escayola en Tánger",
  hero_title:"Decoración en yeso que <em>transforma</em> tu hogar",
  hero_sub:"Instalación profesional de techos, molduras, cornisas y diseños en yeso con iluminación LED. Acabados de lujo, limpios y al mejor precio.",
- cta_quote:"Presupuesto", cta_gallery:"Ver trabajos",
- stat1:"Proyectos realizados", stat2:"Años de experiencia", stat3:"Clientes satisfechos",
+ cta_quote:"Presupuesto gratis", cta_gallery:"Ver trabajos",
  services_title:"Nuestros servicios", services_sub:"Todo tipo de decoración en yeso, con diseño e instalación incluidos",
  s1t:"Techos y falsos techos", s1d:"Techos de yeso y pladur con diseños modernos de varios niveles.",
  s2t:"Molduras y cornisas", s2d:"Molduras decorativas y cornisas elegantes para techos y paredes.",
@@ -608,7 +600,6 @@ fr:{
  hero_title:"Une décoration en plâtre qui <em>transforme</em> votre maison",
  hero_sub:"Installation professionnelle de plafonds, moulures, corniches et designs en plâtre avec éclairage LED. Finitions de luxe, chantier propre, au meilleur prix.",
  cta_quote:"Devis gratuit", cta_gallery:"Voir nos réalisations",
- stat1:"Projets réalisés", stat2:"Années d'expérience", stat3:"Clients satisfaits",
  services_title:"Nos services", services_sub:"Tous types de décoration en plâtre, conception et pose incluses",
  s1t:"Plafonds & faux plafonds", s1d:"Plafonds en plâtre et placo aux designs modernes multi-niveaux.",
  s2t:"Moulures & corniches", s2d:"Moulures décoratives et corniches élégantes pour plafonds et murs.",
@@ -668,7 +659,6 @@ en:{
  hero_title:"Gypsum decoration that <em>transforms</em> your home",
  hero_sub:"Professional installation of ceilings, moldings, cornices and gypsum designs with LED lighting. Luxury finishes, clean work, best price.",
  cta_quote:"Free quote", cta_gallery:"View our work",
- stat1:"Completed projects", stat2:"Years of experience", stat3:"Happy clients",
  services_title:"Our services", services_sub:"All types of gypsum decoration, design and installation included",
  s1t:"Ceilings & false ceilings", s1d:"Gypsum and plasterboard ceilings with modern multi-level designs.",
  s2t:"Moldings & cornices", s2d:"Decorative moldings and elegant cornices for ceilings and walls.",
@@ -728,7 +718,6 @@ ar:{
  hero_title:"ديكورات جبس <em>تُحوِّل</em> منزلك إلى تحفة فنية",
  hero_sub:"تركيب احترافي للأسقف المعلقة، القوالب، الكرانيش والزخارف الجبسية مع إضاءة LED. تشطيبات فاخرة، عمل نظيف وأسعار منافسة.",
  cta_quote:"عرض سعر مجاني", cta_gallery:"شاهد أعمالنا",
- stat1:"مشروع منجز", stat2:"سنة خبرة", stat3:"عميل راضٍ",
  services_title:"خدماتنا", services_sub:"جميع أنواع ديكورات الجبس، تصميماً وتركيباً",
  s1t:"أسقف معلقة", s1d:"أسقف جبس وبلاكو بتصاميم عصرية متعددة المستويات.",
  s2t:"قوالب وكرانيش", s2d:"قوالب ديكورية وكرانيش أنيقة للأسقف والجدران.",
