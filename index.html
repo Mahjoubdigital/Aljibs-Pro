@@ -4,21 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Aljibs Pro - Instalación profesional de decoración en yeso en Tánger: techos, molduras, cornisas, rosetones y luz LED.">
-<!-- 🖼️ Imagen destacada al compartir el enlace (WhatsApp, Facebook, etc.) -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Aljibs Pro">
-<meta property="og:title" content="Aljibs Pro | Decoración en Yeso en Tánger">
-<meta property="og:description" content="Techos, molduras, cornisas y diseños en yeso con luz LED en Tánger. Presupuesto gratis y acabado garantizado.">
-<meta property="og:image" content="https://i.postimg.cc/7LyJQXwn/hero.jpg">
-<meta property="og:locale" content="es_ES">
-<meta property="og:locale:alternate" content="fr_FR">
-<meta property="og:locale:alternate" content="en_US">
-<meta property="og:locale:alternate" content="ar_MA">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Aljibs Pro | Decoración en Yeso en Tánger">
-<meta name="twitter:description" content="Techos, molduras, cornisas y diseños en yeso con luz LED. Presupuesto gratis.">
-<meta name="twitter:image" content="https://i.postimg.cc/7LyJQXwn/hero.jpg">
 <title>Aljibs Pro | Decoración en Yeso</title>
+<!--  PWA: se instala como app sin tiendas -->
+<meta name="theme-color" content="#0d2137">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Aljibs Pro">
+<link rel="icon" href="https://i.postimg.cc/wBdRbFgf/logo.jpg">
+<link rel="apple-touch-icon" href="https://i.postimg.cc/wBdRbFgf/logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
@@ -94,15 +88,17 @@ header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-
 .hero-img{position:relative}
 .hero-img img{border-radius:18px;border:3px solid var(--gold);box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1;object-fit:cover;width:100%}
 .hero-img::after{content:"";position:absolute;inset:-16px;border:2px dashed rgba(201,162,75,.5);border-radius:24px;z-index:-1}
+.stats{display:flex;gap:40px;margin-top:45px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.7rem;color:var(--gold2)}
+.stat span{color:#9fb2c8;font-size:.82rem}
 
 /* SERVICIOS */
 .srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
-.srv{background:#fff;border-radius:16px;padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:.35s;position:relative;overflow:hidden;cursor:pointer}
+.srv{background:#fff;border-radius:16px;padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:.35s;position:relative;overflow:hidden}
 .srv:hover{transform:translateY(-8px);border-top-color:var(--gold)}
 .srv .ico{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:18px}
 .srv h3{margin-bottom:8px;font-size:1.1rem}
 .srv p{color:#68788a;font-size:.92rem}
-.srv .more{margin-top:14px;color:var(--gold);font-weight:700;font-size:.8rem}
 
 /* GALERÍA */
 #gallery{background:#fff}
@@ -122,6 +118,34 @@ header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-
 .ba-tag{position:absolute;top:14px;padding:5px 14px;border-radius:50px;font-size:.78rem;font-weight:700;z-index:2}
 .ba-tag.b{inset-inline-start:14px;background:rgba(13,33,55,.8);color:#fff}
 .ba-tag.a{inset-inline-end:14px;background:rgba(201,162,75,.9);color:var(--navy)}
+
+/* SECCIÓN IA */
+#ia{background:var(--cream)}
+#ia .wrap{text-align:center}
+.ia-badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid var(--gold);color:var(--gold);padding:7px 18px;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:16px}
+#ia .sec-sub{max-width:640px;margin:0 auto 40px}
+.ia-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:40px 26px;max-width:840px;margin:auto}
+.ia-boxes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.ia-box{border:2px dashed #cfd4dc;border-radius:14px;padding:34px 16px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transition:.3s;text-align:center}
+.ia-box.gold{border-color:var(--gold)}
+.ia-box:hover{background:rgba(201,162,75,.07);transform:translateY(-3px)}
+.ia-box .ia-ico{font-size:1.8rem}
+.ia-box b{color:var(--ink);font-size:.95rem}
+.ia-box small{color:#68788a;font-size:.78rem}
+.ia-preview{position:relative;display:inline-block;margin-top:22px}
+.ia-preview[hidden]{display:none}
+.ia-preview img{max-height:220px;border-radius:12px;border:3px solid var(--gold)}
+#iaRemove{position:absolute;top:-10px;inset-inline-end:-10px;width:32px;height:32px;border-radius:50%;border:none;background:var(--navy);color:#fff;cursor:pointer}
+.ia-cta{margin-top:26px;width:min(430px,100%);justify-content:center}
+.ia-cta:disabled{opacity:.6;transform:none;cursor:wait}
+#aiModal{position:fixed;inset:0;background:rgba(13,33,55,.93);z-index:220;display:none;align-items:center;justify-content:center;padding:20px}
+#aiModal.open{display:flex}
+.ai-modal-card{background:#fff;border-radius:18px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:26px;position:relative;text-align:center;animation:pop .3s}
+.ai-modal-card img{width:100%;border-radius:12px;border:3px solid var(--gold);margin-bottom:16px}
+.ai-modal-card h3{margin-bottom:8px}
+.ai-modal-card p{color:#68788a;font-size:.9rem;margin-bottom:14px}
+.ai-modal-card small{display:none;color:#98a2b3;font-size:.75rem;margin-bottom:16px}
+#aiClose{position:absolute;top:12px;inset-inline-end:12px;background:var(--navy);color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer}
 
 /* BANNER PROMO */
 #promo{padding:40px 20px}
@@ -153,17 +177,31 @@ header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-
 /* FOOTER */
 footer{background:var(--navy);color:#9fb2c8;text-align:center;padding:30px 20px;font-size:.85rem}
 footer b{color:var(--gold2)}
+.pwa-foot{background:none;border:1px solid rgba(201,162,75,.5);color:var(--gold2);border-radius:50px;padding:7px 16px;margin-top:12px;cursor:pointer;font-size:.8rem;font-weight:700;transition:.3s}
+.pwa-foot:hover{background:rgba(201,162,75,.15)}
 
-/* POP-UP (MODAL) SERVICIOS Y TRABAJOS */
-#modal{position:fixed;inset:0;background:rgba(13,33,55,.93);z-index:210;display:none;align-items:center;justify-content:center;padding:20px}
-#modal.open{display:flex}
-.modal-card{background:#fff;border-radius:18px;max-width:820px;width:100%;max-height:88vh;overflow:auto;position:relative;display:grid;grid-template-columns:1fr 1fr;animation:pop .3s}
-.modal-img img{width:100%;height:100%;object-fit:cover;min-height:280px}
-.modal-body{padding:30px 28px;display:flex;flex-direction:column}
-.modal-body h3{margin-bottom:14px;font-size:1.3rem}
-.modal-body .info{color:#68788a;font-size:.92rem;margin-bottom:22px;flex:1}
-#modalClose{position:absolute;top:12px;inset-inline-end:12px;z-index:2;background:var(--navy);color:#fff;border:none;width:38px;height:38px;border-radius:50%;font-size:1.2rem;cursor:pointer;transition:.3s}
-#modalClose:hover{background:var(--gold);color:var(--navy)}
+/* 📲 BANNER INSTALAR APP */
+#pwaBanner{position:fixed;inset-inline:0;bottom:0;z-index:230;display:flex;justify-content:center;padding:14px}
+#pwaBanner[hidden]{display:none}
+.pwa-card{background:#fff;border-radius:16px;box-shadow:0 15px 50px rgba(0,0,0,.35);padding:16px 18px;display:flex;align-items:center;gap:14px;max-width:560px;width:100%;position:relative}
+.pwa-card img{width:52px;height:52px;border-radius:12px;border:2px solid var(--gold);object-fit:cover;flex-shrink:0}
+.pwa-txt b{display:block;color:var(--navy);font-size:.95rem}
+.pwa-txt small{color:#68788a;font-size:.78rem}
+.pwa-actions{margin-inline-start:auto;display:flex;flex-direction:column;gap:6px;align-items:stretch;flex-shrink:0}
+.pwa-actions .btn{padding:9px 16px;font-size:.8rem;justify-content:center}
+.pwa-later{background:none;border:none;color:#68788a;font-size:.75rem;cursor:pointer}
+#pwaClose{position:absolute;top:8px;inset-inline-end:10px;background:none;border:none;color:#98a2b3;cursor:pointer;font-size:1rem}
+@media(max-width:560px){
+  .pwa-card{flex-wrap:wrap}
+  .pwa-actions{flex-direction:row;width:100%;justify-content:flex-end;align-items:center}
+}
+
+/* LIGHTBOX */
+#lightbox{position:fixed;inset:0;background:rgba(13,33,55,.92);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
+#lightbox.open{display:flex}
+#lightbox img{max-width:min(90vw,700px);max-height:75vh;border-radius:14px;border:3px solid var(--gold)}
+#lightbox p{color:var(--gold2);margin-top:14px;font-weight:700}
+#lbClose{position:absolute;top:18px;inset-inline-end:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
 
 /* CHAT */
 #chatBtn{position:fixed;bottom:22px;inset-inline-end:22px;z-index:90;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 8px 25px rgba(201,162,75,.5);transition:.3s}
@@ -212,8 +250,7 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
   .nav-quote svg{width:18px;height:18px}
 }
 @media(max-width:700px){
-  .modal-card{grid-template-columns:1fr}
-  .modal-img img{max-height:300px}
+  .ia-boxes{grid-template-columns:1fr}
 }
 .reveal{opacity:0;transform:translateY(30px);transition:.7s}
 .reveal.vis{opacity:1;transform:none}
@@ -269,7 +306,11 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
         <a class="btn btn-gold" href="#contact" data-i18n="cta_quote"></a>
         <a class="btn btn-out" style="border-color:var(--gold2);color:var(--gold2)" href="#gallery" data-i18n="cta_gallery"></a>
       </div>
-      <!-- ❌ Estadísticas eliminadas -->
+      <div class="stats">
+        <div class="stat"><b>+500</b><span data-i18n="stat1"></span></div>
+        <div class="stat"><b>15</b><span data-i18n="stat2"></span></div>
+        <div class="stat"><b>100%</b><span data-i18n="stat3"></span></div>
+      </div>
     </div>
     <div class="hero-img">
       <img src="https://i.postimg.cc/PqkvFKTb/Despues.webp" alt="Techo decorado en yeso" data-fallback="ph">
@@ -283,12 +324,12 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
     <div class="gold-line"></div>
     <p class="sec-sub" data-i18n="services_sub"></p>
     <div class="srv-grid">
-      <div class="srv reveal" data-key="s1" data-img="https://i.postimg.cc/PqkvFKTb/Despues.webp"><div class="ico">🏛️</div><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p><div class="more" data-i18n="more_info"></div></div>
-      <div class="srv reveal" data-key="s2" data-img="https://i.postimg.cc/Qd7WbvGQ/Trabajo-3.jpg"><div class="ico">✨</div><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p><div class="more" data-i18n="more_info"></div></div>
-      <div class="srv reveal" data-key="s3" data-img="https://i.postimg.cc/Qd7WbvGp/595786853-122154179588712565-4355610106860372951-n.jpg"><div class="ico">💡</div><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p><div class="more" data-i18n="more_info"></div></div>
-      <div class="srv reveal" data-key="s4" data-img="https://i.postimg.cc/g2h6D1F3/Trabajo-4.jpg"><div class="ico">🧱</div><h3 data-i18n="s4t"></h3><p data-i18n="s4d"></p><div class="more" data-i18n="more_info"></div></div>
-      <div class="srv reveal" data-key="s5" data-img="https://i.postimg.cc/FHSJZw5V/Trabajo-6.jpg"><div class="ico">🌸</div><h3 data-i18n="s5t"></h3><p data-i18n="s5d"></p><div class="more" data-i18n="more_info"></div></div>
-      <div class="srv reveal" data-key="s6" data-img="https://i.postimg.cc/tgHnmDp3/Trabajo-10.jpg"><div class="ico">🎨</div><h3 data-i18n="s6t"></h3><p data-i18n="s6d"></p><div class="more" data-i18n="more_info"></div></div>
+      <div class="srv reveal"><div class="ico">🏛️</div><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p></div>
+      <div class="srv reveal"><div class="ico">✨</div><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p></div>
+      <div class="srv reveal"><div class="ico">💡</div><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p></div>
+      <div class="srv reveal"><div class="ico">🧱</div><h3 data-i18n="s4t"></h3><p data-i18n="s4d"></p></div>
+      <div class="srv reveal"><div class="ico">🌸</div><h3 data-i18n="s5t"></h3><p data-i18n="s5d"></p></div>
+      <div class="srv reveal"><div class="ico">🎨</div><h3 data-i18n="s6t"></h3><p data-i18n="s6d"></p></div>
     </div>
   </div>
 </section>
@@ -328,6 +369,50 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
     </div>
   </div>
 </section>
+
+<!-- SECCIÓN IA -->
+<section id="ia">
+  <div class="wrap">
+    <span class="ia-badge" data-i18n="ai_badge"></span>
+    <h2 data-i18n="ai_title"></h2>
+    <p class="sec-sub" data-i18n="ai_sub"></p>
+    <div class="ia-card reveal">
+      <div class="ia-boxes">
+        <label class="ia-box gold">
+          <input type="file" id="iaCam" accept="image/*" capture="environment" hidden>
+          <div class="ia-ico">📷</div>
+          <b data-i18n="ai_cam"></b>
+          <small data-i18n="ai_cam_sub"></small>
+        </label>
+        <label class="ia-box">
+          <input type="file" id="iaFile" accept="image/jpeg,image/png,image/webp" hidden>
+          <div class="ia-ico">⬆️</div>
+          <b data-i18n="ai_up"></b>
+          <small data-i18n="ai_up_sub"></small>
+        </label>
+      </div>
+      <div class="ia-preview" id="iaPreview" hidden>
+        <img id="iaThumb" alt="">
+        <button id="iaRemove" type="button" aria-label="quitar">✕</button>
+      </div>
+      <div>
+        <button class="btn btn-gold ia-cta" id="iaGo"><span data-i18n="ai_cta"></span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POP-UP RESULTADO IA -->
+<div id="aiModal">
+  <div class="ai-modal-card">
+    <button id="aiClose" aria-label="close">✕</button>
+    <img id="aiImg" alt="">
+    <h3 id="aiTitle"></h3>
+    <p id="aiInfo"></p>
+    <small id="aiCode"></small>
+    <a id="aiWa" class="btn btn-wa" target="_blank" href="#">💬 <span data-i18n="btn_wa"></span></a>
+  </div>
+</div>
 
 <section id="promo">
   <div class="wrap">
@@ -370,18 +455,22 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
 
 <footer>
   <p><b>الجبس برو · Aljibs Pro</b> — <span data-i18n="footer_rights"></span> © 2026</p>
+  <div><button id="pwaFoot" class="pwa-foot">📲 <span data-i18n="pwa_foot"></span></button></div>
 </footer>
 
-<!-- POP-UP SERVICIOS Y TRABAJOS -->
-<div id="modal">
-  <div class="modal-card">
-    <button id="modalClose" aria-label="close">✕</button>
-    <div class="modal-img"><img id="modalImg" src="" alt=""></div>
-    <div class="modal-body">
-      <h3 id="modalTitle"></h3>
-      <div class="info" id="modalInfo"></div>
-      <a id="modalCta" class="btn btn-wa" target="_blank" href="#"></a>
+<!-- 📲 BANNER INSTALAR APP -->
+<div id="pwaBanner" hidden>
+  <div class="pwa-card">
+    <img src="https://i.postimg.cc/wBdRbFgf/logo.jpg" alt="Aljibs Pro">
+    <div class="pwa-txt">
+      <b data-i18n="pwa_title"></b>
+      <small id="pwaDesc"></small>
     </div>
+    <div class="pwa-actions">
+      <button id="pwaInstall" class="btn btn-gold"></button>
+      <button id="pwaLater" class="pwa-later"></button>
+    </div>
+    <button id="pwaClose" aria-label="close">✕</button>
   </div>
 </div>
 
@@ -400,53 +489,104 @@ html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
   </div>
 </div>
 
+<div id="lightbox">
+  <button id="lbClose" aria-label="close">✕</button>
+  <img id="lbImg" src="" alt="">
+  <p id="lbCap"></p>
+</div>
+
 <script>
 const CONFIG = {
   waCountry : "212",
   waNumber  : "632599085",
   phoneShow : "06 32 59 90 85"
 };
+/* 🔑 IA REAL — OpenRouter: modelos de pago primero y gratuitos (:free) de reserva */
+const AI = {
+  key   : "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",
+  models: [
+    "google/gemini-2.5-flash-image",
+    "google/gemini-2.5-flash-image-preview",
+    "google/gemini-2.5-flash-image-preview:free",
+    "google/gemini-2.5-flash-image:free"
+  ],
+  url   : "https://openrouter.ai/api/v1/chat/completions"
+};
+const AI_PROMPT = "Transform this room photo: add an elegant modern gypsum false ceiling with decorative moldings, cornices and indirect LED lighting. Photorealistic interior design render, keep the walls, windows and furniture of the room.";
 const FLAG = { es:"es", fr:"fr", en:"gb", ar:"ma" };
+
+/* 📲 MANIFIESTO PWA (generado en el propio archivo, sin archivos extra) */
+(function(){
+  const manifest = {
+    name: "Aljibs Pro — Decoración en Yeso",
+    short_name: "Aljibs Pro",
+    description: "Instalación profesional de decoración en yeso en Tánger.",
+    start_url: ".",
+    scope: ".",
+    display: "standalone",
+    orientation: "portrait",
+    theme_color: "#0d2137",
+    background_color: "#faf7f0",
+    icons: [
+      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "192x192", type: "image/jpeg", purpose: "any" },
+      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "512x512", type: "image/jpeg", purpose: "any" },
+      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "512x512", type: "image/jpeg", purpose: "maskable" }
+    ]
+  };
+  const l = document.createElement("link");
+  l.rel = "manifest";
+  l.href = URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" }));
+  document.head.appendChild(l);
+})();
 
 const T = {
 es:{
  _title:"Aljibs Pro | Decoración en Yeso en Tánger",
  brand_tag:"Decoración en yeso · Tánger", nav_home:"Inicio", nav_services:"Servicios", nav_gallery:"Galería", nav_about:"Nosotros", nav_contact:"Contacto",
  nav_quote:"Solicita tu Presupuesto",
- more_info:"＋ Ver detalles",
- modal_cta:"💬 Pedir presupuesto de este diseño",
  hero_badge:"✦ Expertos en yeso y escayola en Tánger",
  hero_title:"Decoración en yeso que <em>transforma</em> tu hogar",
  hero_sub:"Instalación profesional de techos, molduras, cornisas y diseños en yeso con iluminación LED. Acabados de lujo, limpios y al mejor precio.",
  cta_quote:"Presupuesto gratis", cta_gallery:"Ver trabajos",
- services_title:"Nuestros servicios", services_sub:"Todo tipo de decoración en yeso, con diseño e instalación incluidos. Haz clic en cada servicio para ver más.",
+ stat1:"Proyectos realizados", stat2:"Años de experiencia", stat3:"Clientes satisfechos",
+ services_title:"Nuestros servicios", services_sub:"Todo tipo de decoración en yeso, con diseño e instalación incluidos",
  s1t:"Techos y falsos techos", s1d:"Techos de yeso y pladur con diseños modernos de varios niveles.",
- s1i:"Incluye:<br>• Diseño y montaje de techos de varios niveles<br>• Perfilería certificada y acabado sin grietas<br>• Instalación de focos y luz LED",
  s2t:"Molduras y cornisas", s2d:"Molduras decorativas y cornisas elegantes para techos y paredes.",
- s2i:"Incluye:<br>• Molduras y cornisas de yeso de alta calidad<br>• Colocación limpia y precisa<br>• Estilos clásico y moderno",
  s3t:"Iluminación LED", s3d:"Luz LED indirecta integrada que crea ambientes únicos.",
- s3i:"Incluye:<br>• Luz LED indirecta y oculta<br>• Bajo consumo y larga duración<br>• Ambientes cálidos o de color",
  s4t:"Tabiques de pladur", s4d:"Separaciones y tabiques interiores con acabado perfecto.",
- s4i:"Incluye:<br>• Tabiques y separaciones de pladur<br>• Aislamiento acústico y térmico<br>• Acabado listo para pintar",
  s5t:"Rosetones y ornamentos", s5d:"Rosetones, arcos y detalles ornamentales clásicos o modernos.",
- s5i:"Incluye:<br>• Rosetones, arcos y detalles ornamentales<br>• Piezas de primera calidad<br>• Montaje sin dañar tu techo",
  s6t:"Diseños a medida", s6d:"Realizamos el diseño que sueñas, adaptado a tu espacio y gusto.",
- s6i:"Incluye:<br>• Diseño 100% personalizado<br>• Asesoramiento gratuito<br>• Realizamos tu idea o foto de referencia",
- gallery_title:"Galería de trabajos", gallery_sub:"Una muestra de nuestras realizaciones. Haz clic en cada trabajo para ver más.",
- g1c:"Techo con doble nivel y luz cálida", g1i:"Techo de doble nivel con luz cálida indirecta y araña. Ideal para salones y recibidores.",
- g2c:"Diseño moderno con LED azul", g2i:"Diseño moderno de medias lunas con LED azul. Perfecto para dormitorios y pasillos.",
- g3c:"Líneas LED y focos cuadrados", g3i:"Líneas LED geométricas con focos cuadrados. Estilo contemporáneo para salones amplios.",
- g4c:"Acabado elegante con molduras", g4i:"Acabado elegante con molduras y niveles rectos. Aporta amplitud y luz.",
- g5c:"Diseño contemporáneo minimalista", g5i:"Diseño minimalista con iluminación perimetral. Limpio y moderno.",
- g6c:"Iluminación LED oculta", g6i:"Luz LED oculta en cornisa perimetral. Ambiente suave y elegante.",
- g7c:"Combinación de niveles y texturas", g7i:"Combinación de niveles, texturas y luz indirecta. Diseño a medida.",
- g8c:"Estilo clásico con ornamentos", g8i:"Estilo clásico con ornamentos y molduras. Acabado de lujo.",
- g9c:"Espacio amplio con focos", g9i:"Techo amplio con focos repartidos y luz perimetral. Ideal para espacios grandes.",
- g10c:"Diseño personalizado único", g10i:"Diseño personalizado según el gusto del cliente. Cada proyecto es único.",
- g11c:"Acabado de lujo premium", g11i:"Acabado premium con detalles de lujo y luz cálida.",
- g12c:"Iluminación ambiental moderna", g12i:"Iluminación ambiental moderna con LED integrado. Perfecto para noches acogedoras.",
- g13c:"Proyecto de decoración integral", g13i:"Proyecto integral: diseño, montaje e iluminación llave en mano.",
+ gallery_title:"Galería de trabajos", gallery_sub:"Una muestra de nuestras realizaciones",
+ g1c:"Techo con doble nivel y luz cálida", g2c:"Diseño moderno con LED azul", g3c:"Líneas LED y focos cuadrados",
+ g4c:"Acabado elegante con molduras", g5c:"Diseño contemporáneo minimalista", g6c:"Iluminación LED oculta",
+ g7c:"Combinación de niveles y texturas", g8c:"Estilo clásico con ornamentos", g9c:"Espacio amplio con focos",
+ g10c:"Diseño personalizado único", g11c:"Acabado de lujo premium", g12c:"Iluminación ambiental moderna",
+ g13c:"Proyecto de decoración integral",
  ba_title:"Antes / Después", ba_sub:"Desliza y mira la transformación", before:"Antes", after:"Después",
+ ai_badge:"✨ IA",
+ ai_title:"Fotografía tu habitación y visualiza el yeso",
+ ai_sub:"Sube una foto de tu salón o dormitorio — nuestra IA propone en segundos diseños de yeso adaptados.",
+ ai_cam:"📷 Fotografía tu casa ahora", ai_cam_sub:"Abre la cámara y obtén el diseño al instante",
+ ai_up:"Elegir una foto", ai_up_sub:"JPG / PNG • menos de 8 MB",
+ ai_cta:"✨ Consigue tu primer diseño gratis",
+ ai_gen:"Generando diseño…",
+ ai_nophoto:"Primero haz o elige una foto 📷",
+ ai_toobig:"La foto pesa más de 8 MB, elige otra más ligera.",
+ ai_res_t:"Tu diseño con IA", ai_res_i:"¿Te gusta? Pídenos este diseño por WhatsApp y te damos presupuesto gratuito.",
+ ai_err_t:"Te lo preparamos gratis",
+ ai_err_i:"La IA no está disponible ahora mismo. Pulsa el botón y envíanos tu foto por WhatsApp: te mandamos el diseño sin coste.",
+ ec401:"Clave API inválida (401)",
+ ec402:"Sin saldo en OpenRouter (402) — recarga créditos",
+ ec404:"Modelo no disponible (404)",
+ ec429:"Límite de peticiones alcanzado (429)",
+ ecNet:"Sin conexión o error de red",
+ ecOther:"Error desconocido",
+ pwa_title:"📲 Instala Aljibs Pro",
+ pwa_and:"Tenla en tu pantalla de inicio como una app: rápida y a pantalla completa.",
+ pwa_and_m:"En Chrome: menú ⋮ → «Instalar app» o «Añadir a pantalla de inicio».",
+ pwa_ios:"En iPhone: pulsa Compartir (cuadrado con flecha) → «Añadir a pantalla de inicio».",
+ pwa_install:"Instalar", pwa_later:"Ahora no",
+ pwa_foot:"Instalar como app",
  about_title:"¿Por qué elegirnos?",
  about_p1:"En <strong>Aljibs Pro</strong> somos especialistas en todo tipo de decoración en yeso: techos, molduras, cornisas, rosetones e iluminación LED integrada.",
  about_p2:"Trabajamos con materiales de primera calidad, respetamos los plazos y dejamos tu casa limpia al terminar. Presupuesto gratuito y sin compromiso.",
@@ -464,40 +604,49 @@ fr:{
  _title:"Aljibs Pro | Décoration en plâtre à Tanger",
  brand_tag:"Décoration en plâtre · Tanger", nav_home:"Accueil", nav_services:"Services", nav_gallery:"Galerie", nav_about:"À propos", nav_contact:"Contact",
  nav_quote:"Demander un devis",
- more_info:"＋ Voir détails",
- modal_cta:"💬 Demander un devis pour ce design",
  hero_badge:"✦ Experts en plâtre et staff à Tanger",
  hero_title:"Une décoration en plâtre qui <em>transforme</em> votre maison",
  hero_sub:"Installation professionnelle de plafonds, moulures, corniches et designs en plâtre avec éclairage LED. Finitions de luxe, chantier propre, au meilleur prix.",
  cta_quote:"Devis gratuit", cta_gallery:"Voir nos réalisations",
- services_title:"Nos services", services_sub:"Tous types de décoration en plâtre, conception et pose incluses. Cliquez sur chaque service pour en savoir plus.",
+ stat1:"Projets réalisés", stat2:"Années d'expérience", stat3:"Clients satisfaits",
+ services_title:"Nos services", services_sub:"Tous types de décoration en plâtre, conception et pose incluses",
  s1t:"Plafonds & faux plafonds", s1d:"Plafonds en plâtre et placo aux designs modernes multi-niveaux.",
- s1i:"Comprend :<br>• Conception et pose de plafonds multi-niveaux<br>• Structures certifiées, finition sans fissures<br>• Installation de spots et LED",
  s2t:"Moulures & corniches", s2d:"Moulures décoratives et corniches élégantes pour plafonds et murs.",
- s2i:"Comprend :<br>• Moulures et corniches en plâtre de haute qualité<br>• Pose propre et précise<br>• Styles classique et moderne",
  s3t:"Éclairage LED", s3d:"Lumière LED indirecte intégrée pour des ambiances uniques.",
- s3i:"Comprend :<br>• Lumière LED indirecte et dissimulée<br>• Faible consommation, longue durée<br>• Ambiances chaudes ou colorées",
  s4t:"Cloisons en placo", s4d:"Cloisons intérieures aux finitions parfaites.",
- s4i:"Comprend :<br>• Cloisons et séparations en placo<br>• Isolation phonique et thermique<br>• Finition prête à peindre",
  s5t:"Rosaces & ornements", s5d:"Rosaces, arcs et détails ornementaux classiques ou modernes.",
- s5i:"Comprend :<br>• Rosaces, arcs et détails ornementaux<br>• Pièces de première qualité<br>• Pose sans abîmer votre plafond",
  s6t:"Designs sur mesure", s6d:"Nous réalisons le design de vos rêves, adapté à votre espace.",
- s6i:"Comprend :<br>• Design 100% personnalisé<br>• Conseils gratuits<br>• Réalisation de votre idée ou photo de référence",
- gallery_title:"Galerie", gallery_sub:"Un aperçu de nos réalisations. Cliquez sur chaque travail pour en savoir plus.",
- g1c:"Plafond deux niveaux, lumière chaude", g1i:"Plafond deux niveaux avec lumière chaude indirecte et lustre. Idéal pour salons et entrées.",
- g2c:"Design moderne à LED bleue", g2i:"Design moderne en demi-lunes avec LED bleue. Parfait pour chambres et couloirs.",
- g3c:"Lignes LED et spots carrés", g3i:"Lignes LED géométriques avec spots carrés. Style contemporain pour grands salons.",
- g4c:"Finition élégante avec moulures", g4i:"Finition élégante avec moulures et niveaux droits. Apporte amplitude et lumière.",
- g5c:"Design contemporain minimaliste", g5i:"Design minimaliste avec éclairage périphérique. Propre et moderne.",
- g6c:"Éclairage LED dissimulé", g6i:"Lumière LED dissimulée dans la corniche. Ambiance douce et élégante.",
- g7c:"Combinaison de niveaux et textures", g7i:"Combinaison de niveaux, textures et lumière indirecte. Design sur mesure.",
- g8c:"Style classique avec ornements", g8i:"Style classique avec ornements et moulures. Finition de luxe.",
- g9c:"Grand espace avec spots", g9i:"Grand plafond avec spots répartis et lumière périphérique. Idéal pour grands espaces.",
- g10c:"Design personnalisé unique", g10i:"Design personnalisé selon le goût du client. Chaque projet est unique.",
- g11c:"Finition premium de luxe", g11i:"Finition premium avec détails de luxe et lumière chaude.",
- g12c:"Éclairage d'ambiance moderne", g12i:"Éclairage d'ambiance moderne avec LED intégrée. Parfait pour des soirées cosy.",
- g13c:"Projet de décoration intégrale", g13i:"Projet intégral : design, pose et éclairage clé en main.",
+ gallery_title:"Galerie", gallery_sub:"Un aperçu de nos réalisations",
+ g1c:"Plafond deux niveaux, lumière chaude", g2c:"Design moderne à LED bleue", g3c:"Lignes LED et spots carrés",
+ g4c:"Finition élégante avec moulures", g5c:"Design contemporain minimaliste", g6c:"Éclairage LED dissimulé",
+ g7c:"Combinaison de niveaux et textures", g8c:"Style classique avec ornements", g9c:"Grand espace avec spots",
+ g10c:"Design personnalisé unique", g11c:"Finition premium de luxe", g12c:"Éclairage d'ambiance moderne",
+ g13c:"Projet de décoration intégrale",
  ba_title:"Avant / Après", ba_sub:"Faites glisser pour voir la transformation", before:"Avant", after:"Après",
+ ai_badge:"✨ IA",
+ ai_title:"Photographiez votre pièce et visualisez le plâtre",
+ ai_sub:"Téléchargez une photo de votre salon ou chambre — notre IA propose en quelques secondes des designs en plâtre adaptés.",
+ ai_cam:"📷 Photographiez votre maison maintenant", ai_cam_sub:"Ouvrez la caméra et obtenez le design instantanément",
+ ai_up:"Choisir une photo", ai_up_sub:"JPG / PNG • moins de 8 MB",
+ ai_cta:"✨ Obtenez votre premier design gratuit",
+ ai_gen:"Génération du design…",
+ ai_nophoto:"Prenez ou choisissez d'abord une photo 📷",
+ ai_toobig:"La photo dépasse 8 MB, choisissez-en une plus légère.",
+ ai_res_t:"Votre design par IA", ai_res_i:"Ça vous plaît ? Demandez ce design sur WhatsApp, devis gratuit.",
+ ai_err_t:"Nous le préparons pour vous gratuitement",
+ ai_err_i:"L'IA est indisponible pour le moment. Appuyez sur le bouton et envoyez-nous votre photo sur WhatsApp : nous vous envoyons le design sans frais.",
+ ec401:"Clé API invalide (401)",
+ ec402:"Solde insuffisant sur OpenRouter (402) — rechargez des crédits",
+ ec404:"Modèle indisponible (404)",
+ ec429:"Limite de requêtes atteinte (429)",
+ ecNet:"Pas de connexion ou erreur réseau",
+ ecOther:"Erreur inconnue",
+ pwa_title:"📲 Installez Aljibs Pro",
+ pwa_and:"Sur votre écran d'accueil comme une app : rapide et plein écran.",
+ pwa_and_m:"Sur Chrome : menu ⋮ → « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
+ pwa_ios:"Sur iPhone : touchez Partager (carré avec flèche) → « Ajouter à l'écran d'accueil ».",
+ pwa_install:"Installer", pwa_later:"Plus tard",
+ pwa_foot:"Installer comme app",
  about_title:"Pourquoi nous choisir ?",
  about_p1:"Chez <strong>Aljibs Pro</strong>, nous sommes spécialistes de toute décoration en plâtre : plafonds, moulures, corniches, rosaces et éclairage LED intégré.",
  about_p2:"Matériaux de première qualité, respect des délais et chantier laissé propre. Devis gratuit et sans engagement.",
@@ -515,40 +664,49 @@ en:{
  _title:"Aljibs Pro | Gypsum Decoration in Tangier",
  brand_tag:"Gypsum decoration · Tangier", nav_home:"Home", nav_services:"Services", nav_gallery:"Gallery", nav_about:"About", nav_contact:"Contact",
  nav_quote:"Request a Quote",
- more_info:"＋ View details",
- modal_cta:"💬 Request a quote for this design",
  hero_badge:"✦ Gypsum & plaster experts in Tangier",
  hero_title:"Gypsum decoration that <em>transforms</em> your home",
  hero_sub:"Professional installation of ceilings, moldings, cornices and gypsum designs with LED lighting. Luxury finishes, clean work, best price.",
  cta_quote:"Free quote", cta_gallery:"View our work",
- services_title:"Our services", services_sub:"All types of gypsum decoration, design and installation included. Click each service to see more.",
+ stat1:"Completed projects", stat2:"Years of experience", stat3:"Happy clients",
+ services_title:"Our services", services_sub:"All types of gypsum decoration, design and installation included",
  s1t:"Ceilings & false ceilings", s1d:"Gypsum and plasterboard ceilings with modern multi-level designs.",
- s1i:"Includes:<br>• Design and installation of multi-level ceilings<br>• Certified framing, crack-free finish<br>• Spotlights and LED installation",
  s2t:"Moldings & cornices", s2d:"Decorative moldings and elegant cornices for ceilings and walls.",
- s2i:"Includes:<br>• High-quality gypsum moldings & cornices<br>• Clean, precise fitting<br>• Classic and modern styles",
  s3t:"LED lighting", s3d:"Integrated indirect LED light that creates unique atmospheres.",
- s3i:"Includes:<br>• Indirect, concealed LED light<br>• Low consumption, long life<br>• Warm or colored ambiances",
  s4t:"Plasterboard partitions", s4d:"Interior partitions with a perfect finish.",
- s4i:"Includes:<br>• Plasterboard partitions and separations<br>• Sound and thermal insulation<br>• Finish ready to paint",
  s5t:"Medallions & ornaments", s5d:"Ceiling medallions, arches and ornamental details, classic or modern.",
- s5i:"Includes:<br>• Medallions, arches and ornamental details<br>• Top-quality pieces<br>• Installation without damaging your ceiling",
  s6t:"Custom designs", s6d:"We build the design you dream of, adapted to your space and taste.",
- s6i:"Includes:<br>• 100% personalized design<br>• Free advice<br>• We build your idea or reference photo",
- gallery_title:"Work gallery", gallery_sub:"A sample of our achievements. Click each work to see more.",
- g1c:"Two-level ceiling, warm light", g1i:"Two-level ceiling with indirect warm light and chandelier. Ideal for living rooms and entrances.",
- g2c:"Modern design with blue LED", g2i:"Modern half-moon design with blue LED. Perfect for bedrooms and hallways.",
- g3c:"LED lines and square spots", g3i:"Geometric LED lines with square spots. Contemporary style for large living rooms.",
- g4c:"Elegant finish with moldings", g4i:"Elegant finish with moldings and straight levels. Adds space and light.",
- g5c:"Contemporary minimalist design", g5i:"Minimalist design with perimeter lighting. Clean and modern.",
- g6c:"Concealed LED lighting", g6i:"Concealed LED light in the perimeter cornice. Soft, elegant ambiance.",
- g7c:"Combination of levels and textures", g7i:"Combination of levels, textures and indirect light. Custom design.",
- g8c:"Classic style with ornaments", g8i:"Classic style with ornaments and moldings. Luxury finish.",
- g9c:"Spacious area with spotlights", g9i:"Spacious ceiling with distributed spots and perimeter light. Ideal for large spaces.",
- g10c:"Unique personalized design", g10i:"Personalized design based on the client's taste. Every project is unique.",
- g11c:"Premium luxury finish", g11i:"Premium finish with luxury details and warm light.",
- g12c:"Modern ambient lighting", g12i:"Modern ambient lighting with integrated LED. Perfect for cozy evenings.",
- g13c:"Complete decoration project", g13i:"Complete project: design, installation and lighting, turnkey.",
+ gallery_title:"Work gallery", gallery_sub:"A sample of our achievements",
+ g1c:"Two-level ceiling, warm light", g2c:"Modern design with blue LED", g3c:"LED lines and square spots",
+ g4c:"Elegant finish with moldings", g5c:"Contemporary minimalist design", g6c:"Concealed LED lighting",
+ g7c:"Combination of levels and textures", g8c:"Classic style with ornaments", g9c:"Spacious area with spotlights",
+ g10c:"Unique personalized design", g11c:"Premium luxury finish", g12c:"Modern ambient lighting",
+ g13c:"Complete decoration project",
  ba_title:"Before / After", ba_sub:"Slide to see the transformation", before:"Before", after:"After",
+ ai_badge:"✨ AI",
+ ai_title:"Photograph your room and visualize the gypsum",
+ ai_sub:"Upload a photo of your living room or bedroom — our AI suggests adapted gypsum designs in seconds.",
+ ai_cam:"📷 Photograph your home now", ai_cam_sub:"Open the camera and get the design instantly",
+ ai_up:"Choose a photo", ai_up_sub:"JPG / PNG • under 8 MB",
+ ai_cta:"✨ Get your first design free",
+ ai_gen:"Generating design…",
+ ai_nophoto:"First take or choose a photo 📷",
+ ai_toobig:"The photo is over 8 MB, choose a lighter one.",
+ ai_res_t:"Your AI design", ai_res_i:"Like it? Request this design on WhatsApp — free quote.",
+ ai_err_t:"We'll prepare it for you free",
+ ai_err_i:"The AI is unavailable right now. Tap the button and send us your photo on WhatsApp: we'll send you the design free of charge.",
+ ec401:"Invalid API key (401)",
+ ec402:"No credit on OpenRouter (402) — top up credits",
+ ec404:"Model unavailable (404)",
+ ec429:"Rate limit reached (429)",
+ ecNet:"No connection or network error",
+ ecOther:"Unknown error",
+ pwa_title:"📲 Install Aljibs Pro",
+ pwa_and:"On your home screen like an app: fast and fullscreen.",
+ pwa_and_m:"In Chrome: ⋮ menu → «Install app» or «Add to Home screen».",
+ pwa_ios:"On iPhone: tap Share (square with arrow) → «Add to Home Screen».",
+ pwa_install:"Install", pwa_later:"Not now",
+ pwa_foot:"Install as app",
  about_title:"Why choose us?",
  about_p1:"At <strong>Aljibs Pro</strong> we specialise in all types of gypsum decoration: ceilings, moldings, cornices, medallions and integrated LED lighting.",
  about_p2:"We use top-quality materials, respect deadlines and leave your home clean when we finish. Free quote with no obligation.",
@@ -566,40 +724,49 @@ ar:{
  _title:"الجبس برو | ديكورات الجبس في طنجة",
  brand_tag:"ديكور الجبس · طنجة", nav_home:"الرئيسية", nav_services:"خدماتنا", nav_gallery:"معرض الأعمال", nav_about:"لماذا نحن", nav_contact:"اتصل بنا",
  nav_quote:"اطلب عرض سعر",
- more_info:"＋ عرض التفاصيل",
- modal_cta:"💬 اطلب عرض سعر لهذا التصميم",
  hero_badge:"✦ خبراء في الجبس والديكور في طنجة",
  hero_title:"ديكورات جبس <em>تُحوِّل</em> منزلك إلى تحفة فنية",
  hero_sub:"تركيب احترافي للأسقف المعلقة، القوالب، الكرانيش والزخارف الجبسية مع إضاءة LED. تشطيبات فاخرة، عمل نظيف وأسعار منافسة.",
  cta_quote:"عرض سعر مجاني", cta_gallery:"شاهد أعمالنا",
- services_title:"خدماتنا", services_sub:"جميع أنواع ديكورات الجبس، تصميماً وتركيباً. اضغط على كل خدمة لمعرفة المزيد.",
+ stat1:"مشروع منجز", stat2:"سنة خبرة", stat3:"عميل راضٍ",
+ services_title:"خدماتنا", services_sub:"جميع أنواع ديكورات الجبس، تصميماً وتركيباً",
  s1t:"أسقف معلقة", s1d:"أسقف جبس وبلاكو بتصاميم عصرية متعددة المستويات.",
- s1i:"يشمل:<br>• تصميم وتركيب أسقف متعددة المستويات<br>• هياكل مصادق عليها وتشطيب بدون تشققات<br>• تركيب السبوتات وإضاءة LED",
  s2t:"قوالب وكرانيش", s2d:"قوالب ديكورية وكرانيش أنيقة للأسقف والجدران.",
- s2i:"يشمل:<br>• قوالب وكرانيش جبس عالية الجودة<br>• تركيب نظيف ودقيق<br>• أنماط كلاسيكية وعصرية",
  s3t:"إضاءة LED", s3d:"إضاءة مخفية تضفي أجواءً ساحرة على منزلك.",
- s3i:"يشمل:<br>• إضاءة LED غير مباشرة ومخفية<br>• استهلاك منخفض وعمر طويل<br>• أجواء دافئة أو ملونة",
  s4t:"فواصل بلاكو", s4d:"فواصل وتقسيمات داخلية بتشطيب مثالي.",
- s4i:"يشمل:<br>• فواصل وتقسيمات بلاكو<br>• عزل صوتي وحراري<br>• تشطيب جاهز للدهن",
  s5t:"وردات وزخارف", s5d:"وردات سقف وأقواس ونقوش كلاسيكية وعصرية.",
- s5i:"يشمل:<br>• وردات وأقواس ونقوش زخرفية<br>• قطع من الدرجة الأولى<br>• تركيب دون إتلاف سقفك",
  s6t:"تصاميم حسب الطلب", s6d:"ننفذ التصميم الذي تحلم به بما يناسب ذوقك ومساحتك.",
- s6i:"يشمل:<br>• تصميم شخصي 100%<br>• استشارة مجانية<br>• تنفيذ فكرتك أو صورتك المرجعية",
- gallery_title:"معرض الأعمال", gallery_sub:"نماذج من إنجازاتنا. اضغط على كل عمل لمعرفة المزيد.",
- g1c:"سقف بمستويين وإضاءة دافئة", g1i:"سقف بمستويين مع إضاءة دافئة غير مباشرة وثريا. مثالي للصالونات والمداخل.",
- g2c:"تصميم عصري بإضاءة زرقاء", g2i:"تصميم عصري بأهلة مع إضاءة زرقاء. مثالي لغرف النوم والممرات.",
- g3c:"خطوط LED وسبوتات مربعة", g3i:"خطوط LED هندسية مع سبوتات مربعة. أسلوب معاصر للصالونات الواسعة.",
- g4c:"تشطيب أنيق مع قوالب", g4i:"تشطيب أنيق بقوالب ومستويات مستقيمة. يضفي اتساعاً وضوءاً.",
- g5c:"تصميم معاصر بسيط", g5i:"تصميم بسيط مع إضاءة محيطية. نظيف وعصري.",
- g6c:"إضاءة LED مخفية", g6i:"إضاءة LED مخفية في الكرنيش المحيط. أجواء ناعمة وأنيقة.",
- g7c:"مزيج من المستويات والملمس", g7i:"مزيج من المستويات والملمس والإضاءة غير المباشرة. تصميم حسب الطلب.",
- g8c:"أسلوب كلاسيكي بزخارف", g8i:"أسلوب كلاسيكي بزخارف وقوالب. تشطيب فاخر.",
- g9c:"مساحة واسعة مع سبوتات", g9i:"سقف واسع مع سبوتات موزعة وإضاءة محيطية. مثالي للمساحات الكبيرة.",
- g10c:"تصميم مخصص فريد", g10i:"تصميم مخصص حسب ذوق العميل. كل مشروع فريد.",
- g11c:"تشطيب فاخر مميز", g11i:"تشطيب مميز بتفاصيل فاخرة وإضاءة دافئة.",
- g12c:"إضاءة محيطية عصرية", g12i:"إضاءة محيطية عصرية مع LED مدمج. مثالي لأمسيات دافئة.",
- g13c:"مشروع ديكور متكامل", g13i:"مشروع متكامل: تصميم وتركيب وإضاءة تسليم مفتاح.",
+ gallery_title:"معرض الأعمال", gallery_sub:"نماذج من إنجازاتنا",
+ g1c:"سقف بمستويين وإضاءة دافئة", g2c:"تصميم عصري بإضاءة زرقاء", g3c:"خطوط LED وسبوتات مربعة",
+ g4c:"تشطيب أنيق مع قوالب", g5c:"تصميم معاصر بسيط", g6c:"إضاءة LED مخفية",
+ g7c:"مزيج من المستويات والملمس", g8c:"أسلوب كلاسيكي بزخارف", g9c:"مساحة واسعة مع سبوتات",
+ g10c:"تصميم مخصص فريد", g11c:"تشطيب فاخر مميز", g12c:"إضاءة محيطية عصرية",
+ g13c:"مشروع ديكور متكامل",
  ba_title:"قبل / بعد", ba_sub:"حرّك المؤشر وشاهد الفرق", before:"قبل", after:"بعد",
+ ai_badge:"✨ ذكاء اصطناعي",
+ ai_title:"صوّر غرفتك وشاهد تصميم الجبس",
+ ai_sub:"حمّل صورة لصالونك أو غرفتك — يقترح ذكاؤنا الاصطناعي تصاميم جبس مناسبة في ثوانٍ.",
+ ai_cam:"📷 صوّر منزلك الآن", ai_cam_sub:"افتح الكاميرا واحصل على التصميم فوراً",
+ ai_up:"اختر صورة", ai_up_sub:"JPG / PNG • أقل من 8 م.ب",
+ ai_cta:"✨ احصل على تصميمك الأول مجاناً",
+ ai_gen:"جارٍ إنشاء التصميم…",
+ ai_nophoto:"التقط أو اختر صورة أولاً 📷",
+ ai_toobig:"حجم الصورة أكبر من 8 م.ب، اختر صورة أخف.",
+ ai_res_t:"تصميمك بالذكاء الاصطناعي", ai_res_i:"أعجبك؟ اطلب هذا التصميم عبر واتساب — عرض سعر مجاني.",
+ ai_err_t:"سنجهزه لك مجاناً",
+ ai_err_i:"الذكاء الاصطناعي غير متوفر حالياً. اضغط الزر وأرسل لنا صورتك على واتساب: نرسل لك التصميم مجاناً.",
+ ec401:"مفتاح API غير صالح (401)",
+ ec402:"لا يوجد رصيد في OpenRouter (402) — اشحن الرصيد",
+ ec404:"النموذج غير متوفر (404)",
+ ec429:"تم بلوغ حد الطلبات (429)",
+ ecNet:"لا يوجد اتصال أو خطأ في الشبكة",
+ ecOther:"خطأ غير معروف",
+ pwa_title:"📲 ثبّت الجبس برو",
+ pwa_and:"على شاشتك الرئيسية كتطبيق: سريع وبملء الشاشة.",
+ pwa_and_m:"في كروم: قائمة ⋮ → «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».",
+ pwa_ios:"على آيفون: اضغط مشاركة (مربع بسهم) → «إضافة إلى الشاشة الرئيسية».",
+ pwa_install:"تثبيت", pwa_later:"لاحقاً",
+ pwa_foot:"ثبّت كتطبيق",
  about_title:"لماذا تختارنا؟",
  about_p1:"في <strong>الجبس برو</strong> نحن متخصصون في جميع ديكورات الجبس: أسقف، قوالب، كرانيش، وردات وإضاءة LED مدمجة.",
  about_p2:"نشتغل بمواد عالية الجودة، نحترم المواعيد ونترك منزلك نظيفاً. عرض السعر مجاني وبدون التزام.",
@@ -679,20 +846,60 @@ const FALLBACK = {
 };
 
 let lang = localStorage.getItem("lang") || "es";
-let modalData = null;
+let aiMode = null;
+let aiLastCode = null;
 
-function fillModal(){
-  if(!modalData) return;
-  modalTitle.innerHTML = T[lang][modalData.tKey] || "";
-  modalInfo.innerHTML  = T[lang][modalData.iKey] || "";
-  modalCta.innerHTML   = T[lang].modal_cta;
+function fillAiTexts(){
+  aiTitle.textContent = T[lang][aiMode === "err" ? "ai_err_t" : "ai_res_t"];
+  aiInfo.textContent  = T[lang][aiMode === "err" ? "ai_err_i" : "ai_res_i"];
+  if(aiMode === "err" && aiLastCode){
+    const map = {401:"ec401",402:"ec402",404:"ec404",429:"ec429",net:"ecNet"};
+    aiCode.textContent = "🔧 " + (T[lang][map[aiLastCode]] || (T[lang].ecOther + " (" + aiLastCode + ")"));
+    aiCode.style.display = "block";
+  }else{
+    aiCode.textContent = "";
+    aiCode.style.display = "none";
+  }
 }
-function openModal(img, tKey, iKey){
-  modalData = { img, tKey, iKey };
-  modalImg.src = img;
-  fillModal();
-  modal.classList.add("open");
+function showAiModal(src, mode){
+  aiMode = mode;
+  aiImg.src = src;
+  fillAiTexts();
+  aiModal.classList.add("open");
 }
+
+/* 📲 LÓGICA PWA */
+let deferredPrompt = null;
+let pwaMode = null;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
+const isStandalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone;
+
+function pwaShow(mode){
+  if(isStandalone) return;
+  pwaMode = mode;
+  pwaDesc.textContent = T[lang][mode === "ios" ? "pwa_ios" : (deferredPrompt ? "pwa_and" : "pwa_and_m")];
+  pwaInstall.textContent = T[lang].pwa_install;
+  pwaLater.textContent = T[lang].pwa_later;
+  pwaInstall.style.display = (mode === "android" && deferredPrompt) ? "inline-flex" : "none";
+  pwaBanner.hidden = false;
+}
+window.addEventListener("beforeinstallprompt", e=>{
+  e.preventDefault();
+  deferredPrompt = e;
+  pwaShow("android");
+});
+window.addEventListener("appinstalled", ()=>{ pwaBanner.hidden = true; });
+pwaInstall.onclick = async ()=>{
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  pwaBanner.hidden = true;
+};
+pwaLater.onclick = ()=>{ pwaBanner.hidden = true; };
+pwaClose.onclick = ()=>{ pwaBanner.hidden = true; };
+pwaFoot.onclick = ()=>{ pwaShow(isIOS ? "ios" : "android"); };
+if(isIOS && !isStandalone){ setTimeout(()=>pwaShow("ios"), 2500); }
 
 function applyLang(l){
   lang = l; localStorage.setItem("lang", l);
@@ -709,7 +916,8 @@ function applyLang(l){
   document.getElementById("langFlag").src = "https://flagcdn.com/24x18/" + FLAG[l] + ".png";
   renderChips();
   if(chatMsgs.children.length === 1) chatMsgs.firstChild.innerHTML = T[l].chat_welcome;
-  if(modal.classList.contains("open")) fillModal();
+  if(aiModal.classList.contains("open")) fillAiTexts();
+  if(!pwaBanner.hidden && pwaMode) pwaShow(pwaMode);
 }
 
 document.getElementById("langTrigger").addEventListener("click", e=>{
@@ -729,23 +937,112 @@ document.getElementById("waBtn").href   = waLink;
 document.getElementById("promoLink").href = waLink;
 document.getElementById("callBtn").href = "tel:+" + CONFIG.waCountry + CONFIG.waNumber;
 document.getElementById("phoneShow").textContent = CONFIG.phoneShow;
-document.getElementById("modalCta").href = waLink;
+document.getElementById("aiWa").href = waLink;
 
 burger.onclick = ()=> navLinks.classList.toggle("open");
 navLinks.addEventListener("click", ()=> navLinks.classList.remove("open"));
 
 baRange.addEventListener("input", ()=> ba.style.setProperty("--pos", baRange.value + "%"));
 
-/* Pop-ups de servicios */
-document.querySelectorAll(".srv").forEach(s=>{
-  s.addEventListener("click", ()=> openModal(s.dataset.img, s.dataset.key+"t", s.dataset.key+"i"));
-});
-/* Pop-ups de trabajos */
 document.querySelectorAll(".gal").forEach(g=>{
-  g.addEventListener("click", ()=> openModal(g.querySelector("img").src, g.dataset.cap, g.dataset.cap.replace(/c$/,"i")));
+  g.addEventListener("click", ()=>{
+    lbImg.src = g.querySelector("img").src;
+    lbCap.textContent = T[lang][g.dataset.cap];
+    lightbox.classList.add("open");
+  });
 });
-modalClose.onclick = ()=> modal.classList.remove("open");
-modal.addEventListener("click", e=>{ if(e.target===modal) modal.classList.remove("open"); });
+lbClose.onclick = ()=> lightbox.classList.remove("open");
+lightbox.addEventListener("click", e=>{ if(e.target===lightbox) lightbox.classList.remove("open"); });
+
+/* LÓGICA IA con diagnóstico de errores */
+let iaPhoto = null;
+function iaSet(file){
+  if(!file) return;
+  if(file.size > 8*1024*1024){ alert(T[lang].ai_toobig); return; }
+  iaPhoto = file;
+  const r = new FileReader();
+  r.onload = ()=>{ iaThumb.src = r.result; iaPreview.hidden = false; };
+  r.readAsDataURL(file);
+}
+iaCam.addEventListener("change", e=> iaSet(e.target.files[0]));
+iaFile.addEventListener("change", e=> iaSet(e.target.files[0]));
+iaRemove.onclick = ()=>{ iaPhoto = null; iaPreview.hidden = true; iaThumb.src = ""; iaCam.value = ""; iaFile.value = ""; };
+
+function downscale(file, max){
+  return new Promise(res=>{
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = ()=>{
+      const s = Math.min(1, max/Math.max(img.width, img.height));
+      const c = document.createElement("canvas");
+      c.width = Math.round(img.width*s); c.height = Math.round(img.height*s);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      res(c.toDataURL("image/jpeg", 0.9));
+    };
+    img.src = url;
+  });
+}
+function extractImage(j){
+  const content = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
+  if(Array.isArray(content)){
+    for(const p of content){
+      if((p.type === "image_url" || p.type === "image") && p.image_url && p.image_url.url) return p.image_url.url;
+    }
+  }
+  const s = JSON.stringify(j);
+  const m = s.match(/data:image\/[a-zA-Z+]+;base64,[A-Za-z0-9+/=]+/) || s.match(/https:\/\/[^"'\s]+?\.(png|jpe?g|webp)/);
+  return m ? m[0] : null;
+}
+iaGo.onclick = async ()=>{
+  if(!iaPhoto){ alert(T[lang].ai_nophoto); return; }
+  const old = iaGo.innerHTML;
+  iaGo.disabled = true; iaGo.innerHTML = T[lang].ai_gen;
+  aiLastCode = null;
+  try{
+    const dataUrl = await downscale(iaPhoto, 1024);
+    let img = null;
+    for(const model of AI.models){
+      try{
+        const res = await fetch(AI.url, {
+          method:"POST",
+          headers:{
+            "Authorization":"Bearer " + AI.key,
+            "Content-Type":"application/json",
+            "X-Title":"Aljibs Pro"
+          },
+          body: JSON.stringify({
+            model: model,
+            messages:[{
+              role:"user",
+              content:[
+                { type:"text",  text: AI_PROMPT },
+                { type:"image_url", image_url:{ url: dataUrl } }
+              ]
+            }]
+          })
+        });
+        if(!res.ok){
+          if(res.status !== 404 || aiLastCode === null) aiLastCode = res.status;
+          continue;
+        }
+        const j = await res.json();
+        img = extractImage(j);
+        if(img) break;
+        aiLastCode = "empty";
+      }catch(e){ aiLastCode = "net"; continue; }
+    }
+    if(!img) throw new Error(String(aiLastCode || "empty"));
+    showAiModal(img, "ok");
+  }catch(e){
+    aiLastCode = aiLastCode || "net";
+    showAiModal(iaThumb.src, "err");
+  }finally{
+    iaGo.disabled = false; iaGo.innerHTML = old;
+  }
+};
+aiClose.onclick = ()=> aiModal.classList.remove("open");
+aiModal.addEventListener("click", e=>{ if(e.target===aiModal) aiModal.classList.remove("open"); });
 
 const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("vis"); io.unobserve(e.target);} }),{threshold:.15});
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
