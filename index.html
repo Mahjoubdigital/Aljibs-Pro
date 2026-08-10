@@ -2,1088 +2,906 @@
 <html lang="es" dir="ltr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Aljibs Pro - Instalación profesional de decoración en yeso en Tánger: techos, molduras, cornisas, rosetones y luz LED.">
-<title>Aljibs Pro | Decoración en Yeso</title>
-<!-- 📲 PWA: se instala como app sin tiendas -->
-<meta name="theme-color" content="#0d2137">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Arij Color | Pintores en Casablanca</title>
+<!-- ===== PWA: meta tags app ===== -->
+<meta name="theme-color" content="#14336e">
+<meta name="application-name" content="Arij Color">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Aljibs Pro">
-<link rel="icon" href="https://i.postimg.cc/wBdRbFgf/logo.jpg">
-<link rel="apple-touch-icon" href="https://i.postimg.cc/wBdRbFgf/logo.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+<meta name="apple-mobile-web-app-title" content="Arij Color">
+<link id="manifestLink" rel="manifest" href="">
+<link id="appleIcon" rel="apple-touch-icon" href="">
+<link id="favicon" rel="icon" type="image/png" href="">
+<!-- ===== Open Graph / imagen destacada al compartir ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Arij Color">
+<meta property="og:title" content="Arij Color | Pintores en Casablanca">
+<meta property="og:description" content="Calidad, limpieza y acabados perfectos en cada proyecto. Presupuesto gratuito por WhatsApp.">
+<meta property="og:url" content="">
+<meta property="og:image" content="https://i.postimg.cc/QK7wsyzT/hero-botes-jpg.webp">
+<meta property="og:image:alt" content="Arij Color — Pintores profesionales en Casablanca">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ar_MA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Arij Color | Pintores en Casablanca">
+<meta name="twitter:description" content="Calidad, limpieza y acabados perfectos en cada proyecto. Presupuesto gratuito por WhatsApp.">
+<meta name="twitter:image" content="https://i.postimg.cc/QK7wsyzT/hero-botes-jpg.webp">
 <style>
 :root{
-  --navy:#0d2137; --navy2:#13304f; --gold:#c9a24b; --gold2:#e6c87a;
-  --cream:#faf7f0; --ink:#253441; --white:#ffffff; --shadow:0 10px 30px rgba(13,33,55,.12);
+  --primary:#14336e; --accent:#ff7a00; --accent2:#e85d04;
+  --wa:#25D366; --wa-dark:#1ebe5d; --bg:#ffffff; --bg-alt:#f4f7fc;
+  --text:#22304a; --muted:#5b6b85; --radius:16px;
+  --shadow:0 10px 30px rgba(20,51,110,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;overflow-x:hidden}
-html[lang="ar"] body{font-family:'Cairo',sans-serif}
+html{scroll-behavior:smooth;scroll-padding-top:95px}
+body{font-family:'Segoe UI',Tahoma,'Noto Sans Arabic',Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
 img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
-section{padding:80px 20px;scroll-margin-top:90px}
-.wrap{max-width:1150px;margin:auto}
-h1,h2,h3{color:var(--navy);line-height:1.25}
-h2{font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:10px}
-.sec-sub{color:#68788a;margin-bottom:45px}
-.gold-line{width:70px;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;margin:14px 0 18px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:50px;font-weight:700;border:none;cursor:pointer;transition:.3s;font-size:.95rem}
-.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy);box-shadow:0 6px 18px rgba(201,162,75,.4)}
-.btn-gold:hover{transform:translateY(-3px)}
-.btn-out{border:2px solid var(--navy);color:var(--navy);background:transparent}
-.btn-out:hover{background:var(--navy);color:var(--gold2)}
-.btn-wa{background:#25D366;color:#fff;box-shadow:0 6px 18px rgba(37,211,102,.35)}
-.btn-wa:hover{transform:translateY(-3px);background:#1ebe5d}
-
-/* HEADER */
-header{position:sticky;top:0;z-index:100;background:rgba(13,33,55,.96);backdrop-filter:blur(8px);box-shadow:0 2px 20px rgba(0,0,0,.25)}
-.nav{max-width:1150px;margin:auto;display:flex;align-items:center;gap:20px;padding:10px 20px}
-.brand{display:flex;align-items:center;gap:12px;margin-inline-end:auto}
-.brand img{width:52px;height:52px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
-.brand-name{color:var(--gold2);font-weight:800;font-size:1.15rem;line-height:1.2}
-.brand-tag{color:#9fb2c8;font-size:.7rem;letter-spacing:1px;text-transform:uppercase}
-.nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{color:#dfe8f2;font-weight:600;font-size:.92rem;position:relative;padding:6px 0}
-.nav-links a::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:0;height:2px;background:var(--gold);transition:.3s}
-.nav-links a:hover::after{width:100%}
-.nav-links a:hover{color:var(--gold2)}
-
-/* BOTÓN PRESUPUESTO */
-.nav-links a.nav-quote{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;padding:8px 14px;border-radius:50px;font-weight:700;font-size:.8rem;transition:.3s;white-space:nowrap;box-shadow:0 4px 12px rgba(37,211,102,.3)}
-.nav-links a.nav-quote::after{content:none}
-.nav-links a.nav-quote:hover{background:#1ebe5d;color:#fff;transform:translateY(-2px)}
-.nav-quote svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
-
-#burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px}
-#burger span{width:26px;height:3px;background:var(--gold2);border-radius:3px}
-
-/* MENÚ IDIOMAS */
-.langs{position:relative}
-.lang-trigger{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(201,162,75,.35);border-radius:50px;padding:7px 13px;cursor:pointer;transition:.3s}
-.lang-trigger:hover{border-color:var(--gold)}
-.lang-trigger img{width:26px;height:19px;border-radius:3px;object-fit:cover;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
-.lang-trigger .caret{color:var(--gold2);font-size:.65rem;transition:.3s}
-.langs.open .caret{transform:rotate(180deg)}
-.lang-menu{position:absolute;top:calc(100% + 10px);inset-inline-end:0;min-width:170px;background:var(--navy2);border:1px solid rgba(201,162,75,.45);border-radius:14px;box-shadow:0 15px 40px rgba(0,0,0,.45);overflow:hidden;display:flex;flex-direction:column;opacity:0;transform:translateY(-14px);pointer-events:none;transition:.3s ease;z-index:120}
-.langs.open .lang-menu{opacity:1;transform:translateY(0);pointer-events:auto}
-.lang-menu button{display:flex;align-items:center;gap:10px;padding:11px 16px;background:none;border:none;color:#dfe8f2;font-weight:600;font-size:.85rem;cursor:pointer;transition:.25s;text-align:start}
-.lang-menu button img{width:26px;height:19px;border-radius:3px;object-fit:cover}
-.lang-menu button:hover{background:rgba(201,162,75,.15);color:var(--gold2);padding-inline-start:22px}
-.lang-menu button.active{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
-
-/* HERO */
-.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:90px 20px;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(201,162,75,.15),transparent 45%),radial-gradient(circle at 10% 90%,rgba(201,162,75,.1),transparent 40%)}
-.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
-.hero-badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid var(--gold);color:var(--gold2);padding:7px 18px;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:20px}
-.hero h1{color:#fff;font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:18px}
-.hero h1 em{color:var(--gold2);font-style:normal}
-.hero p{color:#c4d2e2;font-size:1.05rem;margin-bottom:32px;max-width:520px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-img{position:relative}
-.hero-img img{border-radius:18px;border:3px solid var(--gold);box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1;object-fit:cover;width:100%}
-.hero-img::after{content:"";position:absolute;inset:-16px;border:2px dashed rgba(201,162,75,.5);border-radius:24px;z-index:-1}
-
-/* SERVICIOS */
-.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
-.srv{background:#fff;border-radius:16px;padding:32px 26px;box-shadow:var(--shadow);border-top:4px solid transparent;transition:.35s;position:relative;overflow:hidden}
-.srv:hover{transform:translateY(-8px);border-top-color:var(--gold)}
-.srv .ico{width:58px;height:58px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--navy2));display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin-bottom:18px}
-.srv h3{margin-bottom:8px;font-size:1.1rem}
-.srv p{color:#68788a;font-size:.92rem}
-
-/* GALERÍA */
-#gallery{background:#fff}
-.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-bottom:60px}
-.gal{position:relative;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow)}
-.gal img{width:100%;aspect-ratio:1;object-fit:cover;transition:.5s}
-.gal:hover img{transform:scale(1.07)}
-.gal figcaption{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(transparent,rgba(13,33,55,.92));color:#fff;padding:40px 18px 16px;font-weight:600;font-size:.92rem}
-.gal .zoom{position:absolute;top:12px;inset-inline-end:12px;background:rgba(201,162,75,.9);color:var(--navy);width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800}
-.ba-box h3{font-size:1.3rem;margin-bottom:6px}
-.ba{--pos:50%;position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:16/9;max-height:520px;user-select:none}
-.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.ba .after{clip-path:inset(0 0 0 var(--pos))}
-.ba-line{position:absolute;top:0;bottom:0;left:var(--pos);width:3px;background:var(--gold);z-index:3}
-.ba-handle{position:absolute;top:50%;left:var(--pos);transform:translate(-50%,-50%);width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;z-index:4;box-shadow:0 4px 14px rgba(0,0,0,.35);pointer-events:none}
-.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;z-index:5}
-.ba-tag{position:absolute;top:14px;padding:5px 14px;border-radius:50px;font-size:.78rem;font-weight:700;z-index:2}
-.ba-tag.b{inset-inline-start:14px;background:rgba(13,33,55,.8);color:#fff}
-.ba-tag.a{inset-inline-end:14px;background:rgba(201,162,75,.9);color:var(--navy)}
-
-/* SECCIÓN IA */
-#ia{background:var(--cream)}
-#ia .wrap{text-align:center}
-.ia-badge{display:inline-block;background:rgba(201,162,75,.15);border:1px solid var(--gold);color:var(--gold);padding:7px 18px;border-radius:50px;font-size:.8rem;font-weight:700;margin-bottom:16px}
-#ia .sec-sub{max-width:640px;margin:0 auto 40px}
-.ia-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:40px 26px;max-width:840px;margin:auto}
-.ia-boxes{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.ia-box{border:2px dashed #cfd4dc;border-radius:14px;padding:34px 16px;display:flex;flex-direction:column;align-items:center;gap:8px;cursor:pointer;transition:.3s;text-align:center}
-.ia-box.gold{border-color:var(--gold)}
-.ia-box:hover{background:rgba(201,162,75,.07);transform:translateY(-3px)}
-.ia-box .ia-ico{font-size:1.8rem}
-.ia-box b{color:var(--ink);font-size:.95rem}
-.ia-box small{color:#68788a;font-size:.78rem}
-.ia-preview{position:relative;display:inline-block;margin-top:22px}
-.ia-preview[hidden]{display:none}
-.ia-preview img{max-height:220px;border-radius:12px;border:3px solid var(--gold)}
-#iaRemove{position:absolute;top:-10px;inset-inline-end:-10px;width:32px;height:32px;border-radius:50%;border:none;background:var(--navy);color:#fff;cursor:pointer}
-.ia-cta{margin-top:26px;width:min(430px,100%);justify-content:center}
-.ia-cta:disabled{opacity:.6;transform:none;cursor:wait}
-#aiModal{position:fixed;inset:0;background:rgba(13,33,55,.93);z-index:220;display:none;align-items:center;justify-content:center;padding:20px}
-#aiModal.open{display:flex}
-.ai-modal-card{background:#fff;border-radius:18px;max-width:560px;width:100%;max-height:88vh;overflow:auto;padding:26px;position:relative;text-align:center;animation:pop .3s}
-.ai-modal-card img{width:100%;border-radius:12px;border:3px solid var(--gold);margin-bottom:16px}
-.ai-modal-card h3{margin-bottom:8px}
-.ai-modal-card p{color:#68788a;font-size:.9rem;margin-bottom:14px}
-.ai-modal-card small{display:none;color:#98a2b3;font-size:.75rem;margin-bottom:16px}
-#aiClose{position:absolute;top:12px;inset-inline-end:12px;background:var(--navy);color:#fff;border:none;width:36px;height:36px;border-radius:50%;cursor:pointer}
-
-/* BANNER PROMO */
-#promo{padding:40px 20px}
-.promo-link{display:block;transition:.3s}
-.promo-link:hover{transform:translateY(-5px)}
-.promo-link img{width:100%;border-radius:20px;border:3px solid var(--gold);box-shadow:0 20px 50px rgba(13,33,55,.25);object-fit:cover}
-
-/* POR QUÉ NOSOTROS */
-#about{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#c4d2e2}
-#about h2{color:#fff}
-#about .sec-sub{color:#9fb2c8}
-#about p{margin-bottom:16px;max-width:800px}
-#about strong{color:var(--gold2)}
-.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:40px}
-.why-item{background:rgba(255,255,255,.06);border:1px solid rgba(201,162,75,.35);border-radius:14px;padding:26px 20px;text-align:center;transition:.3s}
-.why-item:hover{background:rgba(201,162,75,.12);transform:translateY(-5px)}
-.why-item .e{font-size:1.9rem;margin-bottom:10px}
-.why-item h3{color:var(--gold2);font-size:1rem;margin-bottom:6px}
-.why-item p{font-size:.85rem;color:#9fb2c8;margin:0}
-
-/* CONTACTO */
-.contact-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:50px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:30px;text-align:center;border-top:5px solid var(--gold)}
-.c-item .e{font-size:2.2rem;margin-bottom:10px}
-.c-item h3{font-size:1rem;margin-bottom:6px}
-.c-item p{color:#68788a;font-size:.92rem;margin-bottom:14px}
-.c-item .big{font-size:1.25rem;font-weight:800;color:var(--navy);direction:ltr}
-.contact-btns{display:flex;gap:14px;justify-content:center;margin-top:40px;flex-wrap:wrap}
-
-/* FOOTER */
-footer{background:var(--navy);color:#9fb2c8;text-align:center;padding:30px 20px;font-size:.85rem}
-footer b{color:var(--gold2)}
-.pwa-foot{background:none;border:1px solid rgba(201,162,75,.5);color:var(--gold2);border-radius:50px;padding:7px 16px;margin-top:12px;cursor:pointer;font-size:.8rem;font-weight:700;transition:.3s}
-.pwa-foot:hover{background:rgba(201,162,75,.15)}
-
-/* 📲 BANNER INSTALAR APP */
-#pwaBanner{position:fixed;inset-inline:0;bottom:0;z-index:230;display:flex;justify-content:center;padding:14px}
-#pwaBanner[hidden]{display:none}
-.pwa-card{background:#fff;border-radius:16px;box-shadow:0 15px 50px rgba(0,0,0,.35);padding:16px 18px;display:flex;align-items:center;gap:14px;max-width:560px;width:100%;position:relative}
-.pwa-card img{width:52px;height:52px;border-radius:12px;border:2px solid var(--gold);object-fit:cover;flex-shrink:0}
-.pwa-txt b{display:block;color:var(--navy);font-size:.95rem}
-.pwa-txt small{color:#68788a;font-size:.78rem}
-.pwa-actions{margin-inline-start:auto;display:flex;flex-direction:column;gap:6px;align-items:stretch;flex-shrink:0}
-.pwa-actions .btn{padding:9px 16px;font-size:.8rem;justify-content:center}
-.pwa-later{background:none;border:none;color:#68788a;font-size:.75rem;cursor:pointer}
-#pwaClose{position:absolute;top:8px;inset-inline-end:10px;background:none;border:none;color:#98a2b3;cursor:pointer;font-size:1rem}
-@media(max-width:560px){
-  .pwa-card{flex-wrap:wrap}
-  .pwa-actions{flex-direction:row;width:100%;justify-content:flex-end;align-items:center}
+.container{width:min(1150px,92%);margin-inline:auto}
+/* ---------- HEADER ---------- */
+.header{position:fixed;top:0;left:0;right:0;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.08);z-index:900}
+.header-in{display:flex;align-items:center;gap:18px;height:76px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;color:var(--primary)}
+.logo-dot{width:34px;height:34px;border-radius:50% 50% 50% 4px;background:conic-gradient(#ff7a00,#e63946,#8338ec,#3a86ff,#ffbe0b,#ff7a00);box-shadow:0 3px 8px rgba(0,0,0,.2)}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:22px;margin-inline-start:14px}
+.nav a{font-weight:600;color:var(--text);position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;bottom:0;inset-inline-start:0;width:0;height:3px;border-radius:3px;background:var(--accent);transition:.3s}
+.nav a:hover::after{width:100%}
+.header-actions{margin-inline-start:auto;display:flex;align-items:center;gap:12px}
+.lang-wrap{position:relative}
+.lang-btn{display:flex;align-items:center;gap:7px;background:var(--bg-alt);border:1px solid #dde5f2;border-radius:10px;padding:7px 10px;cursor:pointer;font-weight:600;color:var(--primary)}
+.lang-btn img{width:24px;height:17px;border-radius:3px;object-fit:cover;box-shadow:0 0 0 1px #ccd}
+.lang-btn .caret{transition:.3s;font-size:.7rem}
+.lang-wrap.open .caret{transform:rotate(180deg)}
+.lang-drop{position:absolute;top:calc(100% + 8px);inset-inline-end:0;background:#fff;border-radius:12px;box-shadow:var(--shadow);overflow:hidden;max-height:0;opacity:0;transition:max-height .35s ease,opacity .3s ease;min-width:170px;border:1px solid #e3eaf5}
+.lang-wrap.open .lang-drop{max-height:260px;opacity:1}
+.lang-opt{display:flex;align-items:center;gap:10px;width:100%;padding:10px 14px;background:none;border:none;cursor:pointer;font-size:.95rem;font-weight:600;color:var(--text)}
+.lang-opt:hover{background:var(--bg-alt)}
+.lang-opt img{width:26px;height:18px;border-radius:3px;object-fit:cover;box-shadow:0 0 0 1px #ccd}
+.lang-opt.active{background:#fff3e6;color:var(--accent2)}
+.cta{display:flex;align-items:center;gap:9px;background:var(--wa);color:#fff;font-weight:700;padding:11px 18px;border-radius:50px;box-shadow:0 6px 16px rgba(37,211,102,.4);transition:.25s;white-space:nowrap}
+.cta:hover{background:var(--wa-dark);transform:translateY(-2px)}
+.cta svg{width:20px;height:20px;fill:#fff;flex:none}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px}
+.burger span{width:26px;height:3px;border-radius:3px;background:var(--primary);transition:.3s}
+.drawer{position:fixed;top:0;bottom:0;inset-inline-end:0;width:min(320px,85%);background:#fff;z-index:1000;transform:translateX(110%);transition:transform .4s cubic-bezier(.22,.9,.36,1);padding:26px 22px;overflow-y:auto;box-shadow:-8px 0 30px rgba(0,0,0,.15)}
+html[dir="rtl"] .drawer{transform:translateX(-110%)}
+.drawer.open{transform:translateX(0)!important}
+.drawer .d-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.drawer nav a{display:block;padding:13px 6px;font-weight:700;font-size:1.05rem;border-bottom:1px solid #eef2f8;color:var(--primary)}
+.drawer .d-langs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:18px 0}
+.drawer .d-langs .lang-opt{border:1px solid #e3eaf5;border-radius:10px;justify-content:center}
+.drawer .cta{justify-content:center;margin-top:6px}
+.overlay{position:fixed;inset:0;background:rgba(10,20,40,.5);z-index:990;opacity:0;pointer-events:none;transition:.3s}
+.overlay.show{opacity:1;pointer-events:auto}
+/* ---------- HERO ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden;color:#fff;padding:120px 0 70px}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(13,27,62,.82),rgba(20,51,110,.68));z-index:-1}
+.badge{display:inline-block;background:rgba(255,122,0,.18);border:1px solid rgba(255,122,0,.6);color:#ffc79a;padding:7px 16px;border-radius:50px;font-size:.85rem;font-weight:700;letter-spacing:.4px;margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.15;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{max-width:640px;font-size:1.1rem;color:#dbe4f5;margin-bottom:30px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;padding:13px 26px;border-radius:50px;border:none;cursor:pointer;font-size:1rem;transition:.25s}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent2);transform:translateY(-2px)}
+.btn-light{background:#fff;color:var(--primary)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.25)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:var(--wa-dark);transform:translateY(-2px)}
+.btn-wa svg{width:20px;height:20px;fill:#fff}
+/* ---------- SECCIONES ---------- */
+.section{padding:85px 0}
+.section.alt{background:var(--bg-alt)}
+.sec-title{font-size:clamp(1.6rem,3.4vw,2.3rem);color:var(--primary);text-align:center;margin-bottom:10px}
+.sec-title::after{content:"";display:block;width:70px;height:4px;border-radius:4px;background:var(--accent);margin:12px auto 0}
+.sec-sub{text-align:center;color:var(--muted);max-width:620px;margin:14px auto 45px}
+/* Servicios */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px)}
+.card.highlight{outline:4px solid var(--accent);outline-offset:3px;animation:pulse 1s ease 2}
+@keyframes pulse{50%{outline-color:transparent}}
+.card-img{height:210px;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-body{padding:22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card-body h3{color:var(--primary);font-size:1.2rem}
+.card-body p{color:var(--muted);font-size:.95rem;flex:1}
+/* Galería */
+.gal-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow);height:220px}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-cap{position:absolute;inset-inline:0;bottom:0;background:linear-gradient(transparent,rgba(13,27,62,.88));color:#fff;padding:30px 14px 12px;font-weight:700;font-size:.9rem}
+.lightbox{position:fixed;inset:0;background:rgba(8,15,35,.88);z-index:1100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.3s}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:min(920px,94vw);max-height:76vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.lightbox p{color:#fff;margin-top:14px;font-weight:700;text-align:center}
+.lb-x{position:fixed;top:18px;inset-inline-end:18px}
+/* Nosotros */
+.about-grid{display:grid;grid-template-columns:.85fr 1.25fr .8fr;gap:34px;align-items:center}
+.about-img img{width:100%;max-width:270px;margin-inline:auto;border-radius:50%;box-shadow:var(--shadow)}
+.about-grid p{color:var(--muted);margin-bottom:14px}
+.stats{display:grid;gap:16px}
+.stat{background:#fff;border-radius:14px;padding:20px;text-align:center;box-shadow:var(--shadow)}
+.stat b{display:block;font-size:2rem;color:var(--accent)}
+.stat span{color:var(--muted);font-weight:600;font-size:.9rem}
+/* Opiniones */
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.rev-card{background:#fff;border-radius:16px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px}
+.rev-stars{color:#ffbe0b;letter-spacing:2px;font-size:1.05rem}
+.rev-text{color:var(--muted);font-style:italic;flex:1}
+.rev-author{display:flex;align-items:center;gap:12px}
+.rev-av{width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;flex:none}
+.rev-author b{color:var(--primary);display:block;font-size:.95rem}
+.rev-author small{color:var(--muted)}
+/* ---------- SECCIÓN APP (solo móvil/tablet) ---------- */
+.app-card{background:linear-gradient(135deg,var(--primary),#0d1b3e);border-radius:20px;color:#fff;padding:48px 28px;text-align:center;box-shadow:var(--shadow)}
+.app-card .app-ico{font-size:2.8rem;margin-bottom:12px}
+.app-card h2{color:#fff;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:12px}
+.app-card p{color:#c6d2e8;max-width:640px;margin:0 auto 26px}
+.btn-install{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(255,122,0,.4)}
+.btn-install:hover{background:var(--accent2);transform:translateY(-2px)}
+.install-note{margin-top:16px;color:#ffc79a;font-size:.9rem;display:none;max-width:520px;margin-inline:auto}
+.install-note.show{display:block}
+/* Contacto */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-bottom:36px}
+.c-card{background:#fff;border-radius:14px;padding:28px 20px;text-align:center;box-shadow:var(--shadow)}
+.c-card .ico{font-size:2rem;margin-bottom:10px}
+.c-card h4{color:var(--primary);margin-bottom:8px}
+.c-card p,.c-card a{color:var(--muted);font-weight:600}
+.c-card a:hover{color:var(--accent)}
+.contact-cta{text-align:center}
+/* ---------- FOOTER ---------- */
+footer{background:#0d1b3e;color:#c6d2e8;padding:60px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:40px}
+.foot-grid h4{color:#fff;margin-bottom:16px;font-size:1.05rem}
+.foot-grid .logo{color:#fff;margin-bottom:14px}
+.foot-grid p{font-size:.93rem}
+.foot-grid ul{list-style:none}
+.foot-grid ul li{margin-bottom:9px}
+.foot-grid ul a{color:#c6d2e8;font-size:.93rem;transition:.2s;cursor:pointer}
+.foot-grid ul a:hover{color:var(--accent);padding-inline-start:6px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;text-align:center;font-size:.88rem;color:#8fa2c6}
+/* ---------- MODAL ---------- */
+.modal{position:fixed;inset:0;background:rgba(8,15,35,.65);z-index:1100;display:flex;align-items:center;justify-content:center;padding:20px;opacity:0;pointer-events:none;transition:.3s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-box{background:#fff;border-radius:18px;max-width:720px;width:100%;max-height:90vh;overflow-y:auto;position:relative;transform:scale(.92);transition:.3s}
+.modal.open .modal-box{transform:scale(1)}
+.modal-box>img{width:100%;height:280px;object-fit:cover}
+.modal-x{position:absolute;top:14px;inset-inline-end:14px;width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,.92);font-size:1.1rem;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.25);z-index:2}
+.modal-body{padding:28px}
+.modal-body h3{color:var(--primary);font-size:1.5rem;margin-bottom:12px}
+.modal-body p{color:var(--muted);margin-bottom:18px}
+.modal-body ul{list-style:none;margin-bottom:24px;display:grid;gap:10px}
+.modal-body ul li{padding-inline-start:28px;position:relative;color:var(--text);font-weight:600}
+.modal-body ul li::before{content:"✔";position:absolute;inset-inline-start:0;color:var(--wa);font-weight:900}
+/* ---------- BANNER INSTALACIÓN (solo móvil/tablet) ---------- */
+.install{position:fixed;bottom:96px;inset-inline:16px;background:#fff;border-radius:16px;box-shadow:0 14px 40px rgba(0,0,0,.3);z-index:940;padding:16px;display:flex;gap:12px;align-items:flex-start;transform:translateY(20px);opacity:0;pointer-events:none;transition:.35s}
+.install.show{transform:none;opacity:1;pointer-events:auto}
+.install-ico{font-size:1.7rem}
+.install-txt{flex:1;display:flex;flex-direction:column;gap:4px}
+.install-txt b{color:var(--primary)}
+.install-txt span{color:var(--muted);font-size:.85rem}
+.install-actions{display:flex;flex-direction:column;gap:6px;align-items:end}
+.install-actions .btn{padding:8px 16px;font-size:.85rem}
+.install-x{background:none;border:none;color:var(--muted);font-size:.8rem;cursor:pointer;text-decoration:underline}
+@media(min-width:1024px){
+  .install,#appSection{display:none!important}
 }
-
-/* LIGHTBOX */
-#lightbox{position:fixed;inset:0;background:rgba(13,33,55,.92);z-index:200;display:none;align-items:center;justify-content:center;flex-direction:column;padding:20px}
-#lightbox.open{display:flex}
-#lightbox img{max-width:min(90vw,700px);max-height:75vh;border-radius:14px;border:3px solid var(--gold)}
-#lightbox p{color:var(--gold2);margin-top:14px;font-weight:700}
-#lbClose{position:absolute;top:18px;inset-inline-end:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer}
-
-/* CHAT */
-#chatBtn{position:fixed;bottom:22px;inset-inline-end:22px;z-index:90;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 8px 25px rgba(201,162,75,.5);transition:.3s}
-#chatBtn:hover{transform:scale(1.08)}
-#chatBox{position:fixed;bottom:96px;inset-inline-end:22px;z-index:95;width:min(370px,calc(100vw - 44px));height:520px;max-height:70vh;background:#fff;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.3);display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px);opacity:0;pointer-events:none;transition:.35s}
-#chatBox.open{transform:translateY(0);opacity:1;pointer-events:auto}
-.chat-head{background:linear-gradient(135deg,var(--navy),var(--navy2));padding:14px 16px;display:flex;align-items:center;gap:12px}
-.chat-head img{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);object-fit:cover}
-.chat-head b{color:var(--gold2);display:block;font-size:.95rem}
-.chat-head small{color:#8fdc9a;font-size:.72rem}
-.chat-head small::before{content:"●";margin-inline-end:5px}
-#chatClose{margin-inline-start:auto;background:none;border:none;color:#c4d2e2;font-size:1.3rem;cursor:pointer}
-#chatMsgs{flex:1;overflow-y:auto;padding:16px;background:#f4f1ea;display:flex;flex-direction:column;gap:10px}
-.msg{max-width:82%;padding:10px 14px;border-radius:14px;font-size:.88rem;line-height:1.5;animation:pop .3s}
-@keyframes pop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
-.msg.bot{background:#fff;border-start-start-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.08);align-self:flex-start}
-.msg.user{background:var(--navy);color:#fff;border-start-end-radius:4px;align-self:flex-end}
-.msg.typing span{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9aa8b8;margin-inline-end:3px;animation:blink 1s infinite}
-.msg.typing span:nth-child(2){animation-delay:.2s}.msg.typing span:nth-child(3){animation-delay:.4s}
-@keyframes blink{0%,100%{opacity:.3}50%{opacity:1}}
-#chips{display:flex;flex-wrap:wrap;gap:7px;padding:10px 12px;background:#f4f1ea;border-top:1px solid #e5e0d5}
-#chips button{border:1.5px solid var(--gold);background:#fff;color:var(--navy);border-radius:50px;padding:6px 14px;font-size:.78rem;font-weight:700;cursor:pointer;transition:.25s}
-#chips button:hover{background:var(--gold);color:#fff}
-.chat-foot{display:flex;gap:8px;padding:10px;background:#fff;border-top:1px solid #eee}
-.chat-foot input{flex:1;border:1.5px solid #e2ddd2;border-radius:50px;padding:11px 16px;font-size:.9rem;outline:none;font-family:inherit}
-.chat-foot input:focus{border-color:var(--gold)}
-.chat-foot button{width:46px;height:46px;border-radius:50%;border:none;background:var(--navy);color:var(--gold2);font-size:1.1rem;cursor:pointer;flex-shrink:0}
-html[dir="rtl"] .chat-foot button{transform:scaleX(-1)}
-
-@media(max-width:1100px){
-  .nav{gap:12px}
-  .nav-links{gap:16px}
-  .brand-tag{display:none}
-  .brand-name{font-size:1rem}
-  .nav-links a.nav-quote{padding:7px 12px;font-size:.75rem}
-  .nav-quote svg{width:15px;height:15px}
+/* ---------- CHAT ---------- */
+.chat-fab{position:fixed;bottom:22px;inset-inline-end:22px;width:62px;height:62px;border-radius:50%;background:var(--primary);border:none;cursor:pointer;z-index:950;box-shadow:0 8px 22px rgba(20,51,110,.45);display:flex;align-items:center;justify-content:center;transition:.25s}
+.chat-fab:hover{transform:scale(1.08)}
+.chat-fab svg{width:30px;height:30px;fill:#fff}
+.chat{position:fixed;bottom:96px;inset-inline-end:22px;width:min(360px,calc(100vw - 32px));height:480px;background:#fff;border-radius:18px;box-shadow:0 18px 50px rgba(0,0,0,.28);z-index:960;display:flex;flex-direction:column;overflow:hidden;transform:translateY(20px);opacity:0;pointer-events:none;transition:.35s}
+.chat.open{transform:translateY(0);opacity:1;pointer-events:auto}
+.chat-head{background:var(--primary);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px}
+.chat-head .av{width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex:none}
+.chat-head b{display:block;font-size:.98rem}
+.chat-head small{color:#aebfe2;font-size:.75rem}
+.chat-close{margin-inline-start:auto;background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer}
+.chat-body{flex:1;overflow-y:auto;padding:16px;background:var(--bg-alt);display:flex;flex-direction:column;gap:10px}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:.9rem;line-height:1.5}
+.msg.bot{background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.07);align-self:flex-start;border-start-start-radius:4px}
+.msg.user{background:var(--primary);color:#fff;align-self:flex-end;border-start-end-radius:4px}
+.msg a{color:var(--wa-dark);font-weight:800;text-decoration:underline}
+.chat-quick{display:flex;gap:8px;padding:10px 12px;background:#fff;flex-wrap:wrap;border-top:1px solid #e8eef7}
+.chat-quick button{background:#fff3e6;border:1px solid #ffd9ae;color:var(--accent2);border-radius:50px;padding:6px 13px;font-size:.8rem;font-weight:700;cursor:pointer}
+.chat-quick button:hover{background:var(--accent);color:#fff}
+.chat-form{display:flex;background:#fff;border-top:1px solid #e8eef7}
+.chat-form input{flex:1;border:none;padding:14px;font-size:.92rem;outline:none}
+.chat-form button{background:var(--accent);border:none;width:52px;cursor:pointer;font-size:1.15rem;color:#fff}
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:960px){
+  .nav{display:none}
+  .burger{display:flex}
+  .header-actions .cta{display:none}
+  .about-grid{grid-template-columns:1fr}
+  .about-img img{max-width:220px}
+  .foot-grid{grid-template-columns:1fr 1fr}
 }
-@media(max-width:900px){
-  .hero .wrap{grid-template-columns:1fr}
-  .hero-img{max-width:440px;margin:auto}
-  #burger{display:flex}
-  .nav-links{position:absolute;top:100%;inset-inline:0;background:var(--navy);flex-direction:column;gap:0;padding:10px 20px 20px;display:none}
-  .nav-links.open{display:flex}
-  .nav-links a{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);width:100%;text-align:center}
-  .nav-links a.nav-quote{width:100%;justify-content:center;margin-top:10px;padding:12px 16px;font-size:.9rem}
-  .nav-quote svg{width:18px;height:18px}
+@media(max-width:640px){
+  .foot-grid{grid-template-columns:1fr}
+  .header-in{height:68px}
 }
-@media(max-width:700px){
-  .ia-boxes{grid-template-columns:1fr}
-}
-.reveal{opacity:0;transform:translateY(30px);transition:.7s}
-.reveal.vis{opacity:1;transform:none}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <div class="brand">
-      <img src="https://i.postimg.cc/wBdRbFgf/logo.jpg" alt="Aljibs Pro" data-fallback="logo">
-      <div>
-        <div class="brand-name">Aljibs Pro</div>
-        <div class="brand-tag" data-i18n="brand_tag"></div>
-      </div>
-    </div>
-    <nav class="nav-links" id="navLinks">
-      <a href="#hero"     data-i18n="nav_home"></a>
-      <a href="#services" data-i18n="nav_services"></a>
-      <a href="#gallery"  data-i18n="nav_gallery"></a>
-      <a href="#about"    data-i18n="nav_about"></a>
-      <a href="#contact"  data-i18n="nav_contact"></a>
-      <a href="https://wa.me/212632599085" target="_blank" class="nav-quote">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-        <span data-i18n="nav_quote"></span>
-      </a>
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="container header-in">
+    <a class="logo" href="#inicio"><span class="logo-dot"></span>Arij&nbsp;<span>Color</span></a>
+    <nav class="nav">
+      <a href="#inicio" data-i18n="nav_home">Inicio</a>
+      <a href="#servicios" data-i18n="nav_services">Servicios</a>
+      <a href="#galeria" data-i18n="nav_gallery">Galería</a>
+      <a href="#opiniones" data-i18n="nav_reviews">Opiniones</a>
+      <a href="#nosotros" data-i18n="nav_about">Nosotros</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
     </nav>
-
-    <div class="langs" id="langs">
-      <button class="lang-trigger" id="langTrigger" aria-label="Idioma / Language">
-        <img id="langFlag" src="https://flagcdn.com/24x18/es.png" alt="idioma">
-        <span class="caret">▼</span>
-      </button>
-      <div class="lang-menu">
-        <button data-lang="es"><img src="https://flagcdn.com/24x18/es.png" alt="">Español</button>
-        <button data-lang="fr"><img src="https://flagcdn.com/24x18/fr.png" alt="">Français</button>
-        <button data-lang="en"><img src="https://flagcdn.com/24x18/gb.png" alt="">English</button>
-        <button data-lang="ar"><img src="https://flagcdn.com/24x18/ma.png" alt="">العربية</button>
+    <div class="header-actions">
+      <div class="lang-wrap" id="langWrap">
+        <button class="lang-btn" id="langBtn">
+          <img id="langFlag" src="https://flagcdn.com/w40/es.png" alt="idioma">
+          <span id="langCode">ES</span><span class="caret">▼</span>
+        </button>
+        <div class="lang-drop" id="langDrop"></div>
       </div>
+      <a class="cta" href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        <span data-i18n="cta">Solicita tu Presupuesto</span>
+      </a>
+      <button class="burger" id="burger" aria-label="menú"><span></span><span></span><span></span></button>
     </div>
-
-    <button id="burger" aria-label="menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<section class="hero" id="hero">
-  <div class="wrap">
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="d-head">
+    <span class="logo"><span class="logo-dot"></span>Arij&nbsp;<span>Color</span></span>
+    <button id="drawerX" style="background:none;border:none;font-size:1.5rem;cursor:pointer">✕</button>
+  </div>
+  <nav id="drawerNav">
+    <a href="#inicio" data-i18n="nav_home">Inicio</a>
+    <a href="#servicios" data-i18n="nav_services">Servicios</a>
+    <a href="#galeria" data-i18n="nav_gallery">Galería</a>
+    <a href="#opiniones" data-i18n="nav_reviews">Opiniones</a>
+    <a href="#nosotros" data-i18n="nav_about">Nosotros</a>
+    <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+  </nav>
+  <div class="d-langs" id="drawerLangs"></div>
+  <a class="cta" href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+    <span data-i18n="cta">Solicita tu Presupuesto</span>
+  </a>
+</aside>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <img class="hero-bg" src="https://i.postimg.cc/QK7wsyzT/hero-botes-jpg.webp" alt="" onerror="this.onerror=null;this.src='https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/0e71c28a2-cce1-4ab0-afd0-74bf2f0f46328383.png'">
+  <div class="container">
+    <span class="badge" data-i18n="hero_badge"></span>
+    <h1 data-i18n="hero_title"></h1>
+    <p data-i18n="hero_sub"></p>
+    <div class="hero-btns">
+      <a href="#servicios" class="btn btn-light" data-i18n="hero_btn1"></a>
+      <a href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener" class="btn btn-wa">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        <span data-i18n="hero_btn2"></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section" id="servicios">
+  <div class="container">
+    <h2 class="sec-title" data-i18n="sec_services"></h2>
+    <p class="sec-sub" data-i18n="sec_services_sub"></p>
+    <div class="grid" id="servicesGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section alt" id="galeria">
+  <div class="container">
+    <h2 class="sec-title" data-i18n="sec_gallery"></h2>
+    <p class="sec-sub" data-i18n="sec_gallery_sub"></p>
+    <div class="gal-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section" id="nosotros">
+  <div class="container about-grid">
+    <div class="about-img"><img src="https://i.postimg.cc/HcRRqg6Y/pintor-png.webp" alt="Arij Color" onerror="this.onerror=null;this.style.borderRadius='18px';this.src='https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/0e71c28a2-cce1-4ab0-afd0-74bf2f0f46328383.png'"></div>
     <div>
-      <span class="hero-badge" data-i18n="hero_badge"></span>
-      <h1 data-i18n="hero_title"></h1>
-      <p data-i18n="hero_sub"></p>
-      <div class="hero-cta">
-        <a class="btn btn-gold" href="#contact" data-i18n="cta_quote"></a>
-        <a class="btn btn-out" style="border-color:var(--gold2);color:var(--gold2)" href="#gallery" data-i18n="cta_gallery"></a>
-      </div>
-      <!-- ❌ Estadísticas eliminadas -->
+      <h2 class="sec-title" style="text-align:start" data-i18n="sec_about"></h2>
+      <p style="margin-top:20px" data-i18n="about_p1"></p>
+      <p data-i18n="about_p2"></p>
     </div>
-    <div class="hero-img">
-      <img src="https://i.postimg.cc/PqkvFKTb/Despues.webp" alt="Techo decorado en yeso" data-fallback="ph">
+    <div class="stats">
+      <div class="stat"><b>+250</b><span data-i18n="stat1"></span></div>
+      <div class="stat"><b>+10</b><span data-i18n="stat2"></span></div>
+      <div class="stat"><b>98%</b><span data-i18n="stat3"></span></div>
     </div>
   </div>
 </section>
 
-<section id="services">
-  <div class="wrap">
-    <h2 data-i18n="services_title"></h2>
-    <div class="gold-line"></div>
-    <p class="sec-sub" data-i18n="services_sub"></p>
-    <div class="srv-grid">
-      <div class="srv reveal"><div class="ico">🏛️</div><h3 data-i18n="s1t"></h3><p data-i18n="s1d"></p></div>
-      <div class="srv reveal"><div class="ico">✨</div><h3 data-i18n="s2t"></h3><p data-i18n="s2d"></p></div>
-      <div class="srv reveal"><div class="ico">💡</div><h3 data-i18n="s3t"></h3><p data-i18n="s3d"></p></div>
-      <div class="srv reveal"><div class="ico">🧱</div><h3 data-i18n="s4t"></h3><p data-i18n="s4d"></p></div>
-      <div class="srv reveal"><div class="ico">🌸</div><h3 data-i18n="s5t"></h3><p data-i18n="s5d"></p></div>
-      <div class="srv reveal"><div class="ico">🎨</div><h3 data-i18n="s6t"></h3><p data-i18n="s6d"></p></div>
+<!-- ============ OPINIONES ============ -->
+<section class="section alt" id="opiniones">
+  <div class="container">
+    <h2 class="sec-title" data-i18n="sec_reviews"></h2>
+    <p class="sec-sub" data-i18n="sec_reviews_sub"></p>
+    <div class="rev-grid" id="reviewsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ SECCIÓN APP (solo móvil/tablet) ============ -->
+<section class="section" id="appSection">
+  <div class="container">
+    <div class="app-card">
+      <div class="app-ico">📲</div>
+      <h2 data-i18n="sec_app"></h2>
+      <p data-i18n="sec_app_sub"></p>
+      <button class="btn btn-install" id="installBtn2" data-i18n="pwa_btn_label"></button>
+      <p class="install-note" id="installNote"></p>
     </div>
   </div>
 </section>
 
-<section id="gallery">
-  <div class="wrap">
-    <h2 data-i18n="gallery_title"></h2>
-    <div class="gold-line"></div>
-    <p class="sec-sub" data-i18n="gallery_sub"></p>
-    <div class="gal-grid">
-      <figure class="gal reveal" data-cap="g1c"><span class="zoom">+</span><img src="https://i.postimg.cc/PqkvFKTb/Despues.webp" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g1c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g2c"><span class="zoom">+</span><img src="https://i.postimg.cc/Qd7WbvGp/595786853-122154179588712565-4355610106860372951-n.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g2c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g3c"><span class="zoom">+</span><img src="https://i.postimg.cc/9Q9qps5Z/582982366-122152339784712565-2150614154505684567-n.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g3c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g4c"><span class="zoom">+</span><img src="https://i.postimg.cc/Qd7WbvGQ/Trabajo-3.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g4c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g5c"><span class="zoom">+</span><img src="https://i.postimg.cc/g2h6D1F3/Trabajo-4.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g5c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g6c"><span class="zoom">+</span><img src="https://i.postimg.cc/jSfJXB0Q/Trabajo-5.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g6c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g7c"><span class="zoom">+</span><img src="https://i.postimg.cc/FHSJZw5V/Trabajo-6.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g7c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g8c"><span class="zoom">+</span><img src="https://i.postimg.cc/W1ZJnxLn/Trabajo-7.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g8c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g9c"><span class="zoom">+</span><img src="https://i.postimg.cc/fRd0K1nC/Trabajo-8.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g9c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g10c"><span class="zoom">+</span><img src="https://i.postimg.cc/MG8frtqB/Trabajo-9.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g10c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g11c"><span class="zoom">+</span><img src="https://i.postimg.cc/tgHnmDp3/Trabajo-10.jpg" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g11c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g12c"><span class="zoom">+</span><img src="https://i.postimg.cc/hGqQ3Mcr/Trabajo-12.webp" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g12c"></figcaption></figure>
-      <figure class="gal reveal" data-cap="g13c"><span class="zoom">+</span><img src="https://i.postimg.cc/nLt9wTp2/Trabajo-13.webp" alt="" loading="lazy" data-fallback="ph"><figcaption data-i18n="g13c"></figcaption></figure>
+<!-- ============ CONTACTO ============ -->
+<section class="section alt" id="contacto">
+  <div class="container">
+    <h2 class="sec-title" data-i18n="sec_contact"></h2>
+    <p class="sec-sub">&nbsp;</p>
+    <div class="contact-grid">
+      <div class="c-card"><div class="ico">📍</div><h4 data-i18n="lbl_address"></h4><p>C/ Demo Nº1 123456, Casablanca, Maroc</p></div>
+      <div class="c-card"><div class="ico">📞</div><h4 data-i18n="lbl_phone"></h4><a href="tel:+212690157092" dir="ltr">+212 690 157 092</a></div>
+      <div class="c-card"><div class="ico">🕗</div><h4 data-i18n="lbl_hours"></h4><p data-i18n="hours_val"></p></div>
     </div>
-    <div class="ba-box reveal">
-      <h3 data-i18n="ba_title"></h3>
-      <p class="sec-sub" style="margin-bottom:20px" data-i18n="ba_sub"></p>
-      <div class="ba" id="ba">
-        <img src="https://i.postimg.cc/s2RG0Ks5/Antes.jpg" alt="Antes" data-fallback="ph">
-        <img src="https://i.postimg.cc/PqkvFKTb/Despues.webp" alt="Después" class="after" data-fallback="ph">
-        <span class="ba-tag b" data-i18n="before"></span>
-        <span class="ba-tag a" data-i18n="after"></span>
-        <div class="ba-line"></div>
-        <div class="ba-handle">⇔</div>
-        <input type="range" min="0" max="100" value="50" id="baRange" aria-label="before after">
-      </div>
+    <div class="contact-cta">
+      <a class="btn btn-wa" href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        <span data-i18n="cta"></span>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- SECCIÓN IA -->
-<section id="ia">
-  <div class="wrap">
-    <span class="ia-badge" data-i18n="ai_badge"></span>
-    <h2 data-i18n="ai_title"></h2>
-    <p class="sec-sub" data-i18n="ai_sub"></p>
-    <div class="ia-card reveal">
-      <div class="ia-boxes">
-        <label class="ia-box gold">
-          <input type="file" id="iaCam" accept="image/*" capture="environment" hidden>
-          <div class="ia-ico">📷</div>
-          <b data-i18n="ai_cam"></b>
-          <small data-i18n="ai_cam_sub"></small>
-        </label>
-        <label class="ia-box">
-          <input type="file" id="iaFile" accept="image/jpeg,image/png,image/webp" hidden>
-          <div class="ia-ico">⬆️</div>
-          <b data-i18n="ai_up"></b>
-          <small data-i18n="ai_up_sub"></small>
-        </label>
-      </div>
-      <div class="ia-preview" id="iaPreview" hidden>
-        <img id="iaThumb" alt="">
-        <button id="iaRemove" type="button" aria-label="quitar">✕</button>
-      </div>
-      <div>
-        <button class="btn btn-gold ia-cta" id="iaGo"><span data-i18n="ai_cta"></span></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- POP-UP RESULTADO IA -->
-<div id="aiModal">
-  <div class="ai-modal-card">
-    <button id="aiClose" aria-label="close">✕</button>
-    <img id="aiImg" alt="">
-    <h3 id="aiTitle"></h3>
-    <p id="aiInfo"></p>
-    <small id="aiCode"></small>
-    <a id="aiWa" class="btn btn-wa" target="_blank" href="#">💬 <span data-i18n="btn_wa"></span></a>
-  </div>
-</div>
-
-<section id="promo">
-  <div class="wrap">
-    <a href="#" target="_blank" id="promoLink" class="promo-link reveal" aria-label="WhatsApp Aljibs Pro">
-      <img src="https://i.postimg.cc/7LyJQXwn/hero.jpg" alt="الجبس برو - طنجة" loading="lazy" data-fallback="ph">
-    </a>
-  </div>
-</section>
-
-<section id="about">
-  <div class="wrap">
-    <h2 data-i18n="about_title"></h2>
-    <div class="gold-line"></div>
-    <p data-i18n="about_p1"></p>
-    <p data-i18n="about_p2"></p>
-    <div class="why">
-      <div class="why-item reveal"><div class="e">🏆</div><h3 data-i18n="w1t"></h3><p data-i18n="w1d"></p></div>
-      <div class="why-item reveal"><div class="e">⏰</div><h3 data-i18n="w2t"></h3><p data-i18n="w2d"></p></div>
-      <div class="why-item reveal"><div class="e">💶</div><h3 data-i18n="w3t"></h3><p data-i18n="w3d"></p></div>
-      <div class="why-item reveal"><div class="e">🧹</div><h3 data-i18n="w4t"></h3><p data-i18n="w4d"></p></div>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="wrap">
-    <h2 style="text-align:center" data-i18n="contact_title"></h2>
-    <div class="gold-line" style="margin:14px auto 18px"></div>
-    <p class="sec-sub" style="text-align:center" data-i18n="contact_sub"></p>
-    <div class="contact-card reveal">
-      <div class="c-item"><div class="e">📞</div><h3 data-i18n="phone_label"></h3><p class="big" id="phoneShow"></p><a class="btn btn-out" id="callBtn" href="#"></a></div>
-      <div class="c-item"><div class="e">🕗</div><h3 data-i18n="hours_label"></h3><p data-i18n="hours_value"></p></div>
-      <div class="c-item"><div class="e">📍</div><h3 data-i18n="area_label"></h3><p data-i18n="area_value"></p></div>
-    </div>
-    <div class="contact-btns">
-      <a class="btn btn-wa" id="waBtn" target="_blank" href="#">💬 <span data-i18n="btn_wa"></span></a>
-    </div>
-  </div>
-</section>
-
+<!-- ============ FOOTER ============ -->
 <footer>
-  <p><b>Aljibs Pro</b> — <span data-i18n="footer_rights"></span> © 2026</p>
-  <div><button id="pwaFoot" class="pwa-foot">📲 <span data-i18n="pwa_foot"></span></button></div>
+  <div class="container foot-grid">
+    <div>
+      <span class="logo"><span class="logo-dot"></span>Arij&nbsp;<span>Color</span></span>
+      <p data-i18n="foot_about"></p>
+    </div>
+    <div>
+      <h4 data-i18n="foot_services"></h4>
+      <ul id="footServices"></ul>
+    </div>
+    <div>
+      <h4 data-i18n="foot_contact"></h4>
+      <ul>
+        <li>📍 C/ Demo Nº1 123456, Casablanca, Maroc</li>
+        <li>📞 <a href="tel:+212690157092" dir="ltr">+212 690 157 092</a></li>
+        <li>💬 <a href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom"><div class="container">© 2026 Arij Color — <span data-i18n="rights"></span></div></div>
 </footer>
 
-<!-- 📲 BANNER INSTALAR APP -->
-<div id="pwaBanner" hidden>
-  <div class="pwa-card">
-    <img src="https://i.postimg.cc/wBdRbFgf/logo.jpg" alt="Aljibs Pro">
-    <div class="pwa-txt">
-      <b data-i18n="pwa_title"></b>
-      <small id="pwaDesc"></small>
+<!-- ============ MODAL SERVICIO ============ -->
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-x" id="modalX">✕</button>
+    <img id="mImg" src="" alt="">
+    <div class="modal-body">
+      <h3 id="mTitle"></h3>
+      <p id="mDesc"></p>
+      <ul id="mFeats"></ul>
+      <a class="btn btn-wa" href="https://wa.seo-local.click/land/arij-color" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+        <span data-i18n="modal_quote"></span>
+      </a>
     </div>
-    <div class="pwa-actions">
-      <button id="pwaInstall" class="btn btn-gold"></button>
-      <button id="pwaLater" class="pwa-later"></button>
-    </div>
-    <button id="pwaClose" aria-label="close">✕</button>
   </div>
 </div>
 
-<button id="chatBtn" aria-label="Chat">💬</button>
-<div id="chatBox">
-  <div class="chat-head">
-    <img src="https://i.postimg.cc/wBdRbFgf/logo.jpg" alt="" data-fallback="logo">
-    <div><b data-i18n="chat_title"></b><small data-i18n="chat_status"></small></div>
-    <button id="chatClose" aria-label="close">✕</button>
-  </div>
-  <div id="chatMsgs"></div>
-  <div id="chips"></div>
-  <div class="chat-foot">
-    <input id="chatIn" data-i18n-ph="chat_ph" autocomplete="off">
-    <button id="chatSend" aria-label="send">➤</button>
-  </div>
-</div>
-
-<div id="lightbox">
-  <button id="lbClose" aria-label="close">✕</button>
+<!-- ============ LIGHTBOX GALERÍA ============ -->
+<div class="lightbox" id="lightbox">
+  <button class="modal-x lb-x" id="lbX">✕</button>
   <img id="lbImg" src="" alt="">
   <p id="lbCap"></p>
 </div>
 
+<!-- ============ BANNER INSTALACIÓN (solo móvil/tablet) ============ -->
+<div class="install" id="installBanner">
+  <div class="install-ico">🎨</div>
+  <div class="install-txt"><b data-i18n="pwa_title"></b><span id="installMsg"></span></div>
+  <div class="install-actions">
+    <button id="installBtn" class="btn btn-primary" data-i18n="pwa_btn"></button>
+    <button id="installLater" class="install-x" data-i18n="pwa_later"></button>
+  </div>
+</div>
+
+<!-- ============ CHAT ============ -->
+<button class="chat-fab" id="chatFab" aria-label="chat">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.02 2 11c0 2.4 1.02 4.58 2.7 6.2-.14 1.14-.6 2.6-1.6 3.8 0 0 2.6-.2 4.7-1.5 1.3.45 2.7.7 4.2.7 5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+</button>
+<div class="chat" id="chat">
+  <div class="chat-head">
+    <div class="av">🤖</div>
+    <div><b data-i18n="chat_title"></b><small data-i18n="chat_status"></small></div>
+    <button class="chat-close" id="chatClose">✕</button>
+  </div>
+  <div class="chat-body" id="chatBody"></div>
+  <div class="chat-quick" id="chatQuick"></div>
+  <form class="chat-form" id="chatForm">
+    <input id="chatInput" autocomplete="off" data-i18n-ph="chat_ph">
+    <button type="submit">➤</button>
+  </form>
+</div>
+
 <script>
-const CONFIG = {
-  waCountry : "212",
-  waNumber  : "632599085",
-  phoneShow : "06 32 59 90 85"
-};
-/* 🔑 IA REAL — OpenRouter: modelos de pago primero y gratuitos (:free) de reserva */
-const AI = {
-  key   : "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",
-  models: [
-    "google/gemini-2.5-flash-image",
-    "google/gemini-2.5-flash-image-preview",
-    "google/gemini-2.5-flash-image-preview:free",
-    "google/gemini-2.5-flash-image:free"
-  ],
-  url   : "https://openrouter.ai/api/v1/chat/completions"
-};
-const AI_PROMPT = "Transform this room photo: add an elegant modern gypsum false ceiling with decorative moldings, cornices and indirect LED lighting. Photorealistic interior design render, keep the walls, windows and furniture of the room.";
-const FLAG = { es:"es", fr:"fr", en:"gb", ar:"ma" };
-
-/* 📲 MANIFIESTO PWA */
-(function(){
-  const manifest = {
-    name: "Aljibs Pro — Decoración en Yeso",
-    short_name: "Aljibs Pro",
-    description: "Instalación profesional de decoración en yeso en Tánger.",
-    start_url: ".",
-    scope: ".",
-    display: "standalone",
-    orientation: "portrait",
-    theme_color: "#0d2137",
-    background_color: "#faf7f0",
-    icons: [
-      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "192x192", type: "image/jpeg", purpose: "any" },
-      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "512x512", type: "image/jpeg", purpose: "any" },
-      { src: "https://i.postimg.cc/wBdRbFgf/logo.jpg", sizes: "512x512", type: "image/jpeg", purpose: "maskable" }
-    ]
-  };
-  const l = document.createElement("link");
-  l.rel = "manifest";
-  l.href = URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" }));
-  document.head.appendChild(l);
-})();
-
-const T = {
-es:{
- _title:"Aljibs Pro | Decoración en Yeso en Tánger",
- brand_tag:"Decoración en yeso · Tánger", nav_home:"Inicio", nav_services:"Servicios", nav_gallery:"Galería", nav_about:"Nosotros", nav_contact:"Contacto",
- nav_quote:"Solicita tu Presupuesto",
- hero_badge:"✦ Expertos en yeso y escayola en Tánger",
- hero_title:"Decoración en yeso que <em>transforma</em> tu hogar",
- hero_sub:"Instalación profesional de techos, molduras, cornisas y diseños en yeso con iluminación LED. Acabados de lujo, limpios y al mejor precio.",
- cta_quote:"Presupuesto", cta_gallery:"Ver trabajos",
- services_title:"Nuestros servicios", services_sub:"Todo tipo de decoración en yeso, con diseño e instalación incluidos",
- s1t:"Techos y falsos techos", s1d:"Techos de yeso y pladur con diseños modernos de varios niveles.",
- s2t:"Molduras y cornisas", s2d:"Molduras decorativas y cornisas elegantes para techos y paredes.",
- s3t:"Iluminación LED", s3d:"Luz LED indirecta integrada que crea ambientes únicos.",
- s4t:"Tabiques de pladur", s4d:"Separaciones y tabiques interiores con acabado perfecto.",
- s5t:"Rosetones y ornamentos", s5d:"Rosetones, arcos y detalles ornamentales clásicos o modernos.",
- s6t:"Diseños a medida", s6d:"Realizamos el diseño que sueñas, adaptado a tu espacio y gusto.",
- gallery_title:"Galería de trabajos", gallery_sub:"Una muestra de nuestras realizaciones",
- g1c:"Techo con doble nivel y luz cálida", g2c:"Diseño moderno con LED azul", g3c:"Líneas LED y focos cuadrados",
- g4c:"Acabado elegante con molduras", g5c:"Diseño contemporáneo minimalista", g6c:"Iluminación LED oculta",
- g7c:"Combinación de niveles y texturas", g8c:"Estilo clásico con ornamentos", g9c:"Espacio amplio con focos",
- g10c:"Diseño personalizado único", g11c:"Acabado de lujo premium", g12c:"Iluminación ambiental moderna",
- g13c:"Proyecto de decoración integral",
- ba_title:"Antes / Después", ba_sub:"Desliza y mira la transformación", before:"Antes", after:"Después",
- ai_badge:"✨ IA",
- ai_title:"Fotografía tu habitación y visualiza el yeso",
- ai_sub:"Sube una foto de tu salón o dormitorio — nuestra IA propone en segundos diseños de yeso adaptados.",
- ai_cam:"📷 Fotografía tu casa ahora", ai_cam_sub:"Abre la cámara y obtén el diseño al instante",
- ai_up:"Elegir una foto", ai_up_sub:"JPG / PNG • menos de 8 MB",
- ai_cta:"✨ Consigue tu primer diseño gratis",
- ai_gen:"Generando diseño…",
- ai_nophoto:"Primero haz o elige una foto 📷",
- ai_toobig:"La foto pesa más de 8 MB, elige otra más ligera.",
- ai_res_t:"Tu diseño con IA", ai_res_i:"¿Te gusta? Pídenos este diseño por WhatsApp y te damos presupuesto gratuito.",
- ai_err_t:"Te lo preparamos gratis",
- ai_err_i:"La IA no está disponible ahora mismo. Pulsa el botón y envíanos tu foto por WhatsApp: te mandamos el diseño sin coste.",
- ec401:"Clave API inválida (401)",
- ec402:"Sin saldo en OpenRouter (402) — recarga créditos",
- ec404:"Modelo no disponible (404)",
- ec429:"Límite de peticiones alcanzado (429)",
- ecNet:"Sin conexión o error de red",
- ecOther:"Error desconocido",
- pwa_title:"📲 Instala Aljibs Pro",
- pwa_and:"Tenla en tu pantalla de inicio como una app: rápida y a pantalla completa.",
- pwa_and_m:"En Chrome: menú ⋮ → «Instalar app» o «Añadir a pantalla de inicio».",
- pwa_ios:"En iPhone: pulsa Compartir (cuadrado con flecha) → «Añadir a pantalla de inicio».",
- pwa_install:"Instalar", pwa_later:"Ahora no",
- pwa_foot:"Instalar como app",
- about_title:"¿Por qué elegirnos?",
- about_p1:"En <strong>Aljibs Pro</strong> somos especialistas en todo tipo de decoración en yeso: techos, molduras, cornisas, rosetones e iluminación LED integrada.",
- about_p2:"Trabajamos con materiales de primera calidad, respetamos los plazos y dejamos tu casa limpia al terminar. Presupuesto gratuito y sin compromiso.",
- w1t:"Acabados de lujo", w1d:"Detalle y calidad en cada trabajo.", w2t:"Puntualidad", w2d:"Respetamos los plazos acordados.", w3t:"Precio justo", w3d:"Presupuesto claro y sin sorpresas.", w4t:"Limpieza", w4d:"Dejamos tu hogar impecable.",
- contact_title:"Contacto", contact_sub:"Llámanos o escríbenos por WhatsApp, ¡respuesta rápida!",
- phone_label:"Teléfono / WhatsApp", hours_label:"Horario", hours_value:"Lun – Sáb: 8:00 – 19:00",
- area_label:"Zona de trabajo", area_value:"Tánger y alrededores — nos desplazamos a domicilio",
- btn_call:"Llamar ahora", btn_wa:"Escribir por WhatsApp",
- footer_rights:"Todos los derechos reservados.",
- chat_title:"Asistente Aljibs Pro", chat_status:"En línea · responde al instante", chat_ph:"Escribe tu pregunta…",
- chat_welcome:"¡Hola! 👋 Soy el asistente virtual de <strong>Aljibs Pro</strong> (Tánger). Puedo informarte sobre servicios, precios, horarios o contacto. ¿En qué te ayudo?",
- chips:["Servicios","Precio","Horario","Contacto"],
-},
-fr:{
- _title:"Aljibs Pro | Décoration en plâtre à Tanger",
- brand_tag:"Décoration en plâtre · Tanger", nav_home:"Accueil", nav_services:"Services", nav_gallery:"Galerie", nav_about:"À propos", nav_contact:"Contact",
- nav_quote:"Demander un devis",
- hero_badge:"✦ Experts en plâtre et staff à Tanger",
- hero_title:"Une décoration en plâtre qui <em>transforme</em> votre maison",
- hero_sub:"Installation professionnelle de plafonds, moulures, corniches et designs en plâtre avec éclairage LED. Finitions de luxe, chantier propre, au meilleur prix.",
- cta_quote:"Devis gratuit", cta_gallery:"Voir nos réalisations",
- services_title:"Nos services", services_sub:"Tous types de décoration en plâtre, conception et pose incluses",
- s1t:"Plafonds & faux plafonds", s1d:"Plafonds en plâtre et placo aux designs modernes multi-niveaux.",
- s2t:"Moulures & corniches", s2d:"Moulures décoratives et corniches élégantes pour plafonds et murs.",
- s3t:"Éclairage LED", s3d:"Lumière LED indirecte intégrée pour des ambiances uniques.",
- s4t:"Cloisons en placo", s4d:"Cloisons intérieures aux finitions parfaites.",
- s5t:"Rosaces & ornements", s5d:"Rosaces, arcs et détails ornementaux classiques ou modernes.",
- s6t:"Designs sur mesure", s6d:"Nous réalisons le design de vos rêves, adapté à votre espace.",
- gallery_title:"Galerie", gallery_sub:"Un aperçu de nos réalisations",
- g1c:"Plafond deux niveaux, lumière chaude", g2c:"Design moderne à LED bleue", g3c:"Lignes LED et spots carrés",
- g4c:"Finition élégante avec moulures", g5c:"Design contemporain minimaliste", g6c:"Éclairage LED dissimulé",
- g7c:"Combinaison de niveaux et textures", g8c:"Style classique avec ornements", g9c:"Grand espace avec spots",
- g10c:"Design personnalisé unique", g11c:"Finition premium de luxe", g12c:"Éclairage d'ambiance moderne",
- g13c:"Projet de décoration intégrale",
- ba_title:"Avant / Après", ba_sub:"Faites glisser pour voir la transformation", before:"Avant", after:"Après",
- ai_badge:"✨ IA",
- ai_title:"Photographiez votre pièce et visualisez le plâtre",
- ai_sub:"Téléchargez une photo de votre salon ou chambre — notre IA propose en quelques secondes des designs en plâtre adaptés.",
- ai_cam:"📷 Photographiez votre maison maintenant", ai_cam_sub:"Ouvrez la caméra et obtenez le design instantanément",
- ai_up:"Choisir une photo", ai_up_sub:"JPG / PNG • moins de 8 MB",
- ai_cta:"✨ Obtenez votre premier design gratuit",
- ai_gen:"Génération du design…",
- ai_nophoto:"Prenez ou choisissez d'abord une photo 📷",
- ai_toobig:"La photo dépasse 8 MB, choisissez-en une plus légère.",
- ai_res_t:"Votre design par IA", ai_res_i:"Ça vous plaît ? Demandez ce design sur WhatsApp, devis gratuit.",
- ai_err_t:"Nous le préparons pour vous gratuitement",
- ai_err_i:"L'IA est indisponible pour le moment. Appuyez sur le bouton et envoyez-nous votre photo sur WhatsApp : nous vous envoyons le design sans frais.",
- ec401:"Clé API invalide (401)",
- ec402:"Solde insuffisant sur OpenRouter (402) — rechargez des crédits",
- ec404:"Modèle indisponible (404)",
- ec429:"Limite de requêtes atteinte (429)",
- ecNet:"Pas de connexion ou erreur réseau",
- ecOther:"Erreur inconnue",
- pwa_title:"📲 Installez Aljibs Pro",
- pwa_and:"Sur votre écran d'accueil comme une app : rapide et plein écran.",
- pwa_and_m:"Sur Chrome : menu ⋮ → « Installer l'application » ou « Ajouter à l'écran d'accueil ».",
- pwa_ios:"Sur iPhone : touchez Partager (carré avec flèche) → « Ajouter à l'écran d'accueil ».",
- pwa_install:"Installer", pwa_later:"Plus tard",
- pwa_foot:"Installer comme app",
- about_title:"Pourquoi nous choisir ?",
- about_p1:"Chez <strong>Aljibs Pro</strong>, nous sommes spécialistes de toute décoration en plâtre : plafonds, moulures, corniches, rosaces et éclairage LED intégré.",
- about_p2:"Matériaux de première qualité, respect des délais et chantier laissé propre. Devis gratuit et sans engagement.",
- w1t:"Finitions de luxe", w1d:"Soin et qualité à chaque chantier.", w2t:"Ponctualité", w2d:"Délais respectés.", w3t:"Prix juste", w3d:"Devis clair, sans surprises.", w4t:"Propreté", w4d:"Votre maison reste impeccable.",
- contact_title:"Contact", contact_sub:"Appelez-nous ou écrivez-nous sur WhatsApp, réponse rapide !",
- phone_label:"Téléphone / WhatsApp", hours_label:"Horaires", hours_value:"Lun – Sam : 8h – 19h",
- area_label:"Zone d'intervention", area_value:"Tanger et environs — déplacement à domicile",
- btn_call:"Appeler", btn_wa:"Écrire sur WhatsApp",
- footer_rights:"Tous droits réservés.",
- chat_title:"Assistant Aljibs Pro", chat_status:"En ligne · réponse immédiate", chat_ph:"Écrivez votre question…",
- chat_welcome:"Bonjour ! 👋 Je suis l'assistant virtuel d'<strong>Aljibs Pro</strong> (Tanger). Je peux vous renseigner sur les services, prix, horaires ou le contact. Comment puis-je aider ?",
- chips:["Services","Prix","Horaires","Contact"],
-},
-en:{
- _title:"Aljibs Pro | Gypsum Decoration in Tangier",
- brand_tag:"Gypsum decoration · Tangier", nav_home:"Home", nav_services:"Services", nav_gallery:"Gallery", nav_about:"About", nav_contact:"Contact",
- nav_quote:"Request a Quote",
- hero_badge:"✦ Gypsum & plaster experts in Tangier",
- hero_title:"Gypsum decoration that <em>transforms</em> your home",
- hero_sub:"Professional installation of ceilings, moldings, cornices and gypsum designs with LED lighting. Luxury finishes, clean work, best price.",
- cta_quote:"Free quote", cta_gallery:"View our work",
- services_title:"Our services", services_sub:"All types of gypsum decoration, design and installation included",
- s1t:"Ceilings & false ceilings", s1d:"Gypsum and plasterboard ceilings with modern multi-level designs.",
- s2t:"Moldings & cornices", s2d:"Decorative moldings and elegant cornices for ceilings and walls.",
- s3t:"LED lighting", s3d:"Integrated indirect LED light that creates unique atmospheres.",
- s4t:"Plasterboard partitions", s4d:"Interior partitions with a perfect finish.",
- s5t:"Medallions & ornaments", s5d:"Ceiling medallions, arches and ornamental details, classic or modern.",
- s6t:"Custom designs", s6d:"We build the design you dream of, adapted to your space and taste.",
- gallery_title:"Work gallery", gallery_sub:"A sample of our achievements",
- g1c:"Two-level ceiling, warm light", g2c:"Modern design with blue LED", g3c:"LED lines and square spots",
- g4c:"Elegant finish with moldings", g5c:"Contemporary minimalist design", g6c:"Concealed LED lighting",
- g7c:"Combination of levels and textures", g8c:"Classic style with ornaments", g9c:"Spacious area with spotlights",
- g10c:"Unique personalized design", g11c:"Premium luxury finish", g12c:"Modern ambient lighting",
- g13c:"Complete decoration project",
- ba_title:"Before / After", ba_sub:"Slide to see the transformation", before:"Before", after:"After",
- ai_badge:"✨ AI",
- ai_title:"Photograph your room and visualize the gypsum",
- ai_sub:"Upload a photo of your living room or bedroom — our AI suggests adapted gypsum designs in seconds.",
- ai_cam:"📷 Photograph your home now", ai_cam_sub:"Open the camera and get the design instantly",
- ai_up:"Choose a photo", ai_up_sub:"JPG / PNG • under 8 MB",
- ai_cta:"✨ Get your first design free",
- ai_gen:"Generating design…",
- ai_nophoto:"First take or choose a photo 📷",
- ai_toobig:"The photo is over 8 MB, choose a lighter one.",
- ai_res_t:"Your AI design", ai_res_i:"Like it? Request this design on WhatsApp — free quote.",
- ai_err_t:"We'll prepare it for you free",
- ai_err_i:"The AI is unavailable right now. Tap the button and send us your photo on WhatsApp: we'll send you the design free of charge.",
- ec401:"Invalid API key (401)",
- ec402:"No credit on OpenRouter (402) — top up credits",
- ec404:"Model unavailable (404)",
- ec429:"Rate limit reached (429)",
- ecNet:"No connection or network error",
- ecOther:"Unknown error",
- pwa_title:"📲 Install Aljibs Pro",
- pwa_and:"On your home screen like an app: fast and fullscreen.",
- pwa_and_m:"In Chrome: ⋮ menu → «Install app» or «Add to Home screen».",
- pwa_ios:"On iPhone: tap Share (square with arrow) → «Add to Home Screen».",
- pwa_install:"Install", pwa_later:"Not now",
- pwa_foot:"Install as app",
- about_title:"Why choose us?",
- about_p1:"At <strong>Aljibs Pro</strong> we specialise in all types of gypsum decoration: ceilings, moldings, cornices, medallions and integrated LED lighting.",
- about_p2:"We use top-quality materials, respect deadlines and leave your home clean when we finish. Free quote with no obligation.",
- w1t:"Luxury finishes", w1d:"Detail and quality in every job.", w2t:"Punctuality", w2d:"We respect agreed deadlines.", w3t:"Fair price", w3d:"Clear quote, no surprises.", w4t:"Cleanliness", w4d:"We leave your home spotless.",
- contact_title:"Contact", contact_sub:"Call us or message us on WhatsApp, fast reply!",
- phone_label:"Phone / WhatsApp", hours_label:"Hours", hours_value:"Mon – Sat: 8:00 – 19:00",
- area_label:"Work area", area_value:"Tangier and surrounding areas — we travel to your home",
- btn_call:"Call now", btn_wa:"Message on WhatsApp",
- footer_rights:"All rights reserved.",
- chat_title:"Aljibs Pro Assistant", chat_status:"Online · instant reply", chat_ph:"Type your question…",
- chat_welcome:"Hello! 👋 I'm the <strong>Aljibs Pro</strong> (Tangier) virtual assistant. I can help with services, prices, hours or contact. How can I help?",
- chips:["Services","Price","Hours","Contact"],
-},
-ar:{
- _title:"الجبس برو | ديكورات الجبس في طنجة",
- brand_tag:"ديكور الجبس · طنجة", nav_home:"الرئيسية", nav_services:"خدماتنا", nav_gallery:"معرض الأعمال", nav_about:"لماذا نحن", nav_contact:"اتصل بنا",
- nav_quote:"اطلب عرض سعر",
- hero_badge:"✦ خبراء في الجبس والديكور في طنجة",
- hero_title:"ديكورات جبس <em>تُحوِّل</em> منزلك إلى تحفة فنية",
- hero_sub:"تركيب احترافي للأسقف المعلقة، القوالب، الكرانيش والزخارف الجبسية مع إضاءة LED. تشطيبات فاخرة، عمل نظيف وأسعار منافسة.",
- cta_quote:"عرض سعر مجاني", cta_gallery:"شاهد أعمالنا",
- services_title:"خدماتنا", services_sub:"جميع أنواع ديكورات الجبس، تصميماً وتركيباً",
- s1t:"أسقف معلقة", s1d:"أسقف جبس وبلاكو بتصاميم عصرية متعددة المستويات.",
- s2t:"قوالب وكرانيش", s2d:"قوالب ديكورية وكرانيش أنيقة للأسقف والجدران.",
- s3t:"إضاءة LED", s3d:"إضاءة مخفية تضفي أجواءً ساحرة على منزلك.",
- s4t:"فواصل بلاكو", s4d:"فواصل وتقسيمات داخلية بتشطيب مثالي.",
- s5t:"وردات وزخارف", s5d:"وردات سقف وأقواس ونقوش كلاسيكية وعصرية.",
- s6t:"تصاميم حسب الطلب", s6d:"ننفذ التصميم الذي تحلم به بما يناسب ذوقك ومساحتك.",
- gallery_title:"معرض الأعمال", gallery_sub:"نماذج من إنجازاتنا",
- g1c:"سقف بمستويين وإضاءة دافئة", g2c:"تصميم عصري بإضاءة زرقاء", g3c:"خطوط LED وسبوتات مربعة",
- g4c:"تشطيب أنيق مع قوالب", g5c:"تصميم معاصر بسيط", g6c:"إضاءة LED مخفية",
- g7c:"مزيج من المستويات والملمس", g8c:"أسلوب كلاسيكي بزخارف", g9c:"مساحة واسعة مع سبوتات",
- g10c:"تصميم مخصص فريد", g11c:"تشطيب فاخر مميز", g12c:"إضاءة محيطية عصرية",
- g13c:"مشروع ديكور متكامل",
- ba_title:"قبل / بعد", ba_sub:"حرّك المؤشر وشاهد الفرق", before:"قبل", after:"بعد",
- ai_badge:"✨ ذكاء اصطناعي",
- ai_title:"صوّر غرفتك وشاهد تصميم الجبس",
- ai_sub:"حمّل صورة لصالونك أو غرفتك — يقترح ذكاؤنا الاصطناعي تصاميم جبس مناسبة في ثوانٍ.",
- ai_cam:"📷 صوّر منزلك الآن", ai_cam_sub:"افتح الكاميرا واحصل على التصميم فوراً",
- ai_up:"اختر صورة", ai_up_sub:"JPG / PNG • أقل من 8 م.ب",
- ai_cta:"✨ احصل على تصميمك الأول مجاناً",
- ai_gen:"جارٍ إنشاء التصميم…",
- ai_nophoto:"التقط أو اختر صورة أولاً 📷",
- ai_toobig:"حجم الصورة أكبر من 8 م.ب، اختر صورة أخف.",
- ai_res_t:"تصميمك بالذكاء الاصطناعي", ai_res_i:"أعجبك؟ اطلب هذا التصميم عبر واتساب — عرض سعر مجاني.",
- ai_err_t:"سنجهزه لك مجاناً",
- ai_err_i:"الذكاء الاصطناعي غير متوفر حالياً. اضغط الزر وأرسل لنا صورتك على واتساب: نرسل لك التصميم مجاناً.",
- ec401:"مفتاح API غير صالح (401)",
- ec402:"لا يوجد رصيد في OpenRouter (402) — اشحن الرصيد",
- ec404:"النموذج غير متوفر (404)",
- ec429:"تم بلوغ حد الطلبات (429)",
- ecNet:"لا يوجد اتصال أو خطأ في الشبكة",
- ecOther:"خطأ غير معروف",
- pwa_title:"📲 ثبّت الجبس برو",
- pwa_and:"على شاشتك الرئيسية كتطبيق: سريع وبملء الشاشة.",
- pwa_and_m:"في كروم: قائمة ⋮ → «تثبيت التطبيق» أو «إضافة إلى الشاشة الرئيسية».",
- pwa_ios:"على آيفون: اضغط مشاركة (مربع بسهم) → «إضافة إلى الشاشة الرئيسية».",
- pwa_install:"تثبيت", pwa_later:"لاحقاً",
- pwa_foot:"ثبّت كتطبيق",
- about_title:"لماذا تختارنا؟",
- about_p1:"في <strong>الجبس برو</strong> نحن متخصصون في جميع ديكورات الجبس: أسقف، قوالب، كرانيش، وردات وإضاءة LED مدمجة.",
- about_p2:"نشتغل بمواد عالية الجودة، نحترم المواعيد ونترك منزلك نظيفاً. عرض السعر مجاني وبدون التزام.",
- w1t:"تشطيبات فاخرة", w1d:"إتقان وجودة في كل عمل.", w2t:"احترام المواعيد", w2d:"نلتزم بالآجال المتفق عليها.", w3t:"أثمنة مناسبة", w3d:"عرض سعر واضح بدون مفاجآت.", w4t:"نظافة", w4d:"نترك منزلك نظيفاً.",
- contact_title:"اتصل بنا", contact_sub:"اتصل أو راسلنا على واتساب، جواب سريع!",
- phone_label:"الهاتف / واتساب", hours_label:"أوقات العمل", hours_value:"الاثنين – السبت: 8:00 – 19:00",
- area_label:"منطقة التدخل", area_value:"طنجة والنواحي — ننتقل إلى منزلك",
- btn_call:"اتصل الآن", btn_wa:"راسلنا على واتساب",
- footer_rights:"جميع الحقوق محفوظة.",
- chat_title:"مساعد الجبس برو", chat_status:"متصل · يجيب فوراً", chat_ph:"اكتب سؤالك…",
- chat_welcome:"سلام! 👋 أنا المساعد الافتراضي لـ<strong>الجبس برو</strong> (طنجة). يمكنني إخبارك عن الخدمات، الأثمنة، أوقات العمل أو التواصل. كيف أساعدك؟",
- chips:["الخدمات","الثمن","أوقات العمل","اتصال"],
-}};
-
-const INTENTS = [
- {k:["gracias","merci","thank","شكرا","بارك"], r:{
-  es:"😊 ¡A ti! Si necesitas algo más, aquí estoy. No olvides pedir tu presupuesto gratuito. ✨",
-  fr:"😊 À vous ! Si besoin, je reste là. N'oubliez pas votre devis gratuit. ✨",
-  en:"😊 You're welcome! I'm here if you need anything else. Don't forget your free quote. ✨",
-  ar:"😊 العفو! أنا هنا إذا احتجت أي شيء. ولا تنسَ عرض السعر المجاني. ✨"}},
- {k:["presupuesto","precio","cost","cuanto","devis","prix","combien","quote","price","tarif","سعر","ثمن","شحال","فلوس"], r:{
-  es:"💰 El presupuesto es GRATIS y sin compromiso. El precio depende de los m² y del diseño. Envíanos las medidas o una foto por WhatsApp al "+CONFIG.phoneShow+" y te damos una estimación al momento. 👇 Pulsa el botón verde de WhatsApp.",
-  fr:"💰 Le devis est GRATUIT et sans engagement. Le prix dépend des m² et du design. Envoyez-nous les mesures ou une photo sur WhatsApp au "+CONFIG.phoneShow+" et recevez une estimation immédiate. 👇 Utilisez le bouton WhatsApp vert.",
-  en:"💰 The quote is FREE with no obligation. Price depends on m² and design. Send us measurements or a photo on WhatsApp at "+CONFIG.phoneShow+" and get an instant estimate. 👇 Use the green WhatsApp button.",
-  ar:"💰 عرض السعر مجاني وبدون التزام. الثمن يتعلق بالمساحة والتصميم. أرسل لنا القياسات أو صورة على واتساب "+CONFIG.phoneShow+" وستتوصل بتقدير فوري. 👇 استعمل زر واتساب الأخضر."}},
- {k:["whatsapp","telefono","contact","llamar","phone","call","اتصال","هاتف","واتساب","رقم","تواصل"], r:{
-  es:"📞 Puedes contactarnos por teléfono o WhatsApp: <b>"+CONFIG.phoneShow+"</b>. ¡Estaremos encantados de atenderte!",
-  fr:"📞 Contactez-nous par téléphone ou WhatsApp : <b>"+CONFIG.phoneShow+"</b>. Avec plaisir !",
-  en:"📞 Reach us by phone or WhatsApp: <b>"+CONFIG.phoneShow+"</b>. We'll be happy to help!",
-  ar:"📞 يمكنكم الاتصال بنا هاتفياً أو عبر واتساب: <b>"+CONFIG.phoneShow+"</b>. يسعدنا خدمتكم!"}},
- {k:["horario","horaire","hours","schedule","domingo","sunday","dimanche","open","abierto","ouvert","دوام","متى","الأحد","السبت","وقت"], r:{
-  es:"🕗 Trabajamos de lunes a sábado, de 8:00 a 19:00. Por WhatsApp respondemos a cualquier hora.",
-  fr:"🕗 Nous travaillons du lundi au samedi, de 8h à 19h. Sur WhatsApp, nous répondons à toute heure.",
-  en:"🕗 We work Monday to Saturday, 8:00–19:00. On WhatsApp we reply any time.",
-  ar:"🕗 نعمل من الاثنين إلى السبت، من 8:00 إلى 19:00. وعلى واتساب نجيب في أي وقت."}},
- {k:["tarda","duracion","delai","how long","cuanto tiempo","combien de temps","مدة","كم يوم","days","jours","dias"], r:{
-  es:"⏱️ Un techo estándar se instala en 2–4 días según el diseño. Los diseños con LED y varios niveles pueden llevar un poco más. ¡Siempre dejamos el trabajo limpio!",
-  fr:"⏱️ Un plafond standard est installé en 2 à 4 jours selon le design. Les designs LED multi-niveaux demandent un peu plus. Chantier toujours laissé propre !",
-  en:"⏱️ A standard ceiling takes 2–4 days depending on design. Multi-level LED designs may take a bit longer. We always leave everything clean!",
-  ar:"⏱️ السقف العادي يُركَّب في 2–4 أيام حسب التصميم. التصاميم متعددة المستويات مع LED قد تأخذ وقتاً أطول قليلاً. ونترك المكان نظيفاً دائماً!"}},
- {k:["zona","donde","where","area","region","ville","مدينة","أين","منطقة","مكان","desplaz","déplace","travel","طنجة"], r:{
-  es:"📍 Estamos en Tánger y nos desplazamos a domicilio por toda la ciudad y alrededores, sin coste. Escríbenos por WhatsApp y coordinamos la visita.",
-  fr:"📍 Nous sommes à Tanger et nous nous déplaçons à domicile dans toute la ville et ses environs, sans frais. Écrivez-nous sur WhatsApp pour organiser la visite.",
-  en:"📍 We are based in Tangier and travel to your home anywhere in the city and surrounding areas, for free. Message us on WhatsApp to arrange a visit.",
-  ar:"📍 نتواجد في طنجة وننتقل إلى منزلك في كل أحياء المدينة والنواحي مجاناً. راسلنا على واتساب لتنسيق الزيارة."}},
- {k:["material","calidad","quality","qualite","جودة","مواد","خام","grieta","fissure","crack"], r:{
-  es:"🧱 Usamos yeso y pladur de primera calidad, perfilería certificada y LED de bajo consumo. Acabado garantizado sin grietas.",
-  fr:"🧱 Nous utilisons du plâtre et du placo de première qualité, des structures certifiées et des LED basse consommation. Finition garantie sans fissures.",
-  en:"🧱 We use top-quality gypsum and plasterboard, certified framing and low-consumption LEDs. Crack-free finish guaranteed.",
-  ar:"🧱 نستعمل جبس وبلاكو من الدرجة الأولى، هياكل مصادق عليها وإضاءة LED موفرة. تشطيب مضمون بدون تشققات."}},
- {k:["humano","human","persona","agent","equipo","team","معلم","فني","تقني","مسؤول"], r:{
-  es:"👷 ¡Claro! Un especialista de nuestro equipo te atenderá por WhatsApp: "+CONFIG.phoneShow+".",
-  fr:"👷 Bien sûr ! Un spécialiste de notre équipe vous répondra sur WhatsApp : "+CONFIG.phoneShow+".",
-  en:"👷 Of course! A specialist from our team will assist you on WhatsApp: "+CONFIG.phoneShow+".",
-  ar:"👷 بالطبع! سيواصل معك مختص من فريقنا عبر واتساب: "+CONFIG.phoneShow+"."}},
- {k:["servicio","service","offres","خدمات","شنو","propose","techos","plafond","ceiling","moldura","moulure","molding","cornisa","corniche","rosace","roseton","pladur","placo","سقف","قالب","كرنيش","وردة","بلاكو","جبس"], r:{
-  es:"🛠️ Realizamos todo tipo de decoración en yeso:<br>• Techos y falsos techos<br>• Molduras y cornisas<br>• Rosetones y ornamentos<br>• Tabiques de pladur<br>• Iluminación LED integrada<br>• Diseños a medida<br>¿Quieres un presupuesto gratuito?",
-  fr:"🛠️ Nous réalisons tous types de décoration en plâtre :<br>• Plafonds et faux plafonds<br>• Moulures et corniches<br>• Rosaces et ornements<br>• Cloisons en placo<br>• Éclairage LED intégré<br>• Designs sur mesure<br>Souhaitez-vous un devis gratuit ?",
-  en:"🛠️ We do all types of gypsum decoration:<br>• False ceilings<br>• Moldings & cornices<br>• Medallions & ornaments<br>• Plasterboard partitions<br>• Integrated LED lighting<br>• Custom designs<br>Would you like a free quote?",
-  ar:"🛠️ ننجز جميع أنواع ديكورات الجبس:<br>• أسقف معلقة<br>• قوالب وكرانيش<br>• وردات وزخارف<br>• فواصل بلاكو<br>• إضاءة LED مدمجة<br>• تصاميم حسب الطلب<br>هل تريد عرض سعر مجاني؟"}},
- {k:["galer","foto","photo","trabajos","realisation","معرض","صور","أعمال","portfolio","picture"], r:{
-  es:"🖼️ Tenemos diseños para todos los gustos: modernos con LED, clásicos con molduras… Desliza hasta la galería y mira el Antes/Después. 😍",
-  fr:"🖼️ Des designs pour tous les goûts : modernes avec LED, classiques avec moulures… Faites défiler jusqu'à la galerie et voyez l'Avant/Après. 😍",
-  en:"🖼️ Designs for every taste: modern LED, classic moldings… Scroll to the gallery and see the Before/After. 😍",
-  ar:"🖼️ لدينا تصاميم لكل الأذواق: عصرية بإضاءة LED وكلاسيكية بالقوالب… مرِّر إلى معرض الأعمال وشاهد قبل/بعد. 😍"}},
- {k:["hola","buenas","bonjour","salut","hello","hey","سلام","مرحبا","صباح","مساء"], r:{
-  es:"¡Hola! 😊 ¿En qué puedo ayudarte? Puedes preguntarme por servicios, precios, horario o contacto.",
-  fr:"Bonjour ! 😊 Comment puis-je vous aider ? Services, prix, horaires ou contact ?",
-  en:"Hello! 😊 How can I help? Ask me about services, prices, hours or contact.",
-  ar:"مرحباً! 😊 كيف أساعدك؟ اسألني عن الخدمات، الأثمنة، أوقات العمل أو التواصل."}},
+/* ================== DATOS ================== */
+const WA = "https://wa.seo-local.click/land/arij-color";
+/* 👉 Pega aquí el enlace de tu logo (postimg) para usar la imagen real en el icono de la app.
+   Mientras esté vacío, se usa la recreación vectorial con tus colores y fondo naranja. */
+const LOGO_URL = "";
+const GOLD = "#F0C020"; /* color naranja/dorado de los bordes del logo */
+const LANGS = [
+  {code:"es", name:"Español",  flag:"https://flagcdn.com/w40/es.png"},
+  {code:"fr", name:"Français", flag:"https://flagcdn.com/w40/fr.png"},
+  {code:"en", name:"English",  flag:"https://flagcdn.com/w40/gb.png"},
+  {code:"ar", name:"العربية",  flag:"https://flagcdn.com/w40/ma.png"}
 ];
-const FALLBACK = {
- es:"🤔 No estoy seguro de haberte entendido. Puedo ayudarte con: servicios, precios, horario, zona o contacto. Prueba con un botón de abajo. 👇",
- fr:"🤔 Je ne suis pas sûr d'avoir compris. Je peux vous aider sur : services, prix, horaires, zone ou contact. Essayez un bouton ci-dessous. 👇",
- en:"🤔 I'm not sure I understood. I can help with: services, prices, hours, area or contact. Try a button below. 👇",
- ar:"🤔 لم أفهم جيداً. يمكنني مساعدتك في: الخدمات، الأثمنة، أوقات العمل، المنطقة أو التواصل. جرّب أحد الأزرار أسفله. 👇"
+let lang = localStorage.getItem("arij-lang") || "es";
+
+const IMG = {
+  interior:"https://i.postimg.cc/kDRkx25G/salon-interior-jpg.jpg",
+  exterior:"https://i.postimg.cc/H8MRHhNQ/casa-exterior-jpg.jpg",
+  decor:"https://i.postimg.cc/y3RtBbGb/dormitorio-deco-jpg.jpg",
+  water:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/3e71c28a2-cce1-4ab0-afd0-74bf2f0f46329096.png",
+  wood:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/2e71c28a2-cce1-4ab0-afd0-74bf2f0f46329927.png",
+  paper:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/2e71c28a2-cce1-4ab0-afd0-74bf2f0f46321033.png"
+};
+const FB = {
+  interior:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/5e71c28a2-cce1-4ab0-afd0-74bf2f0f46326774.png",
+  exterior:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/2e71c28a2-cce1-4ab0-afd0-74bf2f0f46322926.png",
+  decor:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/4e71c28a2-cce1-4ab0-afd0-74bf2f0f46326685.png"
 };
 
-let lang = localStorage.getItem("lang") || "es";
-let aiMode = null;
-let aiLastCode = null;
+const SERVICES = [
+ {id:"interior", img:IMG.interior, fb:FB.interior,
+  es:{t:"Pintura interior",s:"Acabados perfectos para paredes y techos de tu hogar.",d:"Renovamos el interior de tu hogar o negocio con pinturas de alta calidad, colores a tu gusto y un acabado impecable. Protegemos tus muebles y dejamos todo limpio al terminar.",f:["Preparación y alisado de paredes","Pinturas lavables de primera calidad","Asesoramiento de color incluido","Limpieza final de la obra"]},
+  fr:{t:"Peinture intérieure",s:"Finitions parfaites pour les murs et plafonds de votre maison.",d:"Nous rénovons l'intérieur de votre maison ou commerce avec des peintures de haute qualité, des couleurs à votre goût et un fini impeccable. Nous protégeons vos meubles et laissons tout propre.",f:["Préparation et lissage des murs","Peintures lavables de première qualité","Conseil couleur inclus","Nettoyage final du chantier"]},
+  en:{t:"Interior painting",s:"Perfect finishes for the walls and ceilings of your home.",d:"We refresh the interior of your home or business with high-quality paints, colors of your choice and a flawless finish. We protect your furniture and leave everything clean.",f:["Wall preparation and smoothing","Premium washable paints","Free color advice","Final site cleaning"]},
+  ar:{t:"طلاء داخلي",s:"تشطيبات مثالية لجدران وأسقف منزلك.",d:"نجدد داخل منزلك أو محلك بدهانات عالية الجودة وألوان حسب ذوقك وتشطيب لا تشوبه شائبة. نحمي أثاثك ونترك كل شيء نظيفًا بعد الانتهاء.",f:["تجهيز وتسوية الجدران","دهانات قابلة للغسل بجودة عالية","استشارة الألوان مشمولة","تنظيف نهائي للموقع"]}},
+ {id:"exterior", img:IMG.exterior, fb:FB.exterior,
+  es:{t:"Pintura exterior",s:"Protege y embellece la fachada de tu edificio.",d:"Tratamos y pintamos fachadas y exteriores con pinturas resistentes al sol y a la lluvia, devolviendo a tu edificio su mejor aspecto durante años.",f:["Limpieza y tratamiento previo de la fachada","Pinturas impermeables y anti-UV","Reparación de grietas y humedades","Durabilidad garantizada"]},
+  fr:{t:"Peinture extérieure",s:"Protégez et embellissez la façade de votre bâtiment.",d:"Nous traitons et peignons les façades et extérieurs avec des peintures résistantes au soleil et à la pluie, pour un résultat durable.",f:["Nettoyage et traitement préalable de la façade","Peintures imperméables et anti-UV","Réparation des fissures et de l'humidité","Durabilité garantie"]},
+  en:{t:"Exterior painting",s:"Protect and beautify your building's facade.",d:"We treat and paint facades and exteriors with sun- and rain-resistant paints, keeping your building looking its best for years.",f:["Facade cleaning and pre-treatment","Waterproof and anti-UV paints","Crack and damp repair","Guaranteed durability"]},
+  ar:{t:"طلاء خارجي",s:"احمِ وجمّل واجهة مبناك.",d:"نعالج ونطلي الواجهات والخارجيات بدهانات مقاومة للشمس والأمطار لتبقى واجهة مبناك في أفضل حال لسنوات.",f:["تنظيف ومعالجة الواجهة مسبقًا","دهانات مضادة للماء والأشعة فوق البنفسجية","إصلاح الشقوق والرطوبة","متانة مضمونة"]}},
+ {id:"decor", img:IMG.decor, fb:FB.decor,
+  es:{t:"Pintura decorativa",s:"Efectos únicos: tadelakt, estuco y más.",d:"Dale personalidad a tus espacios con técnicas decorativas marroquíes y modernas: tadelakt, estuco, efectos de textura y pinturas metalizadas.",f:["Tadelakt tradicional marroquí","Estuco y efectos de mármol","Texturas y pinturas metalizadas","Diseños personalizados"]},
+  fr:{t:"Peinture décorative",s:"Effets uniques : tadelakt, stuc et plus.",d:"Donnez du caractère à vos espaces avec des techniques décoratives marocaines et modernes : tadelakt, stuc, effets de texture et peintures métallisées.",f:["Tadelakt traditionnel marocain","Stuc et effets marbrés","Textures et peintures métallisées","Designs personnalisés"]},
+  en:{t:"Decorative painting",s:"Unique effects: tadelakt, stucco and more.",d:"Give personality to your spaces with Moroccan and modern decorative techniques: tadelakt, stucco, texture effects and metallic paints.",f:["Traditional Moroccan tadelakt","Stucco and marble effects","Textures and metallic paints","Custom designs"]},
+  ar:{t:"طلاء ديكوري",s:"لمسات فريدة: تادلاكت، جص والمزيد.",d:"أضف طابعًا خاصًا لمساحاتك بتقنيات زخرفية مغربية وعصرية: تادلاكت، جص، تأثيرات ملمسية ودهانات معدنية.",f:["تادلاكت مغربي تقليدي","جص وتأثيرات رخامية","ملمسات ودهانات معدنية","تصاميم حسب الطلب"]}},
+ {id:"water", img:IMG.water, fb:IMG.water,
+  es:{t:"Impermeabilización",s:"Terrazas y tejados sin humedades.",d:"Aplicamos sistemas impermeabilizantes en terrazas, azoteas y tejados para eliminar filtraciones y humedades de por vida.",f:["Membranas líquidas y telas","Eliminación de filtraciones","Aislamiento térmico adicional","Garantía por escrito"]},
+  fr:{t:"Imperméabilisation",s:"Terrasses et toits sans humidité.",d:"Nous appliquons des systèmes d'imperméabilisation sur terrasses et toitures pour éliminer durablement les infiltrations.",f:["Membranes liquides et toiles","Élimination des infiltrations","Isolation thermique supplémentaire","Garantie écrite"]},
+  en:{t:"Waterproofing",s:"Terraces and roofs without damp.",d:"We apply waterproofing systems on terraces and roofs to permanently eliminate leaks and damp.",f:["Liquid membranes and fabrics","Leak elimination","Extra thermal insulation","Written guarantee"]},
+  ar:{t:"عزل الأسطح",s:"شرفات وأسطح بدون رطوبة.",d:"نطبق أنظمة عزل على الشرفات والأسطح للقضاء نهائيًا على التسربات والرطوبة.",f:["أغشية سائلة وأقمشة عزل","القضاء على التسربات","عزل حراري إضافي","ضمان مكتوب"]}},
+ {id:"wood", img:IMG.wood, fb:IMG.wood,
+  es:{t:"Lacado de madera",s:"Puertas, muebles y ventanas como nuevos.",d:"Lacamos y barnizamos puertas, muebles, ventanas y tarimas con acabados mate, satinado o brillo para devolverles su belleza original.",f:["Lacado de puertas y muebles","Barnizado de tarimas y escaleras","Acabados mate, satinado o brillo","Protección anti-carcoma"]},
+  fr:{t:"Laquage de bois",s:"Portes, meubles et fenêtres comme neufs.",d:"Nous laquons et vernissons portes, meubles, fenêtres et parquets avec des finitions mates, satinées ou brillantes.",f:["Laquage de portes et meubles","Vitrification de parquets et escaliers","Finitions mates, satinées ou brillantes","Protection contre les vers du bois"]},
+  en:{t:"Wood lacquering",s:"Doors, furniture and windows like new.",d:"We lacquer and varnish doors, furniture, windows and floors with matte, satin or gloss finishes to restore their original beauty.",f:["Door and furniture lacquering","Floor and stair varnishing","Matte, satin or gloss finishes","Woodworm protection"]},
+  ar:{t:"طلاء الخشب",s:"أبواب وأثاث ونوافذ كالجديدة.",d:"نطلي ونلمع الأبواب والأثاث والنوافذ والأرضيات بتشطيبات مطفية أو حريرية أو لامعة لنعيد لها جمالها الأصلي.",f:["طلاء الأبواب والأثاث","تلميع الأرضيات والسلالم","تشطيبات مطفية أو حريرية أو لامعة","حماية من سوس الخشب"]}},
+ {id:"paper", img:IMG.paper, fb:IMG.paper,
+  es:{t:"Papel pintado",s:"Instalación profesional de papel y murales.",d:"Instalamos papel pintado y murales de todo tipo con precisión milimétrica, para transformar cualquier pared en la protagonista de tu espacio.",f:["Papeles lisos, texturados y murales","Preparación previa de la pared","Colocación sin burbujas ni juntas visibles","Gran catálogo de diseños"]},
+  fr:{t:"Papier peint",s:"Pose professionnelle de papiers et fresques.",d:"Nous posons papiers peints et fresques murales avec une précision millimétrique pour transformer vos murs.",f:["Papiers unis, texturés et fresques","Préparation préalable du mur","Pose sans bulles ni joints visibles","Large catalogue de designs"]},
+  en:{t:"Wallpaper",s:"Professional wallpaper and mural installation.",d:"We install all types of wallpaper and murals with millimetric precision, turning any wall into the star of your space.",f:["Plain, textured and mural papers","Wall preparation beforehand","Bubble- and seam-free installation","Large design catalogue"]},
+  ar:{t:"ورق جدران",s:"تركيب احترافي لورق الجدران واللوحات.",d:"نركب جميع أنواع ورق الجدران واللوحات الجدارية بدقة متناهية لنحوّل أي جدار إلى نجم مساحتك.",f:["أوراق سادة وملموسة ولوحات جدارية","تجهيز الجدار مسبقًا","تركيب بدون فقاعات أو فواصل مرئية","كتالوج تصاميم واسع"]}}
+];
 
-function fillAiTexts(){
-  aiTitle.textContent = T[lang][aiMode === "err" ? "ai_err_t" : "ai_res_t"];
-  aiInfo.textContent  = T[lang][aiMode === "err" ? "ai_err_i" : "ai_res_i"];
-  if(aiMode === "err" && aiLastCode){
-    const map = {401:"ec401",402:"ec402",404:"ec404",429:"ec429",net:"ecNet"};
-    aiCode.textContent = "🔧 " + (T[lang][map[aiLastCode]] || (T[lang].ecOther + " (" + aiLastCode + ")"));
-    aiCode.style.display = "block";
-  }else{
-    aiCode.textContent = "";
-    aiCode.style.display = "none";
-  }
-}
-function showAiModal(src, mode){
-  aiMode = mode;
-  aiImg.src = src;
-  fillAiTexts();
-  aiModal.classList.add("open");
-}
+const GALLERY = [
+ {img:IMG.exterior, fb:FB.exterior, es:"Fachada de villa · Casablanca", fr:"Façade de villa · Casablanca", en:"Villa facade · Casablanca", ar:"واجهة فيلا · الدار البيضاء"},
+ {img:IMG.interior, fb:FB.interior, es:"Salón moderno · Ain Diab", fr:"Salon moderne · Aïn Diab", en:"Modern living room · Ain Diab", ar:"صالون عصري · عين الذياب"},
+ {img:IMG.decor, fb:FB.decor, es:"Dormitorio cálido · Gauthier", fr:"Chambre chaleureuse · Gauthier", en:"Cozy bedroom · Gauthier", ar:"غرفة نوم دافئة · غوتييه"},
+ {img:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/4e71c28a2-cce1-4ab0-afd0-74bf2f0f46326685.png", fb:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/4e71c28a2-cce1-4ab0-afd0-74bf2f0f46326685.png", es:"Tadelakt tradicional · Medina", fr:"Tadelakt traditionnel · Médina", en:"Traditional tadelakt · Medina", ar:"تادلاكت تقليدي · المدينة القديمة"},
+ {img:IMG.water, fb:IMG.water, es:"Impermeabilización de terraza · Maârif", fr:"Imperméabilisation de terrasse · Maârif", en:"Terrace waterproofing · Maârif", ar:"عزل شرفة · المعاريف"},
+ {img:IMG.wood, fb:IMG.wood, es:"Lacado de puerta · CIL", fr:"Laquage de porte · CIL", en:"Door lacquering · CIL", ar:"طلاء باب · حي السعادة"},
+ {img:IMG.paper, fb:IMG.paper, es:"Papel pintado · Racine", fr:"Papier peint · Racine", en:"Wallpaper · Racine", ar:"ورق جدران · راسين"},
+ {img:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/5e71c28a2-cce1-4ab0-afd0-74bf2f0f46326774.png", fb:"https://image.qwenlm.ai/public_source/0ab6a861-ec60-4cb6-a62b-2a68d4a6a98b/5e71c28a2-cce1-4ab0-afd0-74bf2f0f46326774.png", es:"Equipo en obra · Californie", fr:"Équipe en chantier · Californie", en:"Team at work · Californie", ar:"الفريق في العمل · كاليفورنيا"}
+];
 
-/* 📲 LÓGICA PWA */
-let deferredPrompt = null;
-let pwaMode = null;
-const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-const isStandalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || navigator.standalone;
+const REVIEWS = [
+ {n:"Fatima Z.", loc:"Casablanca",
+  es:"Puntuales, limpios y un acabado perfecto. El salón quedó como nuevo y respetaron el presupuesto.",
+  fr:"Ponctuels, propres et une finition parfaite. Le salon est comme neuf et le budget respecté.",
+  en:"Punctual, tidy and a perfect finish. The living room looks brand new and the quote was respected.",
+  ar:"ملتزمون بالمواعيد والنظافة وتشطيب مثالي. أصبح الصالون كالجديد واحترموا عرض السعر."},
+ {n:"Mohamed R.", loc:"Ain Diab",
+  es:"Pintaron la fachada completa en una semana. Trabajo serio y materiales de primera. Muy recomendables.",
+  fr:"Ils ont peint toute la façade en une semaine. Travail sérieux et matériaux de qualité. Je recommande vivement.",
+  en:"They painted the whole facade in a week. Serious work and top-quality materials. Highly recommended.",
+  ar:"طلوا الواجهة كاملة في أسبوع. عمل جاد ومواد ممتازة. أنصح بهم بشدة."},
+ {n:"Sophie L.", loc:"Gauthier",
+  es:"El tadelakt del recibidor es una obra de arte. Un equipo amable que asesora sin vender por vender.",
+  fr:"Le tadelakt de l'entrée est une œuvre d'art. Une équipe aimable qui conseille sans forcer la vente.",
+  en:"The tadelakt in our hallway is a work of art. A friendly team that advises without hard-selling.",
+  ar:"تادلاكت المدخل تحفة فنية. فريق ودود يقدم النصيحة بدون ضغط."}
+];
 
-function pwaShow(mode){
-  if(isStandalone) return;
-  pwaMode = mode;
-  pwaDesc.textContent = T[lang][mode === "ios" ? "pwa_ios" : (deferredPrompt ? "pwa_and" : "pwa_and_m")];
-  pwaInstall.textContent = T[lang].pwa_install;
-  pwaLater.textContent = T[lang].pwa_later;
-  pwaInstall.style.display = (mode === "android" && deferredPrompt) ? "inline-flex" : "none";
-  pwaBanner.hidden = false;
-}
-window.addEventListener("beforeinstallprompt", e=>{
-  e.preventDefault();
-  deferredPrompt = e;
-  pwaShow("android");
-});
-window.addEventListener("appinstalled", ()=>{ pwaBanner.hidden = true; });
-pwaInstall.onclick = async ()=>{
-  if(!deferredPrompt) return;
-  deferredPrompt.prompt();
-  await deferredPrompt.userChoice;
-  deferredPrompt = null;
-  pwaBanner.hidden = true;
+/* ================== TRADUCCIONES UI ================== */
+const T = {
+ es:{doc_title:"Arij Color | Pintores en Casablanca",nav_home:"Inicio",nav_services:"Servicios",nav_gallery:"Galería",nav_reviews:"Opiniones",nav_about:"Nosotros",nav_contact:"Contacto",cta:"Solicita tu Presupuesto",hero_badge:"Pintores profesionales en Casablanca",hero_title:"Damos <em>color</em> a tus espacios",hero_sub:"Calidad, limpieza y acabados perfectos en cada proyecto. Arij Color transforma tu hogar o negocio en Casablanca.",hero_btn1:"Ver servicios",hero_btn2:"Presupuesto gratis",sec_services:"Nuestros servicios",sec_services_sub:"Haz clic en cada servicio para ver toda la información y las imágenes.",btn_more:"Ver detalles",sec_gallery:"Proyectos realizados",sec_gallery_sub:"Una muestra de nuestro trabajo en Casablanca y alrededores. Haz clic para ampliar.",sec_about:"Sobre Arij Color",about_p1:"Somos una empresa de pintura en Casablanca con años de experiencia en proyectos residenciales y comerciales. Nuestro equipo combina técnica, puntualidad y limpieza en cada obra.",about_p2:"Trabajamos con materiales de primera calidad y ofrecemos presupuesto gratuito y sin compromiso.",stat1:"Proyectos completados",stat2:"Años de experiencia",stat3:"Clientes satisfechos",sec_reviews:"Qué dicen nuestros clientes",sec_reviews_sub:"Opiniones reales de clientes satisfechos.",sec_app:"Llévanos en tu bolsillo",sec_app_sub:"Instala Arij Color en tu móvil o tablet como una aplicación nativa: icono propio, acceso rápido y pantalla completa. Sin tiendas de apps, gratis y en un segundo.",pwa_btn_label:"Instala Arij Color",sec_contact:"Contacto",lbl_address:"Dirección",lbl_phone:"Teléfono",lbl_hours:"Horario",hours_val:"Lunes a Sábado: 8:00 – 19:00",foot_about:"Empresa de servicios de pintura en Casablanca. Calidad, confianza y color en cada proyecto.",foot_services:"Servicios",foot_contact:"Contacto",rights:"Todos los derechos reservados.",modal_quote:"Pedir presupuesto por WhatsApp",chat_title:"Asistente Arij",chat_status:"En línea · Responde al instante",chat_ph:"Escribe tu mensaje…",q1:"Servicios",q2:"Presupuesto",q3:"Contacto",q4:"Horario",pwa_title:"Instala Arij Color",pwa_text:"Úsala como app nativa: icono propio, pantalla completa y sin tiendas de apps.",pwa_btn:"Instalar",pwa_later:"Ahora no",pwa_ios:"En iPhone/iPad: pulsa el botón Compartir de Safari y elige «Añadir a pantalla de inicio».",pwa_android:"En Android: abre el menú ⋮ del navegador y elige «Añadir a pantalla de inicio» o «Instalar app».",
+ bot:{greet:"¡Hola! 👋 Soy el asistente virtual de Arij Color. Puedo informarte sobre servicios, presupuestos, horario o contacto. ¿En qué te ayudo?",services:"Ofrecemos: Pintura interior, Pintura exterior, Pintura decorativa, Impermeabilización, Lacado de madera y Papel pintado. Haz clic en cualquier servicio de la web para ver los detalles. 🎨",quote:"¡Claro! Puedes solicitar tu presupuesto gratuito por WhatsApp con el botón verde \"Solicita tu Presupuesto\" o en este enlace: {wa}. 💬",contact:"📍 C/ Demo Nº1 123456, Casablanca, Maroc<br>📞 +212 690 157 092",hours:"🕗 Lunes a Sábado: 8:00 – 19:00. Domingos cerrado.",thanks:"¡Gracias a ti! Si necesitas algo más, aquí estaré. 😊",fallback:"No estoy seguro de haber entendido 🤔. Puedes preguntarme por: servicios, presupuesto, contacto u horario."}},
+ fr:{doc_title:"Arij Color | Peintres à Casablanca",nav_home:"Accueil",nav_services:"Services",nav_gallery:"Galerie",nav_reviews:"Avis",nav_about:"À propos",nav_contact:"Contact",cta:"Demandez votre devis",hero_badge:"Peintres professionnels à Casablanca",hero_title:"Nous donnons de la <em>couleur</em> à vos espaces",hero_sub:"Qualité, propreté et finitions parfaites dans chaque projet. Arij Color transforme votre maison ou votre commerce à Casablanca.",hero_btn1:"Voir les services",hero_btn2:"Devis gratuit",sec_services:"Nos services",sec_services_sub:"Cliquez sur chaque service pour voir toutes les informations et les images.",btn_more:"Voir détails",sec_gallery:"Projets réalisés",sec_gallery_sub:"Un aperçu de notre travail à Casablanca et ses environs. Cliquez pour agrandir.",sec_about:"À propos d'Arij Color",about_p1:"Nous sommes une entreprise de peinture à Casablanca avec des années d'expérience dans des projets résidentiels et commerciaux. Notre équipe allie technique, ponctualité et propreté.",about_p2:"Nous travaillons avec des matériaux de première qualité et offrons un devis gratuit et sans engagement.",stat1:"Projets réalisés",stat2:"Années d'expérience",stat3:"Clients satisfaits",sec_reviews:"Ce que disent nos clients",sec_reviews_sub:"Avis authentiques de clients satisfaits.",sec_app:"Emmenez-nous dans votre poche",sec_app_sub:"Installez Arij Color sur votre mobile ou tablette comme une application native : icône propre, accès rapide et plein écran. Sans magasins d'apps, gratuit et en une seconde.",pwa_btn_label:"Installez Arij Color",sec_contact:"Contact",lbl_address:"Adresse",lbl_phone:"Téléphone",lbl_hours:"Horaires",hours_val:"Lundi à Samedi : 8h00 – 19h00",foot_about:"Entreprise de services de peinture à Casablanca. Qualité, confiance et couleur dans chaque projet.",foot_services:"Services",foot_contact:"Contact",rights:"Tous droits réservés.",modal_quote:"Demander un devis via WhatsApp",chat_title:"Assistant Arij",chat_status:"En ligne · Répond instantanément",chat_ph:"Écrivez votre message…",q1:"Services",q2:"Devis",q3:"Contact",q4:"Horaires",pwa_title:"Installez Arij Color",pwa_text:"Utilisez-la comme app native : icône propre, plein écran et sans magasins d'apps.",pwa_btn:"Installer",pwa_later:"Plus tard",pwa_ios:"Sur iPhone/iPad : touchez le bouton Partager de Safari puis « Ajouter à l'écran d'accueil ».",pwa_android:"Sur Android : ouvrez le menu ⋮ du navigateur et choisissez « Ajouter à l'écran d'accueil » ou « Installer l'appli ».",
+ bot:{greet:"Bonjour ! 👋 Je suis l'assistant virtuel d'Arij Color. Je peux vous renseigner sur les services, devis, horaires ou le contact. Comment puis-je vous aider ?",services:"Nous proposons : Peinture intérieure, Peinture extérieure, Peinture décorative, Imperméabilisation, Laquage de bois et Papier peint. Cliquez sur un service du site pour voir les détails. 🎨",quote:"Bien sûr ! Demandez votre devis gratuit via WhatsApp avec le bouton vert « Demandez votre devis » ou via ce lien : {wa}. 💬",contact:"📍 C/ Demo Nº1 123456, Casablanca, Maroc<br>📞 +212 690 157 092",hours:"🕗 Lundi à Samedi : 8h00 – 19h00. Dimanche fermé.",thanks:"Merci à vous ! Si vous avez besoin d'autre chose, je suis là. 😊",fallback:"Je ne suis pas sûr d'avoir compris 🤔. Vous pouvez me demander : services, devis, contact ou horaires."}},
+ en:{doc_title:"Arij Color | Painters in Casablanca",nav_home:"Home",nav_services:"Services",nav_gallery:"Gallery",nav_reviews:"Reviews",nav_about:"About us",nav_contact:"Contact",cta:"Request your Quote",hero_badge:"Professional painters in Casablanca",hero_title:"We bring <em>color</em> to your spaces",hero_sub:"Quality, cleanliness and perfect finishes in every project. Arij Color transforms your home or business in Casablanca.",hero_btn1:"View services",hero_btn2:"Free quote",sec_services:"Our services",sec_services_sub:"Click on each service to see full information and images.",btn_more:"View details",sec_gallery:"Completed projects",sec_gallery_sub:"A sample of our work in Casablanca and surroundings. Click to enlarge.",sec_about:"About Arij Color",about_p1:"We are a painting company in Casablanca with years of experience in residential and commercial projects. Our team combines technique, punctuality and cleanliness on every job.",about_p2:"We work with top-quality materials and offer a free, no-obligation quote.",stat1:"Completed projects",stat2:"Years of experience",stat3:"Happy clients",sec_reviews:"What our clients say",sec_reviews_sub:"Real reviews from satisfied clients.",sec_app:"Take us in your pocket",sec_app_sub:"Install Arij Color on your phone or tablet like a native app: own icon, quick access and full screen. No app stores, free and in one second.",pwa_btn_label:"Install Arij Color",sec_contact:"Contact",lbl_address:"Address",lbl_phone:"Phone",lbl_hours:"Opening hours",hours_val:"Monday to Saturday: 8:00 – 19:00",foot_about:"Painting services company in Casablanca. Quality, trust and color in every project.",foot_services:"Services",foot_contact:"Contact",rights:"All rights reserved.",modal_quote:"Request quote on WhatsApp",chat_title:"Arij Assistant",chat_status:"Online · Instant reply",chat_ph:"Type your message…",q1:"Services",q2:"Quote",q3:"Contact",q4:"Hours",pwa_title:"Install Arij Color",pwa_text:"Use it like a native app: own icon, full screen and no app stores.",pwa_btn:"Install",pwa_later:"Not now",pwa_ios:"On iPhone/iPad: tap Safari's Share button and choose \"Add to Home Screen\".",pwa_android:"On Android: open the browser menu ⋮ and choose \"Add to Home Screen\" or \"Install app\".",
+ bot:{greet:"Hi! 👋 I'm Arij Color's virtual assistant. I can help you with services, quotes, opening hours or contact info. How can I help?",services:"We offer: Interior painting, Exterior painting, Decorative painting, Waterproofing, Wood lacquering and Wallpaper. Click any service on the website for details. 🎨",quote:"Of course! Request your free quote on WhatsApp with the green \"Request your Quote\" button or this link: {wa}. 💬",contact:"📍 C/ Demo Nº1 123456, Casablanca, Maroc<br>📞 +212 690 157 092",hours:"🕗 Monday to Saturday: 8:00 – 19:00. Closed on Sundays.",thanks:"Thank you! If you need anything else, I'm here. 😊",fallback:"I'm not sure I understood 🤔. You can ask me about: services, quote, contact or hours."}},
+ ar:{doc_title:"أريج كولور | طلاءون في الدار البيضاء",nav_home:"الرئيسية",nav_services:"خدماتنا",nav_gallery:"معرض الأعمال",nav_reviews:"آراء العملاء",nav_about:"من نحن",nav_contact:"اتصل بنا",cta:"اطلب عرض السعر",hero_badge:"طلاءون محترفون في الدار البيضاء",hero_title:"نمنح <em>اللون</em> لمساحاتك",hero_sub:"جودة ونظافة وتشطيبات مثالية في كل مشروع. أريج كولور يحوّل منزلك أو عملك في الدار البيضاء.",hero_btn1:"عرض الخدمات",hero_btn2:"عرض سعر مجاني",sec_services:"خدماتنا",sec_services_sub:"انقر على كل خدمة لرؤية جميع المعلومات والصور.",btn_more:"عرض التفاصيل",sec_gallery:"مشاريع منجزة",sec_gallery_sub:"نموذج من أعمالنا في الدار البيضاء وضواحيها. انقر للتكبير.",sec_about:"عن أريج كولور",about_p1:"نحن شركة طلاء في الدار البيضاء بخبرة سنوات في المشاريع السكنية والتجارية. يجمع فريقنا بين التقنية والالتزام والنظافة في كل عمل.",about_p2:"نعمل بمواد عالية الجودة ونقدم عرض سعر مجاني وبدون التزام.",stat1:"مشروع منجز",stat2:"سنوات من الخبرة",stat3:"عملاء راضون",sec_reviews:"ماذا يقول عملاؤنا",sec_reviews_sub:"آراء حقيقية لعملاء راضين.",sec_app:"خذنا في جيبك",sec_app_sub:"ثبّت أريج كولور على هاتفك أو جهازك اللوحي كتطبيق أصلي: أيقونة خاصة، وصول سريع وملء الشاشة. بدون متاجر تطبيقات، مجانًا وفي ثانية.",pwa_btn_label:"ثبّت أريج كولور",sec_contact:"اتصل بنا",lbl_address:"العنوان",lbl_phone:"الهاتف",lbl_hours:"أوقات العمل",hours_val:"من الاثنين إلى السبت: 8:00 – 19:00",foot_about:"شركة خدمات طلاء في الدار البيضاء. جودة وثقة ولون في كل مشروع.",foot_services:"خدماتنا",foot_contact:"اتصل بنا",rights:"جميع الحقوق محفوظة.",modal_quote:"اطلب عرض السعر عبر واتساب",chat_title:"مساعد أريج",chat_status:"متصل · يجيب فورًا",chat_ph:"اكتب رسالتك…",q1:"الخدمات",q2:"عرض السعر",q3:"الاتصال",q4:"الأوقات",pwa_title:"ثبّت أريج كولور",pwa_text:"استخدمه كتطبيق أصلي: أيقونة خاصة، ملء الشاشة وبدون متاجر التطبيقات.",pwa_btn:"تثبيت",pwa_later:"لاحقًا",pwa_ios:"على آيفون/آيباد: اضغط زر المشاركة في سفاري واختر «إضافة إلى الشاشة الرئيسية».",pwa_android:"على أندرويد: افتح قائمة ⋮ في المتصفح واختر «إضافة إلى الشاشة الرئيسية» أو «تثبيت التطبيق».",
+ bot:{greet:"مرحبًا! 👋 أنا المساعد الافتراضي لأريج كولور. يمكنني مساعدتك بمعلومات عن الخدمات وعروض الأسعار وأوقات العمل والاتصال. كيف أساعدك؟",services:"نقدم: طلاء داخلي، طلاء خارجي، طلاء ديكوري، عزل الأسطح، طلاء الخشب وورق جدران. انقر على أي خدمة في الموقع لرؤية التفاصيل. 🎨",quote:"بالطبع! اطلب عرض سعر مجاني عبر واتساب من الزر الأخضر \"اطلب عرض السعر\" أو عبر هذا الرابط: {wa}. 💬",contact:"📍 شارع ديمو رقم 1، 123456، الدار البيضاء، المغرب<br>📞 +212690157092",hours:"🕗 من الاثنين إلى السبت: 8:00 – 19:00. الأحد مغلق.",thanks:"شكرًا لك! إذا احتجت أي شيء آخر فأنا هنا. 😊",fallback:"لم أفهم جيدًا 🤔. يمكنك سؤالي عن: الخدمات، عرض السعر، الاتصال أو أوقات العمل."}}
 };
-pwaLater.onclick = ()=>{ pwaBanner.hidden = true; };
-pwaClose.onclick = ()=>{ pwaBanner.hidden = true; };
-pwaFoot.onclick = ()=>{ pwaShow(isIOS ? "ios" : "android"); };
-if(isIOS && !isStandalone){ setTimeout(()=>pwaShow("ios"), 2500); }
 
+/* ================== i18n + compartir ================== */
+function setMeta(attr, val){
+  let m = document.querySelector(`meta[property="${attr}"]`) || document.querySelector(`meta[name="${attr}"]`);
+  if(m) m.content = val;
+}
 function applyLang(l){
-  lang = l; localStorage.setItem("lang", l);
+  lang = l; localStorage.setItem("arij-lang", l);
+  const t = T[l];
   document.documentElement.lang = l;
   document.documentElement.dir = (l === "ar") ? "rtl" : "ltr";
-  document.title = T[l]._title;
+  document.title = t.doc_title;
   document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const k = el.dataset.i18n; if(T[l][k] !== undefined) el.innerHTML = T[l][k];
+    const k = el.getAttribute("data-i18n");
+    if(t[k] !== undefined) el.innerHTML = t[k];
   });
   document.querySelectorAll("[data-i18n-ph]").forEach(el=>{
-    el.placeholder = T[l][el.dataset.i18nPh];
+    el.placeholder = t[el.getAttribute("data-i18n-ph")] || "";
   });
-  document.querySelectorAll("#langs .lang-menu button").forEach(b=>b.classList.toggle("active", b.dataset.lang===l));
-  document.getElementById("langFlag").src = "https://flagcdn.com/24x18/" + FLAG[l] + ".png";
-  renderChips();
-  if(chatMsgs.children.length === 1) chatMsgs.firstChild.innerHTML = T[l].chat_welcome;
-  if(aiModal.classList.contains("open")) fillAiTexts();
-  if(!pwaBanner.hidden && pwaMode) pwaShow(pwaMode);
+  const cur = LANGS.find(x=>x.code===l);
+  document.getElementById("langFlag").src = cur.flag;
+  document.getElementById("langCode").textContent = l.toUpperCase();
+  setMeta("og:title", t.doc_title);
+  setMeta("og:description", t.hero_sub);
+  setMeta("og:url", location.href);
+  setMeta("twitter:title", t.doc_title);
+  setMeta("twitter:description", t.hero_sub);
+  buildLangOptions(); renderServices(); renderGallery(); renderReviews(); renderFooterServices(); renderQuick();
+  if(currentModal) fillModal(currentModal);
+  refreshInstallBanner();
 }
-
-document.getElementById("langTrigger").addEventListener("click", e=>{
-  e.stopPropagation();
-  document.getElementById("langs").classList.toggle("open");
+function buildLangOptions(){
+  const html = LANGS.map(x=>`<button class="lang-opt ${x.code===lang?"active":""}" data-lang="${x.code}"><img src="${x.flag}" alt="${x.code}">${x.name}</button>`).join("");
+  document.getElementById("langDrop").innerHTML = html;
+  document.getElementById("drawerLangs").innerHTML = html;
+}
+document.addEventListener("click", e=>{
+  const opt = e.target.closest(".lang-opt");
+  if(opt){ applyLang(opt.dataset.lang); document.getElementById("langWrap").classList.remove("open"); closeDrawer(); }
 });
-document.getElementById("langs").addEventListener("click", e=>{
-  const b = e.target.closest("button[data-lang]");
-  if(b){ applyLang(b.dataset.lang); document.getElementById("langs").classList.remove("open"); }
+document.getElementById("langBtn").addEventListener("click", e=>{
+  e.stopPropagation();
+  document.getElementById("langWrap").classList.toggle("open");
 });
 document.addEventListener("click", e=>{
-  if(!e.target.closest("#langs")) document.getElementById("langs").classList.remove("open");
+  if(!e.target.closest(".lang-wrap")) document.getElementById("langWrap").classList.remove("open");
 });
 
-const waLink = "https://wa.me/" + CONFIG.waCountry + CONFIG.waNumber;
-document.getElementById("waBtn").href   = waLink;
-document.getElementById("promoLink").href = waLink;
-document.getElementById("callBtn").href = "tel:+" + CONFIG.waCountry + CONFIG.waNumber;
-document.getElementById("phoneShow").textContent = CONFIG.phoneShow;
-document.getElementById("aiWa").href = waLink;
-
-burger.onclick = ()=> navLinks.classList.toggle("open");
-navLinks.addEventListener("click", ()=> navLinks.classList.remove("open"));
-
-baRange.addEventListener("input", ()=> ba.style.setProperty("--pos", baRange.value + "%"));
-
-document.querySelectorAll(".gal").forEach(g=>{
-  g.addEventListener("click", ()=>{
-    lbImg.src = g.querySelector("img").src;
-    lbCap.textContent = T[lang][g.dataset.cap];
-    lightbox.classList.add("open");
-  });
+/* ================== SERVICIOS + MODAL ================== */
+let currentModal = null;
+function renderServices(){
+  document.getElementById("servicesGrid").innerHTML = SERVICES.map(s=>`
+    <article class="card" id="card-${s.id}">
+      <div class="card-img"><img src="${s.img}" onerror="this.onerror=null;this.src='${s.fb}'" alt="${s[lang].t}" loading="lazy"></div>
+      <div class="card-body">
+        <h3>${s[lang].t}</h3>
+        <p>${s[lang].s}</p>
+        <button class="btn btn-primary" onclick="openModal('${s.id}')">${T[lang].btn_more}</button>
+      </div>
+    </article>`).join("");
+}
+function renderFooterServices(){
+  document.getElementById("footServices").innerHTML = SERVICES.map(s=>`
+    <li><a href="#card-${s.id}" data-service="${s.id}">${s[lang].t}</a></li>`).join("");
+}
+function openModal(id){
+  currentModal = id; fillModal(id);
+  document.getElementById("modal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+function fillModal(id){
+  const s = SERVICES.find(x=>x.id===id); if(!s) return;
+  const d = s[lang];
+  const mImgEl = document.getElementById("mImg");
+  mImgEl.onerror = ()=>{ mImgEl.onerror = null; mImgEl.src = s.fb; };
+  mImgEl.src = s.img;
+  document.getElementById("mTitle").textContent = d.t;
+  document.getElementById("mDesc").textContent = d.d;
+  document.getElementById("mFeats").innerHTML = d.f.map(f=>`<li>${f}</li>`).join("");
+}
+function closeModal(){
+  document.getElementById("modal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+document.getElementById("modalX").addEventListener("click", closeModal);
+document.getElementById("modal").addEventListener("click", e=>{ if(e.target.id==="modal") closeModal(); });
+document.addEventListener("keydown", e=>{ if(e.key==="Escape"){ closeModal(); closeLightbox(); closeDrawer(); } });
+document.getElementById("footServices").addEventListener("click", e=>{
+  const a = e.target.closest("a[data-service]"); if(!a) return;
+  e.preventDefault(); goToService(a.dataset.service);
 });
-lbClose.onclick = ()=> lightbox.classList.remove("open");
-lightbox.addEventListener("click", e=>{ if(e.target===lightbox) lightbox.classList.remove("open"); });
+function goToService(id){
+  const card = document.getElementById("card-"+id); if(!card) return;
+  card.scrollIntoView({behavior:"smooth", block:"center"});
+  card.classList.add("highlight");
+  setTimeout(()=>card.classList.remove("highlight"), 2200);
+  setTimeout(()=>openModal(id), 650);
+}
 
-/* LÓGICA IA con diagnóstico de errores */
-let iaPhoto = null;
-function iaSet(file){
-  if(!file) return;
-  if(file.size > 8*1024*1024){ alert(T[lang].ai_toobig); return; }
-  iaPhoto = file;
-  const r = new FileReader();
-  r.onload = ()=>{ iaThumb.src = r.result; iaPreview.hidden = false; };
-  r.readAsDataURL(file);
+/* ================== GALERÍA + LIGHTBOX ================== */
+function renderGallery(){
+  document.getElementById("galleryGrid").innerHTML = GALLERY.map((g,i)=>`
+    <figure class="gal-item" onclick="openLightbox(${i})">
+      <img src="${g.img}" onerror="this.onerror=null;this.src='${g.fb}'" alt="${g[lang]}" loading="lazy">
+      <figcaption class="gal-cap">${g[lang]}</figcaption>
+    </figure>`).join("");
 }
-iaCam.addEventListener("change", e=> iaSet(e.target.files[0]));
-iaFile.addEventListener("change", e=> iaSet(e.target.files[0]));
-iaRemove.onclick = ()=>{ iaPhoto = null; iaPreview.hidden = true; iaThumb.src = ""; iaCam.value = ""; iaFile.value = ""; };
+function openLightbox(i){
+  const g = GALLERY[i]; if(!g) return;
+  const el = document.getElementById("lbImg");
+  el.onerror = ()=>{ el.onerror = null; el.src = g.fb; };
+  el.src = g.img;
+  document.getElementById("lbCap").textContent = g[lang];
+  document.getElementById("lightbox").classList.add("open");
+}
+function closeLightbox(){ document.getElementById("lightbox").classList.remove("open"); }
+document.getElementById("lbX").addEventListener("click", closeLightbox);
+document.getElementById("lightbox").addEventListener("click", e=>{ if(e.target.id==="lightbox") closeLightbox(); });
 
-function downscale(file, max){
-  return new Promise(res=>{
-    const img = new Image();
-    const url = URL.createObjectURL(file);
-    img.onload = ()=>{
-      const s = Math.min(1, max/Math.max(img.width, img.height));
-      const c = document.createElement("canvas");
-      c.width = Math.round(img.width*s); c.height = Math.round(img.height*s);
-      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
-      URL.revokeObjectURL(url);
-      res(c.toDataURL("image/jpeg", 0.9));
-    };
-    img.src = url;
-  });
+/* ================== OPINIONES ================== */
+function renderReviews(){
+  document.getElementById("reviewsGrid").innerHTML = REVIEWS.map(r=>`
+    <article class="rev-card">
+      <div class="rev-stars">★★★★★</div>
+      <p class="rev-text">“${r[lang]}”</p>
+      <div class="rev-author">
+        <span class="rev-av">${r.n.charAt(0)}</span>
+        <div><b>${r.n}</b><small>${r.loc}</small></div>
+      </div>
+    </article>`).join("");
 }
-function extractImage(j){
-  const content = j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content;
-  if(Array.isArray(content)){
-    for(const p of content){
-      if((p.type === "image_url" || p.type === "image") && p.image_url && p.image_url.url) return p.image_url.url;
-    }
-  }
-  const s = JSON.stringify(j);
-  const m = s.match(/data:image\/[a-zA-Z+]+;base64,[A-Za-z0-9+/=]+/) || s.match(/https:\/\/[^"'\s]+?\.(png|jpe?g|webp)/);
-  return m ? m[0] : null;
-}
-iaGo.onclick = async ()=>{
-  if(!iaPhoto){ alert(T[lang].ai_nophoto); return; }
-  const old = iaGo.innerHTML;
-  iaGo.disabled = true; iaGo.innerHTML = T[lang].ai_gen;
-  aiLastCode = null;
-  try{
-    const dataUrl = await downscale(iaPhoto, 1024);
-    let img = null;
-    for(const model of AI.models){
-      try{
-        const res = await fetch(AI.url, {
-          method:"POST",
-          headers:{
-            "Authorization":"Bearer " + AI.key,
-            "Content-Type":"application/json",
-            "X-Title":"Aljibs Pro"
-          },
-          body: JSON.stringify({
-            model: model,
-            messages:[{
-              role:"user",
-              content:[
-                { type:"text",  text: AI_PROMPT },
-                { type:"image_url", image_url:{ url: dataUrl } }
-              ]
-            }]
-          })
-        });
-        if(!res.ok){
-          if(res.status !== 404 || aiLastCode === null) aiLastCode = res.status;
-          continue;
-        }
-        const j = await res.json();
-        img = extractImage(j);
-        if(img) break;
-        aiLastCode = "empty";
-      }catch(e){ aiLastCode = "net"; continue; }
-    }
-    if(!img) throw new Error(String(aiLastCode || "empty"));
-    showAiModal(img, "ok");
-  }catch(e){
-    aiLastCode = aiLastCode || "net";
-    showAiModal(iaThumb.src, "err");
-  }finally{
-    iaGo.disabled = false; iaGo.innerHTML = old;
-  }
+
+/* ================== MENÚ MÓVIL ================== */
+const drawer = document.getElementById("drawer"), overlay = document.getElementById("overlay");
+function openDrawer(){ drawer.classList.add("open"); overlay.classList.add("show"); }
+function closeDrawer(){ drawer.classList.remove("open"); overlay.classList.remove("show"); }
+document.getElementById("burger").addEventListener("click", openDrawer);
+document.getElementById("drawerX").addEventListener("click", closeDrawer);
+overlay.addEventListener("click", closeDrawer);
+document.querySelectorAll("#drawerNav a").forEach(a=>a.addEventListener("click", closeDrawer));
+
+/* ================== PWA: ICONO CON LOGO Y FONDO NARANJA ================== */
+const store = {
+  get(k){ try{return sessionStorage.getItem(k)}catch(e){return null} },
+  set(k,v){ try{sessionStorage.setItem(k,v)}catch(e){} }
 };
-aiClose.onclick = ()=> aiModal.classList.remove("open");
-aiModal.addEventListener("click", e=>{ if(e.target===aiModal) aiModal.classList.remove("open"); });
+const isTouchDevice = (navigator.maxTouchPoints > 0) || ("ontouchstart" in window);
 
-const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){e.target.classList.add("vis"); io.unobserve(e.target);} }),{threshold:.15});
-document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
-
-const chatBox = document.getElementById("chatBox"), chatMsgs = document.getElementById("chatMsgs");
-let opened = false;
-chatBtn.onclick = ()=>{ chatBox.classList.toggle("open"); if(!opened){ opened=true; addMsg(T[lang].chat_welcome,"bot"); } };
-chatClose.onclick = ()=> chatBox.classList.remove("open");
-
-function renderChips(){
-  chips.innerHTML = "";
-  T[lang].chips.forEach(c=>{
-    const b = document.createElement("button"); b.textContent = c;
-    b.onclick = ()=> sendMsg(c); chips.appendChild(b);
+function roundRectPath(x,X,Y,W,H,R){
+  x.beginPath();
+  x.moveTo(X+R,Y);
+  x.lineTo(X+W-R,Y); x.quadraticCurveTo(X+W,Y,X+W,Y+R);
+  x.lineTo(X+W,Y+H-R); x.quadraticCurveTo(X+W,Y+H,X+W-R,Y+H);
+  x.lineTo(X+R,Y+H); x.quadraticCurveTo(X,Y+H,X,Y+H-R);
+  x.lineTo(X,Y+R); x.quadraticCurveTo(X,Y,X+R,Y);
+  x.closePath();
+}
+function housePath(x,X,Y,W,H){
+  const roof = H*0.38;
+  x.beginPath();
+  x.moveTo(X-W/2,Y+H); x.lineTo(X-W/2,Y+roof); x.lineTo(X,Y);
+  x.lineTo(X+W/2,Y+roof); x.lineTo(X+W/2,Y+H);
+  x.closePath();
+}
+/* Recreación del logo Arij Color sobre fondo naranja/dorado */
+function drawLogoIcon(size){
+  const c = document.createElement("canvas"); c.width = c.height = size;
+  const x = c.getContext("2d"); const s = size;
+  x.fillStyle = GOLD; x.fillRect(0,0,s,s);
+  x.fillStyle = "#F7F8FA";
+  x.beginPath(); x.arc(s/2,s/2,s*0.47,0,Math.PI*2); x.fill();
+  /* casa izquierda cian */
+  x.save(); x.translate(s*0.345,s*0.40); x.rotate(-0.10);
+  x.fillStyle = "#57BFDA"; housePath(x,0,-s*0.155,s*0.17,s*0.33); x.fill(); x.restore();
+  /* casa derecha magenta */
+  x.save(); x.translate(s*0.655,s*0.40); x.rotate(0.10);
+  x.fillStyle = "#D5248F"; housePath(x,0,-s*0.155,s*0.17,s*0.33); x.fill(); x.restore();
+  /* casa central naranja */
+  const g = x.createLinearGradient(0,s*0.14,0,s*0.55);
+  g.addColorStop(0,"#FDB913"); g.addColorStop(1,"#F58220");
+  x.fillStyle = g; housePath(x,s*0.5,s*0.15,s*0.21,s*0.40); x.fill();
+  /* rodillo azul con borde blanco */
+  x.lineWidth = s*0.02; x.strokeStyle = "#FFFFFF";
+  roundRectPath(x,s*0.355,s*0.325,s*0.29,s*0.095,s*0.02);
+  x.fillStyle = "#2E63AF"; x.fill(); x.stroke();
+  /* mango del rodillo */
+  x.strokeStyle = "#2E63AF"; x.lineWidth = s*0.022; x.lineCap = "round";
+  x.beginPath();
+  x.moveTo(s*0.645,s*0.372);
+  x.quadraticCurveTo(s*0.675,s*0.372,s*0.675,s*0.40);
+  x.lineTo(s*0.675,s*0.415);
+  x.quadraticCurveTo(s*0.675,s*0.445,s*0.645,s*0.445);
+  x.lineTo(s*0.525,s*0.445);
+  x.quadraticCurveTo(s*0.50,s*0.445,s*0.50,s*0.47);
+  x.lineTo(s*0.50,s*0.49);
+  x.stroke();
+  roundRectPath(x,s*0.478,s*0.49,s*0.045,s*0.105,s*0.012);
+  x.fillStyle = "#2E63AF"; x.fill();
+  /* texto ARIJ COLOR */
+  x.font = "bold "+Math.round(s*0.088)+"px Georgia, 'Times New Roman', serif";
+  x.textAlign = "left"; x.textBaseline = "alphabetic";
+  const t1 = "ARIJ ", t2 = "COLOR";
+  const w1 = x.measureText(t1).width, w2 = x.measureText(t2).width;
+  const tx = s/2 - (w1+w2)/2;
+  x.fillStyle = "#C4218C"; x.fillText(t1,tx,s*0.70);
+  x.fillStyle = "#59BBD5"; x.fillText(t2,tx+w1,s*0.70);
+  return c;
+}
+/* Si hay LOGO_URL, usa la imagen real del logo */
+function iconFromLogo(url,size){
+  return new Promise(res=>{
+    const im = new Image();
+    im.crossOrigin = "anonymous";
+    im.onload = ()=>{
+      try{
+        const c = document.createElement("canvas"); c.width = c.height = size;
+        const x = c.getContext("2d");
+        x.fillStyle = GOLD; x.fillRect(0,0,size,size);
+        x.drawImage(im,0,0,size,size);
+        res(c.toDataURL("image/png"));
+      }catch(e){ res(null); }
+    };
+    im.onerror = ()=>res(null);
+    im.src = url;
   });
 }
+(async function setupPWA(){
+  let i192 = null, i512 = null;
+  if(LOGO_URL){
+    i192 = await iconFromLogo(LOGO_URL,192);
+    i512 = await iconFromLogo(LOGO_URL,512);
+  }
+  if(!i192) i192 = drawLogoIcon(192).toDataURL("image/png");
+  if(!i512) i512 = drawLogoIcon(512).toDataURL("image/png");
+  const manifest = {
+    name:"Arij Color — Pintura profesional en Casablanca",
+    short_name:"Arij Color",
+    description:"Servicios de pintura profesionales en Casablanca.",
+    start_url: location.href,
+    display:"standalone",
+    background_color:GOLD,
+    theme_color:"#14336e",
+    lang:"es",
+    icons:[
+      {src:i192, sizes:"192x192", type:"image/png", purpose:"any"},
+      {src:i512, sizes:"512x512", type:"image/png", purpose:"any"},
+      {src:i512, sizes:"512x512", type:"image/png", purpose:"maskable"}
+    ]
+  };
+  const blob = new Blob([JSON.stringify(manifest)], {type:"application/manifest+json"});
+  document.getElementById("manifestLink").href = URL.createObjectURL(blob);
+  document.getElementById("appleIcon").href = LOGO_URL || i192;
+  document.getElementById("favicon").href = i192;
+})();
+
+let deferredPrompt = null;
+const banner = document.getElementById("installBanner");
+const isStandalone = (window.matchMedia && matchMedia("(display-mode: standalone)").matches) || window.navigator.standalone;
+const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent||"");
+window.addEventListener("beforeinstallprompt", e=>{ e.preventDefault(); deferredPrompt = e; showBanner(true); });
+window.addEventListener("appinstalled", ()=>hideBanner(true));
+function showBanner(native){
+  if(isStandalone || store.get("pwa-hide") || !isTouchDevice) return;
+  const t = T[lang];
+  document.getElementById("installMsg").innerHTML = (native && deferredPrompt) ? t.pwa_text : (isIOS ? t.pwa_ios : t.pwa_android);
+  document.getElementById("installBtn").style.display = (native && deferredPrompt) ? "" : "none";
+  banner.classList.add("show");
+}
+function hideBanner(forever){
+  banner.classList.remove("show");
+  if(forever) store.set("pwa-hide","1");
+}
+function refreshInstallBanner(){
+  if(banner.classList.contains("show")) showBanner(!!deferredPrompt);
+  const note = document.getElementById("installNote");
+  if(note.classList.contains("show") && !deferredPrompt){
+    note.innerHTML = isIOS ? T[lang].pwa_ios : T[lang].pwa_android;
+  }
+}
+setTimeout(()=>{ if(!banner.classList.contains("show")) showBanner(false); }, 1800);
+document.getElementById("installBtn").addEventListener("click", async ()=>{
+  if(!deferredPrompt) return;
+  deferredPrompt.prompt();
+  try{ await deferredPrompt.userChoice; }catch(e){}
+  deferredPrompt = null; hideBanner(true);
+});
+document.getElementById("installLater").addEventListener("click", ()=>hideBanner(true));
+document.getElementById("installBtn2").addEventListener("click", async ()=>{
+  const note = document.getElementById("installNote");
+  if(deferredPrompt){
+    deferredPrompt.prompt();
+    try{ await deferredPrompt.userChoice; }catch(e){}
+    deferredPrompt = null; hideBanner(true);
+    note.classList.remove("show");
+  }else{
+    note.innerHTML = isIOS ? T[lang].pwa_ios : T[lang].pwa_android;
+    note.classList.add("show");
+  }
+});
+
+/* ================== CHAT ================== */
+const chat = document.getElementById("chat"), chatBody = document.getElementById("chatBody");
+let chatSeeded = false;
+document.getElementById("chatFab").addEventListener("click", ()=>{
+  chat.classList.toggle("open");
+  if(chat.classList.contains("open") && !chatSeeded){ chatSeeded = true; addMsg(fmt(T[lang].bot.greet), "bot"); }
+});
+document.getElementById("chatClose").addEventListener("click", ()=>chat.classList.remove("open"));
+function renderQuick(){
+  const t = T[lang];
+  document.getElementById("chatQuick").innerHTML =
+    `<button data-q="services">${t.q1}</button><button data-q="quote">${t.q2}</button><button data-q="contact">${t.q3}</button><button data-q="hours">${t.q4}</button>`;
+}
+document.getElementById("chatQuick").addEventListener("click", e=>{
+  const b = e.target.closest("button[data-q]"); if(!b) return;
+  addMsg(esc(b.textContent), "user");
+  setTimeout(()=>addMsg(fmt(T[lang].bot[b.dataset.q]), "bot"), 500);
+});
+document.getElementById("chatForm").addEventListener("submit", e=>{
+  e.preventDefault();
+  const input = document.getElementById("chatInput");
+  const text = input.value.trim(); if(!text) return;
+  addMsg(esc(text), "user"); input.value = "";
+  setTimeout(()=>addMsg(fmt(botReply(text)), "bot"), 600);
+});
 function addMsg(html, who){
   const d = document.createElement("div");
   d.className = "msg " + who; d.innerHTML = html;
-  chatMsgs.appendChild(d); chatMsgs.scrollTop = chatMsgs.scrollHeight;
-  return d;
+  chatBody.appendChild(d); chatBody.scrollTop = chatBody.scrollHeight;
 }
-function norm(s){
-  s = s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-  s = s.replace(/[\u064B-\u0652\u0640]/g,"").replace(/[أإآ]/g,"ا").replace(/ى/g,"ي").replace(/ة/g,"ه");
-  return s;
-}
+function fmt(str){ return str.replace(/\{wa\}/g, `<a href="${WA}" target="_blank" rel="noopener">WhatsApp</a>`); }
+function esc(str){ return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 function botReply(text){
-  const n = norm(text);
-  for(const it of INTENTS){
-    for(const k of it.k){
-      const kk = norm(k);
-      if(kk.length <= 4){ if(new RegExp("(^|\\s)"+kk+"(\\s|$)").test(n)) return it.r[lang]; }
-      else if(n.includes(kk)) return it.r[lang];
-    }
-  }
-  return FALLBACK[lang];
+  const s = text.toLowerCase();
+  if(/gracias|merci|thank|شكرا/.test(text)) return T[lang].bot.thanks;
+  if(/presupuesto|precio|devis|prix|quote|price|cost|سعر|عرض|كم/.test(s)) return T[lang].bot.quote;
+  if(/horario|hour|horaire|schedule|ساع|وقت/.test(s)) return T[lang].bot.hours;
+  if(/direc|address|adresse|tel|phone|télé|whatsapp|llamar|call|contact|ubic|عنوان|هاتف|اتصال|موقع/.test(s)) return T[lang].bot.contact;
+  if(/servic|paint|peintur|pintur|tadelakt|wallpaper|papier|imperm|waterproof|lacqu|laqu|ورق|طلاء|خدم|عزل|ديكور/.test(s)) return T[lang].bot.services;
+  if(/hola|buenas|hello|hi|bonjour|salut|سلام|مرحبا|أهلا/.test(s)) return T[lang].bot.greet;
+  return T[lang].bot.fallback;
 }
-function sendMsg(text){
-  addMsg(text.replace(/</g,"&lt;"),"user");
-  const t = addMsg("<span></span><span></span><span></span>","bot typing");
-  setTimeout(()=>{ t.remove(); addMsg(botReply(text),"bot"); }, 700 + Math.random()*600);
-}
-chatSend.onclick = ()=>{ const v = chatIn.value.trim(); if(v){ chatIn.value=""; sendMsg(v);} };
-chatIn.addEventListener("keydown", e=>{ if(e.key==="Enter") chatSend.click(); });
 
-const PH = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800"><rect width="800" height="800" fill="#0d2137"/><rect x="25" y="25" width="750" height="750" fill="none" stroke="#c9a24b" stroke-width="5"/><text x="400" y="410" font-size="52" fill="#c9a24b" text-anchor="middle" font-family="sans-serif">ALJIBS PRO</text></svg>');
-const LOGOPH = "data:image/svg+xml;charset=UTF-8," + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="#0d2137"/><path d="M32 14 12 30h6v16h28V30h6z" fill="#c9a24b"/></svg>');
-document.querySelectorAll("img[data-fallback]").forEach(img=>{
-  img.addEventListener("error", ()=>{ img.src = (img.dataset.fallback==="logo") ? LOGOPH : PH; });
-});
-
+/* ================== INICIO ================== */
 applyLang(lang);
 </script>
 </body>
